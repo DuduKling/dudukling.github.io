@@ -4,9 +4,6 @@
 $verde: #254460
 $mainFont: "Arial Black", Gadget, sans-serif
 
-body
-	background-color: $verde
-
 header
 	width: 100%
 	height: 100vh
@@ -15,13 +12,14 @@ header
 	display: flex
 	justify-content: center
 	align-items: center
+	background-color: black
 
 .background
 	width: 100%
 	height: 100vh
 
 	position: absolute
-	z-index: -1
+	z-index: 0
 
 	background: url('imgs/home-bg.jpg')
 	background-repeat: no-repeat
@@ -32,6 +30,7 @@ header
 	display: flex
 	flex-direction: column
 	align-items: center
+	z-index: 1
 
 	> .avatar
 		width: 192px
@@ -51,6 +50,7 @@ header
 	position: fixed
 	top: 0
 	left: 0
+	z-index: 10
 
 	background-color: rgba(255, 255, 255, 0.1)
 	font-family: $mainFont

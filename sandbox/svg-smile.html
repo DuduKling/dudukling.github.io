@@ -10,17 +10,42 @@
 		
 		<!-- SVG STYLE -->
 		<style>
+			svg {
+				border: 1px solid black;
+			}
+
 			#rosto {
 				fill: rgba(254, 222, 88, 1);
 				stroke: black;
-				stroke-width: 3px;
+				stroke-width: 1px;
 			}
 
 			#olhos {
 				fill: white;
 				stroke: black;
-				stroke-width: 6px;
+				stroke-width: 10px;
 			}
+
+			#iris {
+				fill: black;
+			}
+
+			#boca {
+				fill: #891846;
+				stroke: black;
+				stroke-width: 10px;
+			}
+
+			#cantoBoca {
+				fill: black;
+				width: 20px;
+				height: 10px;
+			}
+
+			#lingua {
+				fill: #fdc0e1;
+			}
+
 		</style>
 	</head>
 
@@ -31,18 +56,28 @@
 
 		<section class="SandContent">
 
+			<img src="imgs/smile.jpg" width="400" height="400" />
 
-			<img src="imgs/smile.jpg" width="200" height="200"/>
+			<svg width="400" height="400">
+				<circle id="rosto" cx="50%" cy="50%" r="195" fill="#0000"/>
 
-			<svg width="200" height="200" style="border: 1px solid black">
-				<circle id="rosto" cx="50%" cy="50%" r="95" fill="#0000"/>
 				<g id="olhos">
-					<path d="M30,90 C20,25 80,40 70,90 Z"/>
-					<path d="M110,90 C90,35 160,30 150,90 Z"/>
+					<path id="olhoEsq" d="M45,185 C10,60 170,60 140,185 Z" />
+					<path id="olhoDir" d="M210,185 C180,70 350,70 310,185 Z" />
 				</g>
+
+				<g id="iris">
+					<circle id="irEsq" cx="29%" cy="30%" r="20" />
+					<circle id="irDir" cx="72%" cy="31%" r="20" />
+				</g>
+				
+				<path id="boca" d="M70,225 C70,405 345,395 310,225 Z" />
+				<rect id="cantoBoca" x="50" y="220" />
+				<path id="lingua" d="M155,343 C180,280 245,280 280,321 C280,321 233,372 155,343" />
 			</svg>
 
-
 		</section>
+		
+		<footer class="SandNotes">Testing SVG drawing directly in code.</footer>
 	</body>
 </html>

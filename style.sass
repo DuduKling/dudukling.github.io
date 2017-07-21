@@ -124,7 +124,11 @@ $mainFont: "Arial Black", Gadget, sans-serif
 	min-height: calc(100vh - 120px)
 	padding-top: 60px
 	padding-bottom: 60px
-	background-color: $verde
+
+	background: url('imgs/sandbox-bg.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-attachment: fixed
 
 .aviso
 	margin-top: 20px
@@ -180,8 +184,10 @@ $mainFont: "Arial Black", Gadget, sans-serif
 			color: $cinza
 			text-shadow: 1px 1px #262c31
 
+			transition: background-color 0.2s ease
+
 			&:hover
-				background-color: lighten($verde, 5%)
+				background-color: rgba(37, 68, 96, .3)
 
 			> .date
 				position: absolute
@@ -218,11 +224,22 @@ $mainFont: "Arial Black", Gadget, sans-serif
 
 .SandContent
 	width: 100%
-	height: 100vh
+	height: calc(100vh - 50px)
 	background-color: $cinza
 
 	display: flex
 	justify-content: center
 	align-items: center
 
+.SandNotes
+	width: 100%
+	height: 50px
+	background-color: $verde
+	color: white
+	font-family: $mainFont
+	font-size: 12px
+	letter-spacing: 1px
 
+	display: flex
+	justify-content: center
+	align-items: center

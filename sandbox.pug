@@ -1,0 +1,48 @@
+doctype html
+html(lang="pt-br")
+  head
+    title Dudu Kling
+    
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    link(rel="shortcut icon" href="imgs/icone.ico")
+    link(rel="stylesheet" type="text/css" href="style.css")
+
+  body
+    nav.menu
+      ul
+        li
+          a(href="index.html") Home
+        li
+          a(href="#") Sobre
+        li
+          a(href="#") Blog
+        li
+          a(href="#") Porfólio
+        li
+          a(href="sandbox.html") Sandbox
+        li
+          a(href="#") Currículo 
+        li
+          a(href="#") Contato
+    
+    section.sandboxSection
+      h2.sandPageTitle Sandbox
+
+        div.aviso
+          p 
+            span.red PS: 
+            |Esta página é destinada a listar meus testes, mini projetos e outras aleatoriedades. (Podem estar incompletos)
+
+      ul.sandList
+        li.sandLine 
+          a(href="sandbox/svg-smile.html")
+            h3.title Smile em SVG
+            p.date Jul/17
+
+        li.sandLine 
+          a(href="#")
+            h3.title Parallax sem JS (Perspective)
+            p.date Mar/17
+
+

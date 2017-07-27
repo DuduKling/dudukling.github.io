@@ -1,24 +1,37 @@
 var gulp = require('gulp'),
 	browserSync = require('browser-sync').create(),
-	sass = require('gulp-sass');
+	sass = require('gulp-sass'),
+	pug = require('gulp-pug'),
+	plumber = require('gulp-plumber');
 
+gulp.task('default', ['server'] , function(){});
 
-gulp.task('default', function() {});
-
-gulp.task('s', function() {
+gulp.task('server', function() {
 	browserSync.init({
 		server: {
 			baseDir: './'
 		}
 	});
 
-	gulp.watch("./**/*.sass", ['sass']);
-	gulp.watch("./**/*.css").on('change', browserSync.reload);
+	gulp.watch("./*.sass", ['sass']);
+	gulp.watch("./*.pug", ['pug']);
+
+	gulp.watch("./*.css").on('change', browserSync.reload);
+	gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
-    return gulp.src("./**/*.sass")
-        .pipe(sass())
-        .pipe(gulp.dest("./"))
-        .pipe(browserSync.stream());
+	gulp.src("./*.sass")
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest("./"))
+		// .pipe(browserSync.stream())
 });
+
+gulp.task('pug', function() {
+	gulp.src("./*.pug")
+		.pipe(plumber())
+		.pipe(pug())
+		.pipe(gulp.dest("./"))
+		// .pipe(browserSync.stream())
+});
+

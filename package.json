@@ -31,5 +31,6 @@
   },
   "devDependencies": {
     "gulp-svgo": "^1.2.5"
-  }
+  },
+  "homepage": "https://github.com/DuduKling/dudukling.github.io#readme"
 }

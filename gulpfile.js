@@ -34,7 +34,7 @@ gulp.task('server', function() {
 gulp.task('sass', function() {
 	gulp.src("./dev/*.sass")
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest("./dev/"))
+		.pipe(gulp.dest("./"))
 });
 
 

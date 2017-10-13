@@ -2,9 +2,28 @@
 	margin: 0
 	box-sizing: border-box
 
-$verde: #254460
-$cinza: #cecece
+$verde: #2CAD88
+$azul: #254460
+$cinza: #f8f8f8
+$preto: #1F2421
+
+
+// Possible Pallet:
+$c1: #254460
+$c2: #1F2421
+$c3: #49A078
+$c4: #9CC5A1
+$c5: #DCE1DE
+
+$b1: #254460
+$b2: #2CAD88
+$b3: #C6C29B
+$b4: #CDA45C
+$b5: #BF4230
+
+
 $mainFont: "Arial Black", Gadget, sans-serif
+$logoFont: "Arial", sans-serif
 
 .homeHeader
 	width: 100%
@@ -48,7 +67,7 @@ $mainFont: "Arial Black", Gadget, sans-serif
 			transition: all 0.5s ease
 
 	> .headerName
-		color: white
+		color: $c5
 		font-family: $mainFont
 		font-size: 30px
 		letter-spacing: 3px
@@ -56,7 +75,7 @@ $mainFont: "Arial Black", Gadget, sans-serif
 
 .menu
 	width: 100%
-	height: 60px
+	height: 35px
 
 	position: fixed
 	top: 0
@@ -65,9 +84,24 @@ $mainFont: "Arial Black", Gadget, sans-serif
 
 	background-color: rgba(255, 255, 255, 0.1)
 	font-family: $mainFont
+	font-size: 12px
+
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+	> .logo
+		margin-left: 20px
+
+		color: white
+		font-family: $logoFont
+		font-size: 20px
+
+		text-decoration: none	
 
 	> ul
-		width: 100%
+		// width: 100%
 		height: 100%
 
 		margin: 0
@@ -79,7 +113,7 @@ $mainFont: "Arial Black", Gadget, sans-serif
 
 		> li
 			height: 100%
-			margin-right: 20px 
+			margin-right: 12px
 
 			> a
 				height: 100%
@@ -96,7 +130,7 @@ $mainFont: "Arial Black", Gadget, sans-serif
 				&:after
 					content: ''
 					width: 100%
-					height: 5px
+					height: 2px
 					
 					position: absolute
 					bottom: 0
@@ -118,45 +152,13 @@ $mainFont: "Arial Black", Gadget, sans-serif
 				&:hover:after
 					content: none
 
-.homeFooter
-	width: 100%
-	height: 50vh
-	padding: 8vh 5% 0 5%
-	background-color: #252525
 
-	display: flex
-	flex-direction: column
-	align-items: center
-	justify-content: space-around
-	
-	font-family: $mainFont
-
-	> .socialMedias
-		width: 50%
-		display: flex
-		justify-content: space-around
-
-		> a 
-
-			> img
-				width: 50px
-	
-	> .copyrightText
-		display: flex
-		flex-direction: column
-		align-items: center
-
-		> p
-			margin-bottom: 5px
-
-			> a
-				color: black
 
 
 
 .about
 	width: 100%
-	background-color: $verde
+	background-color: $cinza
 	padding: 50px 10px
 
 	display: flex
@@ -168,14 +170,16 @@ $mainFont: "Arial Black", Gadget, sans-serif
 	letter-spacing: 1px
 
 	> h3 
-		font-size: 24px
-		margin-bottom: 15px
+		font-size: 28px
+		margin-bottom: 30px
 
 	> .aboutMeSumUp
 		width: 50%
-		font-size: 18px
-		margin-bottom: 60px
-		color: $cinza
+		font-size: 15px
+		margin-bottom: 100px
+		color: $verde
+		font-family: $logoFont
+		text-align: center
 
 	> .socialMedias
 		width: 100%
@@ -184,19 +188,73 @@ $mainFont: "Arial Black", Gadget, sans-serif
 		justify-content: center
 
 		> a
-			width: 35px
-			height: 35px
+			width: 20px
+			height: 20px
 			display: block
-			margin-right: 30px
+			margin-right: 10px
 
 			> img
 				width: 100%
 				height: 100%
 
+.skills
+	width: 100%
+	// height: 500px
+	padding: 40px 5%
+	background-color: $preto
+
+	> h3
+		font-family: $mainFont
+		color: $cinza
+		font-size: 28px
+		padding-bottom: 5px
+		border-bottom: 2px solid $cinza
+		margin-bottom: 25px
+
+	> .skillsList
+		> ul
+			list-style-type: none
+			padding: 0
+
+			color: $cinza
+			font-family: $logoFont
+			font-size: 16px
+
+			> li
+				margin-bottom: 5px
+
+.portfolio
+	width: 100%
+	height: 500px
+	padding: 40px 5%
+	background-color: $verde
+
+	> h3
+		font-family: $mainFont
+		color: $cinza
+		font-size: 28px
+		padding-bottom: 5px
+		border-bottom: 2px solid $cinza
+		margin-bottom: 25px
+
+.blog
+	width: 100%
+	height: 500px
+	padding: 40px 5%
+	background-color: $cinza
+
+	> h3
+		font-family: $mainFont
+		color: $preto
+		font-size: 28px
+		padding-bottom: 5px
+		border-bottom: 2px solid $preto
+		margin-bottom: 25px
+
 .contact
 	width: 100%
 	padding: 40px 5%
-	background-color: $verde
+	background-color: $preto
 
 	> h3
 		font-family: $mainFont
@@ -274,21 +332,39 @@ $mainFont: "Arial Black", Gadget, sans-serif
 			width: 40px
 			margin-bottom: 5px
 
-
-/* Filler */
-.skills
+.homeFooter
 	width: 100%
-	height: 500px
-	padding: 40px 5%
+	height: 50vh
+	padding: 8vh 5% 0 5%
 	background-color: $cinza
 
-	> h3
-		font-family: $mainFont
-		color: black
-		font-size: 20px
-		padding-bottom: 5px
-		border-bottom: 2px solid black
-		margin-bottom: 25px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+	
+	font-family: $mainFont
+
+	> .socialMedias
+		width: 50%
+		display: flex
+		justify-content: space-around
+
+		> a 
+
+			> img
+				width: 50px
+	
+	> .copyrightText
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		> p
+			margin-bottom: 5px
+
+			> a
+				color: black
 
 
 /* SandBox */

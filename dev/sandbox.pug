@@ -9,23 +9,8 @@ html(lang="pt-br")
     link(rel="stylesheet" type="text/css" href="style.css")
 
   body
-    nav.menu
-      ul
-        li
-          a(href="index.html") Home
-        li
-          a(href="#") Sobre
-        li
-          a(href="#") Blog
-        li
-          a(href="#") Porfólio
-        li
-          a(href="sandbox.html") Sandbox
-        li
-          a(href="#") Currículo 
-        li
-          a(href="#") Contato
-    
+    include includes/menu.pug
+
     section.sandboxSection
       h2.sandPageTitle Sandbox
 

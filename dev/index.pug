@@ -15,25 +15,8 @@ html(lang="pt-br")
     header.homeHeader
       div.background
 
-      nav.menu
-        a(href="#").logo &lt Dudu Kling /&gt
-
-        ul
-          li
-            a(href="index.html") Home
-          li 
-            a(href="#") Sobre
-          li 
-            a(href="#") Blog
-          li 
-            a(href="#") Portfólio
-          li 
-            a(href="sandbox.html") Sandbox
-          li 
-            a(href="#") Currículo
-          li 
-            a(href="#") Contato
-
+      include includes/menu.pug
+      
       div.present
         div
           img.avatar(src="imgs/avatar.png" alt="")

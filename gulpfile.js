@@ -23,6 +23,7 @@ gulp.task('server', function() {
 
 	gulp.watch("./dev/*.sass", ['sass']);
 	gulp.watch("./dev/*.pug", ['pug']);
+	gulp.watch("./dev/includes/*.pug", ['pug']);
 	gulp.watch("./dev/sandbox/*", ['sandbox']);
 
 	gulp.watch("./*.css").on('change', browserSync.reload);

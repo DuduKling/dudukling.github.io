@@ -1,16 +1,7 @@
 doctype html
 html(lang="pt-br")
-  head
-    title Dudu Kling
+  include includes/head.pug
 
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
-
-    link(rel="shortcut icon" href="imgs/icone.ico")
-    link(rel="stylesheet" type="text/css" href="style.css")
-
-    link(href="https://fonts.googleapis.com/css?family=Montserrat:300,500|Varela+Round" rel="stylesheet")
-    
   body
     header.homeHeader
       div.background
@@ -45,25 +36,41 @@ html(lang="pt-br")
     section.skills
       h3 Habilidades
       div.skillsList
+        div.skillsExpertise
+          div.basic
+            h2 Básico
+          div.intermediate
+            h2 Intermediário
+          div.expert
+            h2 Avançado
+        
         ul
-          li HTML5
-          li CSS3 (Sass)
-          li SVG
-          li Gulp
-          li Jkyll
-          li Pacote Office (Excel - VBA, Word, PowerPoint)
-          li JavaScript (JQuery, Greensock, ReactJS)
-          li C
-          li C++
-          li Python
-          li PHP
-          li mysql
-          li Linux
-          li Redes de computadores
-          li Arduino
-          li Wordpress
-          li Git/Github
-          li LATEX
+          li.level9 HTML5
+          li.level6 JavaScript
+          li.level9 CSS3
+          li.level7 SVG
+          li.level4 Arduino
+          li.level7 Excel
+          li.level4 C
+          li.level2 C++
+          li.level6 Excel (VBA)
+          li.level8 Pug / Jade
+          li.level2 Python
+          li.level4 Jquery
+          li.level3 PHP
+          li.level7 Word
+          li.level6 Jkyll
+          li.level4 ReactJS
+          li.level5 mySQL
+          li.level4 Linux
+          li.level6 PorwerPoint
+          li.level5 Git / Github
+          li.level9 Sass
+          li.level4 Greensock
+          li.level7 Gulp
+          li.level3 Redes de computadores
+          li.level5 Wordpress
+          li.level4 LaTeX
 
     section.portfolio#portfolio
       h3 Portfolio

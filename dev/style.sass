@@ -204,8 +204,8 @@ $logoFont: 'Montserrat', sans-serif
 
 .skills
 	width: 100%
-	// height: 500px
 	padding: 40px 5%
+	position: relative
 	background-color: $preto
 
 	> h3
@@ -217,16 +217,91 @@ $logoFont: 'Montserrat', sans-serif
 		margin-bottom: 25px
 
 	> .skillsList
+		position: relative
+
 		> ul
 			list-style-type: none
 			padding: 0
 
 			color: $cinza
 			font-family: $logoFont
-			font-size: 16px
+			font-size: 14px
 
 			> li
-				margin-bottom: 5px
+				margin-bottom: 10px
+
+				border-bottom: 1px dashed $cinza
+				border-right: 1px solid $cinza
+				border-top: 1px dashed $cinza
+				border-left: 1px dashed lighten($preto, 40%)
+
+				background-color: lighten($preto, 5%)
+
+				text-align: right
+				padding: 3px 10px
+
+				&.level1
+					width: 10%
+				&.level2
+					width: 20%
+				&.level3
+					width: 30%
+				&.level4
+					width: 40%
+				&.level5
+					width: 50%
+				&.level6
+					width: 60%
+				&.level7
+					width: 70%
+				&.level8
+					width: 80%
+				&.level9
+					width: 90%
+				&.level10
+					width: 100%
+				
+				// &.level1, &.level2, &.level3
+				// 	background-color: #5ec35e
+				// &.level4, &.level5, &.level6, &.level7
+				// 	background-color: rgba(255, 183, 51, 0.7)
+				// &.level8, &.level9, &.level10
+				// 	background-color: rgba(255, 19, 19, 0.5)
+
+
+		> .skillsExpertise
+			width: 100%
+			margin-bottom: 30px
+			display: flex
+			flex-direction: row
+			justify-content: space-around
+			align-items: flex-start
+			z-index: 0
+
+			> div
+				height: 25px
+				display: flex
+				justify-content: center
+				align-items: center
+
+				font-family: $mainFont
+				font-size: 10px
+
+				&:nth-child(1)
+					width: 33%
+					background-color: #5ec35e
+					margin-right: 5px
+					padding-right: 5px
+
+				&:nth-child(2)
+					width: 38%
+					background-color: #ffb733
+					margin-right: 5px
+					padding-right: 5px
+
+				&:nth-child(3)
+					width: 33%
+					background-color: #ff1313
 
 .portfolio
 	width: 100%

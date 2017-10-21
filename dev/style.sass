@@ -21,61 +21,16 @@ $b3: #C6C29B
 $b4: #CDA45C
 $b5: #BF4230
 
+// $mainFont: "Arial Black", Gadget, sans-serif
+// $logoFont: "Arial", sans-serif
 
-$mainFont: "Arial Black", Gadget, sans-serif
-$logoFont: "Arial", sans-serif
+$mainFont: 'Varela Round', sans-serif
+$logoFont: 'Montserrat', sans-serif
 
-.homeHeader
-	width: 100%
-	height: 100vh
-	position: relative
-	overflow: hidden
-
-	display: flex
-	justify-content: center
-	align-items: center
-	background-color: black
-
-.background
-	width: 100%
-	height: 100vh
-
-	position: absolute
-	z-index: 0
-
-	background: url('imgs/home-bg.jpg')
-	background-repeat: no-repeat
-	background-size: cover
-	background-attachment: fixed
-	filter: blur(3px)
-
-.present
-	display: flex
-	flex-direction: column
-	align-items: center
-	z-index: 1
-
-	> div
-		width: 192px
-		margin-bottom: 20px
-
-		&:hover > .avatar
-			transform: rotateY(180deg)
-
-		> .avatar
-			width: 100%
-			transition: all 0.5s ease
-
-	> .headerName
-		color: $c5
-		font-family: $mainFont
-		font-size: 30px
-		letter-spacing: 3px
-		text-shadow: 3px 3px #262c31
 
 .menu
 	width: 100%
-	height: 35px
+	height: 40px
 
 	position: fixed
 	top: 0
@@ -92,11 +47,13 @@ $logoFont: "Arial", sans-serif
 	align-items: center
 
 	> .logo
-		margin-left: 20px
+		margin-left: 25px
 
 		color: white
 		font-family: $logoFont
 		font-size: 20px
+		font-weight: 500
+		letter-spacing: 1px
 
 		text-decoration: none	
 
@@ -151,6 +108,56 @@ $logoFont: "Arial", sans-serif
 
 				&:hover:after
 					content: none
+
+.homeHeader
+	width: 100%
+	height: 100vh
+	position: relative
+	overflow: hidden
+
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: black
+
+	> .background
+		width: 100%
+		height: 100vh
+
+		position: absolute
+		z-index: 0
+
+		background: url('imgs/home-bg.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-attachment: fixed
+		filter: blur(3px)
+
+	> .present
+		display: flex
+		flex-direction: column
+		align-items: center
+		z-index: 1
+		margin-top: 40px
+
+		> div
+			width: 192px
+			margin-bottom: 20px
+
+			&:hover > .avatar
+				transform: rotateY(180deg)
+
+			> .avatar
+				width: 100%
+				transition: all 0.5s ease
+
+		> .headerName
+			color: $c5
+			font-family: $mainFont
+			font-size: 30px
+			letter-spacing: 3px
+			text-shadow: 3px 3px #262c31
+			text-align: center
 
 
 
@@ -259,7 +266,7 @@ $logoFont: "Arial", sans-serif
 	> h3
 		font-family: $mainFont
 		color: white
-		font-size: 20px
+		font-size: 28px
 		padding-bottom: 5px
 		border-bottom: 2px solid white
 		margin-bottom: 25px
@@ -307,22 +314,26 @@ $logoFont: "Arial", sans-serif
 
 		> input[type="submit"]
 			padding: 10px
-			align-self: flex-end
-			font-family: $mainFont
-			transition: background-color 0.1s ease 
-			border-radius: 15px
+			background-color: darken($cinza, 25%)
+			
 			border: none
+			border-radius: 15px
 			cursor: pointer
+			align-self: flex-end
+			
+			font-family: $mainFont
+			
+			transition: background-color 0.1s ease 
 
 			&:hover
-				background-color: lighten($verde, 25%)
+				background-color: $cinza
 
 	> .email
 		display: flex
 		flex-direction: column
 		align-items: center
 
-		margin-bottom: 20px
+		margin-bottom: 30px
 
 		font-family: $mainFont
 		color: white
@@ -330,7 +341,7 @@ $logoFont: "Arial", sans-serif
 
 		> img
 			width: 40px
-			margin-bottom: 5px
+			margin-bottom: 10px
 
 .homeFooter
 	width: 100%

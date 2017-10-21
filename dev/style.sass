@@ -161,8 +161,6 @@ $logoFont: 'Montserrat', sans-serif
 
 
 
-
-
 .about
 	width: 100%
 	background-color: $cinza
@@ -232,7 +230,6 @@ $logoFont: 'Montserrat', sans-serif
 
 .portfolio
 	width: 100%
-	height: 500px
 	padding: 40px 5%
 	background-color: $verde
 
@@ -243,6 +240,64 @@ $logoFont: 'Montserrat', sans-serif
 		padding-bottom: 5px
 		border-bottom: 2px solid $cinza
 		margin-bottom: 25px
+
+	> .portfolioContainer
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		// align-items: center
+
+		> .frame
+			height: 400px
+			min-width: 250px
+			max-width: calc(30% - 20px)
+			flex-grow: 1
+
+			border: 1px solid $cinza
+			border-radius: 15px
+			margin: 0 20px 30px 20px
+
+			position: relative
+			overflow: hidden
+			cursor: pointer
+
+			transition: all 0.2s ease
+
+			> .case
+				width: 100%
+				transition: all 0.2s ease
+				z-index: -1
+
+			> .hover
+				width: 100%
+				height: 100%
+				background-color: rgba(248,248,248,0.7)
+
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				position: absolute
+				z-index: 1
+
+				opacity: 0
+				transition: opacity 0.2s ease
+
+				> h2 
+					font-family: $mainFont
+					margin-bottom: 20px
+
+				> img
+					width: 30px
+					height: 30px
+
+			&:hover
+				> .hover
+					opacity: 1
+
+				> .case
+					transform: scale(1.1)
 
 .blog
 	width: 100%

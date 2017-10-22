@@ -30,6 +30,7 @@
     "gulp-sourcemaps": "^2.6.0"
   },
   "devDependencies": {
+    "gulp-minify": "^1.0.0",
     "gulp-svgo": "^1.2.5"
   },
   "homepage": "https://github.com/DuduKling/dudukling.github.io#readme"

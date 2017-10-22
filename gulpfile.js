@@ -8,11 +8,10 @@ var gulp = require('gulp'),
 	cssnano = require('gulp-cssnano'),
 	sourcemaps = require('gulp-sourcemaps'),
 	htmlmin = require('gulp-htmlmin'),
-	svgo = require('gulp-svgo');
-
+	svgo = require('gulp-svgo'),
+	minify = require('gulp-minify');
 
 gulp.task('default', ['server'] , function(){});
-
 
 gulp.task('server', function() {
 	browserSync.init({
@@ -24,7 +23,7 @@ gulp.task('server', function() {
 	gulp.watch("./dev/*.sass", ['sass']);
 	gulp.watch("./dev/*.pug", ['pug']);
 	gulp.watch("./dev/includes/*.pug", ['pug']);
-	gulp.watch("./dev//*.js", ['js']);
+	gulp.watch("./dev/*.js", ['js']);
 
 	gulp.watch("./*.css").on('change', browserSync.reload);
 	gulp.watch("./*.html").on('change', browserSync.reload);
@@ -34,54 +33,38 @@ gulp.task('server', function() {
 gulp.task('sass', function() {
 	gulp.src("./dev/*.sass")
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest("./"))
+		.pipe(gulp.dest("./"));
 });
 
 gulp.task('pug', function() {
 	gulp.src("./dev/*.pug")
 		.pipe(plumber())
 		.pipe(pug())
-		.pipe(gulp.dest("./"))
+		.pipe(gulp.dest("./"));
 });
 
-gulp.task('optimizeImages', function() {
-	gulp.src('./dev/imgs/*')
-		.pipe(imagemin())
-		.pipe(gulp.dest('./imgs/'))
-});
-
-gulp.task('autoprefixer', function() {
-	gulp.src('./dev/*.css')
-		.pipe(autoprefixer({
-			browsers: ['last 10 versions'],
-			cascade: false
+gulp.task('js', function(){
+	gulp.src('./dev/*.js')
+		.pipe(minify({
+			ext:{
+				src:'-debug.js',
+				min:'.js'
+			},
+			exclude: ['tasks'],
+			ignoreFiles: ['.combo.js', '-min.js']
 		}))
-		.pipe(gulp.dest('./dev/'))
-});
-
-gulp.task('cssnano', function () {
-	gulp.src('./dev/*.css')
-		.pipe(sourcemaps.init())
-		.pipe(cssnano())
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./dev/'));
-});
-
-gulp.task('buildcss', function () {
-	gulp.src('./dev/*.sass')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 10 versions'],
-			cascade: false
-		}))
-		.pipe(sourcemaps.init())
-		.pipe(cssnano())
-		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./'));
 });
 
+gulp.task('imgs', function() {
+	gulp.src('./dev/imgs/*')
+	.pipe(imagemin())
+	.pipe(svgo())
+	.pipe(gulp.dest('./imgs/'));
+});
+
 gulp.task('build', function () {
-	gulp.src('./dev/*/*.sass')
+	gulp.src('./dev/*.sass')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 10 versions'],
@@ -99,4 +82,14 @@ gulp.task('build', function () {
 		.pipe(imagemin())
 		.pipe(svgo())
 		.pipe(gulp.dest('./imgs/'));
+	gulp.src('./dev/*.js')
+		.pipe(minify({
+			ext:{
+				src:'-debug.js',
+				min:'.js'
+			},
+			exclude: ['tasks'],
+			ignoreFiles: ['.combo.js', '-min.js']
+		}))
+		.pipe(gulp.dest('./'));
 });

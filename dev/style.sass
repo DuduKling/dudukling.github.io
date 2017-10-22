@@ -9,23 +9,23 @@ $preto: #1F2421
 
 
 // Possible Pallet:
-$c1: #254460
-$c2: #1F2421
-$c3: #49A078
-$c4: #9CC5A1
-$c5: #DCE1DE
+// $c1: #254460
+// $c2: #1F2421
+// $c3: #49A078
+// $c4: #9CC5A1
+// $c5: #DCE1DE
 
-$b1: #254460
-$b2: #2CAD88
-$b3: #C6C29B
-$b4: #CDA45C
-$b5: #BF4230
+// $b1: #254460
+// $b2: #2CAD88
+// $b3: #C6C29B
+// $b4: #CDA45C
+// $b5: #BF4230
 
-// $mainFont: "Arial Black", Gadget, sans-serif
-// $logoFont: "Arial", sans-serif
+// $font1: "Arial Black", Gadget, sans-serif
+// $font2: "Arial", sans-serif
 
-$mainFont: 'Varela Round', sans-serif
-$logoFont: 'Montserrat', sans-serif
+$font1: 'Varela Round', sans-serif
+$font2: 'Montserrat', sans-serif
 
 
 .menu
@@ -38,7 +38,7 @@ $logoFont: 'Montserrat', sans-serif
 	z-index: 10
 
 	background-color: rgba(255, 255, 255, 0.1)
-	font-family: $mainFont
+	font-family: $font1
 	font-size: 12px
 
 	display: flex
@@ -50,7 +50,7 @@ $logoFont: 'Montserrat', sans-serif
 		margin-left: 25px
 
 		color: white
-		font-family: $logoFont
+		font-family: $font2
 		font-size: 20px
 		font-weight: 500
 		letter-spacing: 1px
@@ -156,12 +156,9 @@ $logoFont: 'Montserrat', sans-serif
 			&:hover
 				transform: rotateY(180deg)
 
-				
-					
-
 		> .headerName
-			color: $c5
-			font-family: $mainFont
+			color: $cinza
+			font-family: $font1
 			font-size: 30px
 			letter-spacing: 3px
 			text-shadow: 3px 3px #262c31
@@ -181,7 +178,7 @@ svg
 	justify-content: flex-start
 	align-items: center
 
-	font-family: $mainFont
+	font-family: $font1
 	letter-spacing: 1px
 
 	> h3 
@@ -193,7 +190,7 @@ svg
 		font-size: 15px
 		margin-bottom: 100px
 		color: $verde
-		font-family: $logoFont
+		font-family: $font2
 		text-align: center
 
 	> .socialMedias
@@ -224,7 +221,7 @@ svg
 	background-color: $preto
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: $cinza
 		font-size: 28px
 		padding-bottom: 5px
@@ -239,7 +236,7 @@ svg
 			padding: 0
 
 			color: $cinza
-			font-family: $logoFont
+			font-family: $font2
 			font-size: 14px
 
 			> li
@@ -299,7 +296,7 @@ svg
 				justify-content: center
 				align-items: center
 
-				font-family: $mainFont
+				font-family: $font1
 				font-size: 10px
 
 				&:nth-child(1)
@@ -324,7 +321,7 @@ svg
 	background-color: $verde
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: $cinza
 		font-size: 28px
 		padding-bottom: 5px
@@ -375,7 +372,7 @@ svg
 				transition: opacity 0.2s ease
 
 				> h2 
-					font-family: $mainFont
+					font-family: $font1
 					margin-bottom: 20px
 
 				> svg
@@ -392,17 +389,87 @@ svg
 
 .blog
 	width: 100%
-	height: 500px
 	padding: 40px 5%
 	background-color: $cinza
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: $preto
 		font-size: 28px
 		padding-bottom: 5px
 		border-bottom: 2px solid $preto
 		margin-bottom: 25px
+
+	> .blogContainer
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
+		
+		> .post
+			width: 30%
+			padding: 15px 15px 15px 15px
+			margin-bottom: 30px
+			font-family: $font2
+			border: 1px solid lighten($preto, 75%)
+			transition: box-shadow 0.2s ease
+
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			&:hover
+				box-shadow: 0px 0px 5px lighten($preto, 50%)
+
+				> .postlink > .postTitle
+					color: $verde
+			
+			> .postlink
+				display: block
+				text-decoration: none
+				color: $preto
+
+				> .postTitle
+					letter-spacing: 2px
+					font-size: 24px
+					margin-bottom: 3px
+					transition: color 0.2s ease
+				
+				> .infos
+					font-size: 12px
+					color: darken($cinza, 50%)
+					margin-bottom: 30px
+
+				> .peek
+					color: lighten($preto, 10%)
+					line-height: 22px
+					margin-bottom: 20px
+			
+			> .tags
+				align-self: flex-end
+				padding: 0
+				color: lighten($preto, 10%)
+				list-style-type: none
+				
+				display: flex
+
+				> li
+					margin-left: 5px
+					padding: 5px
+					border-radius: 3px
+					font-size: 14px
+					transition: background-color 0.2s ease
+
+					&:hover
+						background-color: $verde
+
+						> a
+							color: $cinza
+
+					> a 
+						text-decoration: none
+						color: lighten($preto, 10%)
+						transition: color 0.2s ease
 
 .contact
 	width: 100%
@@ -410,7 +477,7 @@ svg
 	background-color: $preto
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: white
 		font-size: 28px
 		padding-bottom: 5px
@@ -431,7 +498,7 @@ svg
 				background-color: transparent
 				padding: 10px
 				font-size: 14px
-				font-family: $mainFont
+				font-family: $font1
 				color: white
 				letter-spacing: 1px
 				
@@ -439,8 +506,8 @@ svg
 				border-radius: 10px
 
 				&::placeholder
-					font-family: $mainFont
-					color: $cinza
+					font-family: $font1
+					color: darken($cinza, 50%)
 					letter-spacing: 1px
 				
 				&:focus
@@ -451,7 +518,7 @@ svg
 			margin-bottom: 10px
 			background-color: transparent
 			padding: 10px
-			font-family: $mainFont
+			font-family: $font1
 			font-size: 14px
 			border: 1px solid $cinza
 			color: $cinza
@@ -460,8 +527,8 @@ svg
 			border-radius: 10px
 
 			&::placeholder
-				font-family: $mainFont
-				color: $cinza
+				font-family: $font1
+				color: darken($cinza, 50%)
 				letter-spacing: 1px
 
 			&:focus
@@ -478,7 +545,7 @@ svg
 			cursor: pointer
 			align-self: flex-end
 			
-			font-family: $mainFont
+			font-family: $font1
 			border: 1px solid $cinza
 			
 			transition: all 0.2s ease
@@ -496,7 +563,7 @@ svg
 
 		margin-bottom: 40px
 
-		font-family: $mainFont
+		font-family: $font1
 		color: $cinza
 		letter-spacing: 1px
 
@@ -518,7 +585,7 @@ svg
 	align-items: center
 	justify-content: space-around
 	
-	font-family: $mainFont
+	font-family: $font1
 
 	> .socialMedias
 		width: 35%
@@ -546,6 +613,10 @@ svg
 
 			> a
 				color: black
+				transition: color 0.2s ease
+
+				&:hover
+					color: $verde
 
 
 /* SandBox */
@@ -570,7 +641,7 @@ svg
 		width: 100%
 		
 		text-align: right
-		font-family: $mainFont
+		font-family: $font1
 		font-size: 12px
 		color: $cinza
 		line-height: 20px
@@ -583,7 +654,7 @@ svg
 	margin: 30px 20px 0 20px
 	position: relative
 
-	font-family: $mainFont
+	font-family: $font1
 	font-size: 30px
 	color: $cinza
 	text-shadow: 1px 1px #262c31
@@ -610,7 +681,7 @@ svg
 			text-decoration: none
 			position: relative
 
-			font-family: $mainFont
+			font-family: $font1
 			color: $cinza
 			text-shadow: 1px 1px #262c31
 
@@ -665,7 +736,7 @@ svg
 	height: 50px
 	background-color: $verde
 	color: white
-	font-family: $mainFont
+	font-family: $font1
 	font-size: 12px
 	letter-spacing: 1px
 

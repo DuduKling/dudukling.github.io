@@ -24,20 +24,18 @@ gulp.task('server', function() {
 	gulp.watch("./dev/*.sass", ['sass']);
 	gulp.watch("./dev/*.pug", ['pug']);
 	gulp.watch("./dev/includes/*.pug", ['pug']);
-	gulp.watch("./dev/sandbox/*", ['sandbox']);
+	gulp.watch("./dev//*.js", ['js']);
 
 	gulp.watch("./*.css").on('change', browserSync.reload);
 	gulp.watch("./*.html").on('change', browserSync.reload);
-	gulp.watch("./sandbox/*").on('change', browserSync.reload);
+	gulp.watch("./*.js").on('change', browserSync.reload);
 });
-
 
 gulp.task('sass', function() {
 	gulp.src("./dev/*.sass")
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest("./"))
 });
-
 
 gulp.task('pug', function() {
 	gulp.src("./dev/*.pug")
@@ -46,13 +44,11 @@ gulp.task('pug', function() {
 		.pipe(gulp.dest("./"))
 });
 
-
 gulp.task('optimizeImages', function() {
 	gulp.src('./dev/imgs/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('./imgs/'))
 });
-
 
 gulp.task('autoprefixer', function() {
 	gulp.src('./dev/*.css')
@@ -63,7 +59,6 @@ gulp.task('autoprefixer', function() {
 		.pipe(gulp.dest('./dev/'))
 });
 
-
 gulp.task('cssnano', function () {
 	gulp.src('./dev/*.css')
 		.pipe(sourcemaps.init())
@@ -71,7 +66,6 @@ gulp.task('cssnano', function () {
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./dev/'));
 });
-
 
 gulp.task('buildcss', function () {
 	gulp.src('./dev/*.sass')
@@ -86,13 +80,8 @@ gulp.task('buildcss', function () {
 		.pipe(gulp.dest('./'));
 });
 
-gulp.task('clean', function () {
-    gulp.src('./', {read: false})
-        .pipe(clean());
-});
-
 gulp.task('build', function () {
-	gulp.src('./dev/*.sass')
+	gulp.src('./dev/*/*.sass')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 10 versions'],
@@ -110,22 +99,4 @@ gulp.task('build', function () {
 		.pipe(imagemin())
 		.pipe(svgo())
 		.pipe(gulp.dest('./imgs/'));
-
-	gulp.src('./dev/sandbox/*')
-		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(gulp.dest("./sandbox/"));
-	gulp.src('./dev/sandbox/imgs/*')
-		.pipe(imagemin())
-		.pipe(svgo())
-		.pipe(gulp.dest('./sandbox/imgs/'));
-});
-
-gulp.task('sandbox', function () {
-	gulp.src('./dev/sandbox/*')
-		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(gulp.dest("./sandbox/"));
-	gulp.src('./dev/sandbox/imgs/*')
-		.pipe(imagemin())
-		.pipe(svgo())
-		.pipe(gulp.dest('./sandbox/imgs/'));
 });

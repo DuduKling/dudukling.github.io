@@ -3,14 +3,18 @@ html(lang="pt-br")
   include includes/head.pug
 
   body
+    include includes/svg-social.pug
+    include includes/svg-icons.pug
+
     header.homeHeader
       div.background
 
       include includes/menu.pug
-      
+
       div.present
         div
-          img.avatar(src="imgs/avatar.png" alt="")
+          div
+            img.avatar(src="imgs/avatar.png" alt="")
         h1.headerName Eduardo Kling 
           br 
           | Mesiano
@@ -23,15 +27,20 @@ html(lang="pt-br")
 
       div.socialMedias
         a(href="#")
-          img(src="imgs/github.png" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-github")
         a(href="#")
-          img(src="imgs/linkedin.png" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-linkedin")
         a(href="#")
-          img(src="imgs/facebook.png" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-facebook")
         a(href="#")
-          img(src="imgs/twitter.png" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-twitter")
         a(href="#")
-          img(src="imgs/mail.png" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-mail")
 
     section.skills
       h3 Habilidades
@@ -73,32 +82,37 @@ html(lang="pt-br")
           li.level4 LaTeX
 
     section.portfolio#portfolio
-      h3 Portfolio
+      h3 Portfólio
       div.portfolioContainer
         div.frame
           div.hover
             h2 Load Interiores
-            img(src="./imgs/lupa.png", alt="")
+            svg(viewBox="0 0 24 24")
+              use(xlink:href="#svg-magnifier")
           img.case(src="./imgs/atelier-load.png", alt="") 
         div.frame
           div.hover
             h2 Clínica Dr. Tannure
-            img(src="./imgs/lupa.png", alt="")
+            svg(viewBox="0 0 24 24")
+              use(xlink:href="#svg-magnifier")
           img.case(src="./imgs/atelier-tannure.png", alt="")
         div.frame
           div.hover
             h2 Reanult Serra
-            img(src="./imgs/lupa.png", alt="")
+            svg(viewBox="0 0 24 24")
+              use(xlink:href="#svg-magnifier")
           img.case(src="./imgs/atelier-renaultserra.png", alt="")
         div.frame
           div.hover
             h2 Buska Imóvel
-            img(src="./imgs/lupa.png", alt="")
+            svg(viewBox="0 0 24 24")
+              use(xlink:href="#svg-magnifier")
           img.case(src="./imgs/atelier-buska.png", alt="")
         div.frame
           div.hover
-            h2 Storti Boechat
-            img(src="./imgs/lupa.png", alt="")
+            h2 Storti & Boechat
+            svg(viewBox="0 0 24 24")
+              use(xlink:href="#svg-magnifier")
           img.case(src="./imgs/atelier-stortiboechat.png", alt="")
 
     section.blog#blog
@@ -109,7 +123,8 @@ html(lang="pt-br")
       h3 Contato
 
       div.email
-        img(src="imgs/mail2.png" alt="")
+        svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-email")
         p eduardokmesiano@gmail.com
 
       form(action="#")
@@ -122,15 +137,25 @@ html(lang="pt-br")
     footer.homeFooter
       div.socialMedias
         a(href="#")
-          img(src="imgs/github.png" alt="")
+          //- img(src="imgs/social-github.svg" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-github")
         a(href="#")
-          img(src="imgs/linkedin.png" alt="")
+          //- img(src="imgs/social-linkedin.svg" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-linkedin")
         a(href="#")
-          img(src="imgs/facebook.png" alt="")
+          //- img(src="imgs/social-facebook.svg" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-facebook")
         a(href="#")
-          img(src="imgs/twitter.png" alt="")
+          //- img(src="imgs/social-twitter.svg" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-twitter")
         a(href="#")
-          img(src="imgs/mail.png" alt="")
+          //- img(src="imgs/social-mail.svg" alt="")
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-mail")
 
       div.copyrightText
         p Copyright ☺ 2017

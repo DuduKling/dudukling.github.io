@@ -141,15 +141,23 @@ $logoFont: 'Montserrat', sans-serif
 		margin-top: 40px
 
 		> div
-			width: 192px
+			transition: all 0.5s ease
 			margin-bottom: 20px
+			
+			> div
+				width: 200px
+				height: 200px
+				border-radius: 50%
+				overflow: hidden
 
-			&:hover > .avatar
+				> .avatar
+					width: 100%
+
+			&:hover
 				transform: rotateY(180deg)
 
-			> .avatar
-				width: 100%
-				transition: all 0.5s ease
+				
+					
 
 		> .headerName
 			color: $c5
@@ -159,6 +167,8 @@ $logoFont: 'Montserrat', sans-serif
 			text-shadow: 3px 3px #262c31
 			text-align: center
 
+svg
+	display: none
 
 
 .about
@@ -198,9 +208,14 @@ $logoFont: 'Montserrat', sans-serif
 			display: block
 			margin-right: 10px
 
-			> img
-				width: 100%
-				height: 100%
+			> svg
+				display: block
+				width: 25px
+				height: 25px
+				transition: all 0.2s ease
+
+				&:hover
+					fill: $verde
 
 .skills
 	width: 100%
@@ -321,7 +336,6 @@ $logoFont: 'Montserrat', sans-serif
 		flex-direction: row
 		flex-wrap: wrap
 		justify-content: center
-		// align-items: center
 
 		> .frame
 			height: 400px
@@ -332,6 +346,7 @@ $logoFont: 'Montserrat', sans-serif
 			border: 1px solid $cinza
 			border-radius: 15px
 			margin: 0 20px 30px 20px
+			background-color: $cinza
 
 			position: relative
 			overflow: hidden
@@ -363,9 +378,10 @@ $logoFont: 'Montserrat', sans-serif
 					font-family: $mainFont
 					margin-bottom: 20px
 
-				> img
-					width: 30px
-					height: 30px
+				> svg
+					display: block
+					width: 35px
+					height: 35px
 
 			&:hover
 				> .hover
@@ -419,12 +435,17 @@ $logoFont: 'Montserrat', sans-serif
 				color: white
 				letter-spacing: 1px
 				
-				border: 1px solid white
+				border: 1px solid $cinza
+				border-radius: 10px
 
 				&::placeholder
 					font-family: $mainFont
-					color: white
+					color: $cinza
 					letter-spacing: 1px
+				
+				&:focus
+					border-color: $verde
+					outline: none
 		
 		> textarea
 			margin-bottom: 10px
@@ -432,19 +453,25 @@ $logoFont: 'Montserrat', sans-serif
 			padding: 10px
 			font-family: $mainFont
 			font-size: 14px
-			border: 1px solid white
-			color: white
+			border: 1px solid $cinza
+			color: $cinza
 			letter-spacing: 1px
 			resize: none
+			border-radius: 10px
 
 			&::placeholder
 				font-family: $mainFont
-				color: white
+				color: $cinza
 				letter-spacing: 1px
+
+			&:focus
+					border-color: $verde
+					outline: none
+			
 
 		> input[type="submit"]
 			padding: 10px
-			background-color: darken($cinza, 25%)
+			background-color: $cinza
 			
 			border: none
 			border-radius: 15px
@@ -452,26 +479,33 @@ $logoFont: 'Montserrat', sans-serif
 			align-self: flex-end
 			
 			font-family: $mainFont
+			border: 1px solid $cinza
 			
-			transition: background-color 0.1s ease 
+			transition: all 0.2s ease
+			outline: none
 
 			&:hover
-				background-color: $cinza
+				color: $cinza
+				background-color: transparent
+				border: 1px solid $verde
 
 	> .email
 		display: flex
 		flex-direction: column
 		align-items: center
 
-		margin-bottom: 30px
+		margin-bottom: 40px
 
 		font-family: $mainFont
-		color: white
+		color: $cinza
 		letter-spacing: 1px
 
-		> img
-			width: 40px
-			margin-bottom: 10px
+		> svg
+			display: block
+			width: 50px
+			height: 50px
+			margin-bottom: 15px
+			fill: $cinza
 
 .homeFooter
 	width: 100%
@@ -487,14 +521,20 @@ $logoFont: 'Montserrat', sans-serif
 	font-family: $mainFont
 
 	> .socialMedias
-		width: 50%
+		width: 35%
 		display: flex
 		justify-content: space-around
 
 		> a 
-
-			> img
+			> svg
+				display: block
 				width: 50px
+				height: 50px
+				transition: all 0.2s ease
+
+				&:hover
+					fill: $verde
+				
 	
 	> .copyrightText
 		display: flex

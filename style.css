@@ -167,34 +167,41 @@ svg {
       font-family: "Montserrat", sans-serif;
       font-size: 14px; }
       .skills > .skillsList > ul > li {
+        height: 26px;
         margin-bottom: 10px;
-        border-bottom: 1px dashed #f8f8f8;
-        border-right: 1px solid #f8f8f8;
-        border-top: 1px dashed #f8f8f8;
-        border-left: 1px dashed #7f9086;
+        padding: 3px 10px;
         background-color: #2b322e;
         text-align: right;
-        padding: 3px 10px; }
-        .skills > .skillsList > ul > li.level1 {
+        overflow: hidden;
+        border-bottom: 1px dashed #2CAD88;
+        border-right: 1px solid #2CAD88;
+        border-top: 1px dashed #2CAD88;
+        border-left: 1px dashed #175c48;
+        transition: all 0.5s linear; }
+        .skills > .skillsList > ul > li.-in.level.-o1 {
           width: 10%; }
-        .skills > .skillsList > ul > li.level2 {
+        .skills > .skillsList > ul > li.-in.level.-o2 {
           width: 20%; }
-        .skills > .skillsList > ul > li.level3 {
+        .skills > .skillsList > ul > li.-in.level.-o3 {
           width: 30%; }
-        .skills > .skillsList > ul > li.level4 {
+        .skills > .skillsList > ul > li.-in.level.-o4 {
           width: 40%; }
-        .skills > .skillsList > ul > li.level5 {
+        .skills > .skillsList > ul > li.-in.level.-o5 {
           width: 50%; }
-        .skills > .skillsList > ul > li.level6 {
+        .skills > .skillsList > ul > li.-in.level.-o6 {
           width: 60%; }
-        .skills > .skillsList > ul > li.level7 {
+        .skills > .skillsList > ul > li.-in.level.-o7 {
           width: 70%; }
-        .skills > .skillsList > ul > li.level8 {
+        .skills > .skillsList > ul > li.-in.level.-o8 {
           width: 80%; }
-        .skills > .skillsList > ul > li.level9 {
+        .skills > .skillsList > ul > li.-in.level.-o9 {
           width: 90%; }
-        .skills > .skillsList > ul > li.level10 {
+        .skills > .skillsList > ul > li.-in.level.-o10 {
           width: 100%; }
+        .skills > .skillsList > ul > li.-out {
+          width: 0;
+          overflow: hidden;
+          padding: 3px 0px; }
     .skills > .skillsList > .skillsExpertise {
       width: 100%;
       margin-bottom: 30px;

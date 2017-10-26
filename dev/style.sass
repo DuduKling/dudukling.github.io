@@ -2,6 +2,9 @@
 	margin: 0
 	box-sizing: border-box
 
+svg
+	display: none
+
 $verde: #2CAD88
 $azul: 	#254460
 $cinza: #f8f8f8
@@ -166,10 +169,11 @@ $font2: 'Montserrat', sans-serif
 		align-items: center
 		z-index: 1
 		margin-top: 60px
+		width: 440px
 
 		> div
 			transition: all 0.5s ease
-			margin-bottom: 20px
+			margin-bottom: 30px
 			
 			> div
 				width: 200px
@@ -185,14 +189,20 @@ $font2: 'Montserrat', sans-serif
 
 		> .headerName
 			color: $cinza
-			font-family: $font1
+			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
-			letter-spacing: 3px
+			letter-spacing: 4px
 			text-shadow: 3px 3px #262c31
 			text-align: center
 
-svg
-	display: none
+			width: 432px
+			border-right: 2px solid transparent
+			
+			overflow: hidden
+			animation: write 4s steps(21) 1s 1 normal both,cursor 500ms steps(21) 14 normal
+
+			> span
+				white-space: nowrap				
 
 .about
 	width: 100%
@@ -652,4 +662,17 @@ svg
 
 				&:hover
 					color: $verde
+
+
+@keyframes write
+	from
+		width: 0
+	to
+		width: 432px
+
+@keyframes cursor
+	from
+		border-right-color: transparent
+	to
+		border-right-color: rgba(255,255,255,.75)
 

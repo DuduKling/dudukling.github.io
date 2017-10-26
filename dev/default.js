@@ -1,23 +1,34 @@
+document.addEventListener("scroll", function(){
+    SkillsAnimationOnScroll();
+    MenuChangeOnScroll();
+});
+
 // Get skills li
-var level = document.querySelectorAll(".level");
+let level = document.querySelectorAll(".level");
 
 // Get window size.
-var tela = window.innerHeight;
+let tela = window.innerHeight;
 
-var lis = document.getElementsByClassName("level");
-var liTopPositions = new Array();
-var liBotPositions = new Array();
+let lis = document.getElementsByClassName("level");
+let liTopPositions = new Array();
+let liBotPositions = new Array();
 
 level.forEach(function(e, i) {
-    var liTop = offset(level[i]);
+    let liTop = offset(level[i]);
     liTopPositions.push(liTop.top);
     liBotPositions.push(liTop.top + 26);
 }, this);
 
-document.addEventListener("scroll", function(){
+function offset(el) {
+    let rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {top: rect.top + scrollTop}
+}
+
+function SkillsAnimationOnScroll() {
     // Get user's window position relative to page.
-    var topoTela = document.documentElement.scrollTop;
-    var baixoTela = Number(topoTela+tela);
+    let topoTela = document.documentElement.scrollTop;
+    let baixoTela = Number(topoTela+tela);
     
     level.forEach(function(e, i) {
         if (baixoTela >= liBotPositions[i] && Number(topoTela-80) <= liTopPositions[i]) {
@@ -28,11 +39,21 @@ document.addEventListener("scroll", function(){
             level[i].classList.add("-out");
         }
     }, this);
-});
-
-function offset(el) {
-    var rect = el.getBoundingClientRect(),
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return {top: rect.top + scrollTop}
 }
 
+
+let about = document.querySelectorAll(".about");
+let menu = document.querySelectorAll(".menu");
+let aboutTop = offset(about[0]);
+
+function MenuChangeOnScroll(){
+    let topoTela2 = document.documentElement.scrollTop;
+
+    if (aboutTop.top-60 <= topoTela2) {
+        menu[0].classList.remove("-top");
+        menu[0].classList.add("-scroll");
+    }else{
+        menu[0].classList.remove("-scroll");
+        menu[0].classList.add("-top");
+    }
+}

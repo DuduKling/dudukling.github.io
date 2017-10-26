@@ -45,6 +45,7 @@ gulp.task('pug', function() {
 
 gulp.task('js', function(){
 	gulp.src('./dev/*.js')
+		.pipe(plumber())
 		.pipe(minify({
 			ext:{
 				src:'-debug.js',

@@ -432,6 +432,66 @@ $font2: 'Montserrat', sans-serif
 				> .case
 					transform: scale(1.1)
 
+	> .largeView
+		width: 100%
+		min-height: 100vh
+		position: fixed
+		z-index: 11
+		top: 0
+		left: 0
+		background-color: rgba(0,0,0,0.8)
+		justify-content: center
+		padding-top: 50px
+		overflow-y: scroll
+
+		&.-hide
+			display: none
+			overflow: hidden
+		
+		&.-show
+			display: flex
+
+		> .closeView
+			width: 23px
+			height: 23px
+			position: fixed
+			top: 25px
+			right: 50px
+			cursor: pointer
+
+			&::after
+				content: ''
+				width: 30px
+				height: 5px
+				position: absolute
+				top: 9px
+				left: -5px
+				background-color: white
+				transform: rotate(-45deg) 
+				border-radius: 10px
+				
+			&::before
+				content: ''
+				width: 30px
+				height: 5px
+				position: absolute
+				top: 9px 
+				left: -5px
+				background-color: white
+				transform: rotate(45deg)
+				border-radius: 10px
+
+		> .img
+			width: 800px
+			position: absolute
+			border: 5px solid darken($cinza, 10%)
+			margin-bottom: 50px
+			padding-bottom: -5px
+			background-color: white
+
+			> img
+				width: 100%
+
 .blog
 	width: 100%
 	padding: 40px 5%
@@ -662,7 +722,6 @@ $font2: 'Montserrat', sans-serif
 
 				&:hover
 					color: $verde
-
 
 @keyframes write
 	from

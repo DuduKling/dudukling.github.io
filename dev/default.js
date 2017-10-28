@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 document.addEventListener("scroll", function(){
     SkillsAnimationOnScroll();
     MenuChangeOnScroll();
@@ -7,15 +9,15 @@ document.addEventListener("scroll", function(){
 function offset(el) {
     let rect = el.getBoundingClientRect(),
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return {top: rect.top + scrollTop}
+    return {top: rect.top + scrollTop};
 }
 
 /* Animate Skills bars to expand only when the user screen is showing them. */
 let level = document.querySelectorAll(".level");
 let tela = window.innerHeight;
-let lis = document.getElementsByClassName("level");
-let liTopPositions = new Array();
-let liBotPositions = new Array();
+// let liTopPositions = new Array();
+let liTopPositions = [];
+let liBotPositions = [];
 
 level.forEach(function(e, i) {
     let liTop = offset(level[i]);
@@ -39,51 +41,51 @@ function SkillsAnimationOnScroll() {
 }
 
 /* Change style of Menu when user scroll down after the ATF (Above The Fold). */
-let about = document.querySelectorAll(".about");
-let menu = document.querySelectorAll(".menu");
-let aboutTop = offset(about[0]);
+let about = document.getElementById("sobre");
+let menu = document.getElementById("menu");
+let aboutTop = offset(about);
 
 function MenuChangeOnScroll(){
     let topoTela2 = document.documentElement.scrollTop;
 
     if (aboutTop.top-60 <= topoTela2) {
-        menu[0].classList.remove("-top");
-        menu[0].classList.add("-scroll");
+        menu.classList.remove("-top");
+        menu.classList.add("-scroll");
     }else{
-        menu[0].classList.remove("-scroll");
-        menu[0].classList.add("-top");
+        menu.classList.remove("-scroll");
+        menu.classList.add("-top");
     }
 }
 
 
 /* A shitty kind of Lightbox */
-let body = document.querySelectorAll("body");
+let body = document.getElementById("body");
 let skill = document.querySelectorAll(".frame");
-let view = document.getElementsByClassName("largeView");
-let closeView = document.getElementsByClassName("closeView");
+let modal = document.getElementById("modal");
+let closeModal = document.getElementById("closeModal");
 
 skill.forEach(function(e, i) {
     skill[i].addEventListener("click", function(){
-        let j = this.children[1].getAttribute("src");
-        view[0].children[1].children[0].setAttribute("src", j);
-        view[0].classList.remove("-hide");
-        view[0].classList.add("-show");
-        body[0].setAttribute("style", "overflow: hidden;");
+        let newSrc = this.children[1].getAttribute("src");
+        modal.children[1].children[0].setAttribute("src", newSrc);
+        modal.classList.remove("-hide");
+        modal.classList.add("-show");
+        body.setAttribute("style", "overflow: hidden;");
     });
 }, this);
 
-closeView[0].addEventListener("click", function(){
-    body[0].setAttribute("style", "overflow: auto;");
-    view[0].scrollTop = 0;
-    view[0].classList.remove("-show");
-    view[0].classList.add("-hide");
+closeModal.addEventListener("click", function(){
+    body.setAttribute("style", "overflow: auto;");
+    modal.scrollTop = 0;
+    modal.classList.remove("-show");
+    modal.classList.add("-hide");
 }, this);
 
-view[0].addEventListener("click", function(e){
+modal.addEventListener("click", function(e){
     if (e.target !== this)
     return;
 
-    body[0].setAttribute("style", "overflow: auto;");
+    body.setAttribute("style", "overflow: auto;");
     this.scrollTop = 0;
     this.classList.remove("-show");
     this.classList.add("-hide");

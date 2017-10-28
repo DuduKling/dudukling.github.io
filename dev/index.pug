@@ -2,7 +2,7 @@ doctype html
 html(lang="pt-br")
   include includes/head.pug
 
-  body
+  body#body
     include includes/svg-social.pug
     include includes/svg-icons.pug
 
@@ -115,8 +115,8 @@ html(lang="pt-br")
               use(xlink:href="#svg-magnifier")
           img.case(src="./imgs/atelier-stortiboechat.png", alt="")
       
-      div.largeView.-hide
-        div.closeView
+      div#modal.-hide
+        div#closeModal
         div.img
           img(src="#", alt="")
 

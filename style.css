@@ -313,7 +313,7 @@ svg {
         opacity: 1; }
       .portfolio > .portfolioContainer > .frame:hover > .case {
         transform: scale(1.1); }
-  .portfolio > .largeView {
+  .portfolio > #modal {
     width: 100%;
     min-height: 100vh;
     position: fixed;
@@ -324,19 +324,19 @@ svg {
     justify-content: center;
     padding-top: 50px;
     overflow-y: scroll; }
-    .portfolio > .largeView.-hide {
+    .portfolio > #modal.-hide {
       display: none;
       overflow: hidden; }
-    .portfolio > .largeView.-show {
+    .portfolio > #modal.-show {
       display: flex; }
-    .portfolio > .largeView > .closeView {
+    .portfolio > #modal > #closeModal {
       width: 23px;
       height: 23px;
       position: fixed;
       top: 25px;
       right: 50px;
       cursor: pointer; }
-      .portfolio > .largeView > .closeView::after {
+      .portfolio > #modal > #closeModal::after {
         content: '';
         width: 30px;
         height: 5px;
@@ -346,7 +346,7 @@ svg {
         background-color: white;
         transform: rotate(-45deg);
         border-radius: 10px; }
-      .portfolio > .largeView > .closeView::before {
+      .portfolio > #modal > #closeModal::before {
         content: '';
         width: 30px;
         height: 5px;
@@ -356,14 +356,15 @@ svg {
         background-color: white;
         transform: rotate(45deg);
         border-radius: 10px; }
-    .portfolio > .largeView > .img {
+    .portfolio > #modal > .img {
       width: 800px;
       position: absolute;
       border: 5px solid #dfdfdf;
       margin-bottom: 50px;
       padding-bottom: -5px;
-      background-color: white; }
-      .portfolio > .largeView > .img > img {
+      background-color: white;
+      animation: zoom 0.5s; }
+      .portfolio > #modal > .img > img {
         width: 100%; }
 
 .blog {
@@ -561,3 +562,9 @@ svg {
     border-right-color: transparent; }
   to {
     border-right-color: rgba(255, 255, 255, 0.75); } }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }

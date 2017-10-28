@@ -9,7 +9,8 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	htmlmin = require('gulp-htmlmin'),
 	svgo = require('gulp-svgo'),
-	minify = require('gulp-minify');
+	minify = require('gulp-minify'),
+	jshint = require('gulp-jshint');
 
 gulp.task('default', ['server'] , function(){});
 
@@ -46,6 +47,8 @@ gulp.task('pug', function() {
 gulp.task('js', function(){
 	gulp.src('./dev/*.js')
 		.pipe(plumber())
+		.pipe(jshint())
+		.pipe(jshint.reporter('jshint-stylish'))
 		.pipe(minify({
 			ext:{
 				src:'-debug.js',

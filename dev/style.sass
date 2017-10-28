@@ -10,23 +10,8 @@ $azul: 	#254460
 $cinza: #f8f8f8
 $preto: #1F2421
 
-
-// Possible Pallet:
-// $c1: #254460
-// $c2: #1F2421
-// $c3: #49A078
-// $c4: #9CC5A1
-// $c5: #DCE1DE
-
-// $b1: #254460
-// $b2: #2CAD88
-// $b3: #C6C29B
-// $b4: #CDA45C
-// $b5: #BF4230
-
 $font1: 'Varela Round', sans-serif
 $font2: 'Montserrat', sans-serif
-
 
 .menu
 	width: 100%
@@ -432,7 +417,7 @@ $font2: 'Montserrat', sans-serif
 				> .case
 					transform: scale(1.1)
 
-	> .largeView
+	> #modal
 		width: 100%
 		min-height: 100vh
 		position: fixed
@@ -451,7 +436,7 @@ $font2: 'Montserrat', sans-serif
 		&.-show
 			display: flex
 
-		> .closeView
+		> #closeModal
 			width: 23px
 			height: 23px
 			position: fixed
@@ -488,6 +473,8 @@ $font2: 'Montserrat', sans-serif
 			margin-bottom: 50px
 			padding-bottom: -5px
 			background-color: white
+
+			animation: zoom 0.5s
 
 			> img
 				width: 100%
@@ -734,4 +721,10 @@ $font2: 'Montserrat', sans-serif
 		border-right-color: transparent
 	to
 		border-right-color: rgba(255,255,255,.75)
+
+@keyframes zoom 
+	from
+		transform: scale(0) 
+	to
+		transform: scale(1)
 

@@ -576,6 +576,24 @@ $font2: 'Montserrat', sans-serif
 		border-bottom: 2px solid white
 		margin-bottom: 25px
 	
+	> .email
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		margin-bottom: 40px
+
+		font-family: $font1
+		color: $cinza
+		letter-spacing: 1px
+
+		> svg
+			display: block
+			width: 50px
+			height: 50px
+			margin-bottom: 15px
+			fill: $cinza
+
 	> form
 		display: flex
 		flex-direction: column
@@ -625,10 +643,9 @@ $font2: 'Montserrat', sans-serif
 
 			&:focus
 					border-color: $verde
-					outline: none
-			
+					outline: none	
 
-		> input[type="submit"]
+		> #emailSubmit
 			padding: 10px
 			background-color: $cinza
 			
@@ -639,6 +656,8 @@ $font2: 'Montserrat', sans-serif
 			
 			font-family: $font1
 			border: 1px solid $cinza
+			text-decoration: none
+			color: $preto
 			
 			transition: all 0.2s ease
 			outline: none
@@ -648,23 +667,6 @@ $font2: 'Montserrat', sans-serif
 				background-color: transparent
 				border: 1px solid $verde
 
-	> .email
-		display: flex
-		flex-direction: column
-		align-items: center
-
-		margin-bottom: 40px
-
-		font-family: $font1
-		color: $cinza
-		letter-spacing: 1px
-
-		> svg
-			display: block
-			width: 50px
-			height: 50px
-			margin-bottom: 15px
-			fill: $cinza
 
 .homeFooter
 	width: 100%

@@ -2,43 +2,26 @@
 	margin: 0
 	box-sizing: border-box
 
+svg
+	display: none
+
 $verde: #2CAD88
-$azul: #254460
+$azul: 	#254460
 $cinza: #f8f8f8
 $preto: #1F2421
 
-
-// Possible Pallet:
-$c1: #254460
-$c2: #1F2421
-$c3: #49A078
-$c4: #9CC5A1
-$c5: #DCE1DE
-
-$b1: #254460
-$b2: #2CAD88
-$b3: #C6C29B
-$b4: #CDA45C
-$b5: #BF4230
-
-// $mainFont: "Arial Black", Gadget, sans-serif
-// $logoFont: "Arial", sans-serif
-
-$mainFont: 'Varela Round', sans-serif
-$logoFont: 'Montserrat', sans-serif
-
+$font1: 'Varela Round', sans-serif
+$font2: 'Montserrat', sans-serif
 
 .menu
 	width: 100%
-	height: 40px
 
 	position: fixed
 	top: 0
 	left: 0
 	z-index: 10
-
-	background-color: rgba(255, 255, 255, 0.1)
-	font-family: $mainFont
+	
+	font-family: $font1
 	font-size: 12px
 
 	display: flex
@@ -46,16 +29,46 @@ $logoFont: 'Montserrat', sans-serif
 	justify-content: space-between
 	align-items: center
 
+	transition: all 0.5s ease
+
+	&.-top
+		height: 60px
+		background-color: rgba(255, 255, 255, 0.1)
+
+		> .logo
+			font-size: 28px
+		
+		> ul > li > a
+			font-size: 18px
+
+			&:after
+				height: 4px
+
+	&.-scroll
+		height: 40px
+		background-color: $preto
+		border-bottom: 1px solid darken($cinza, 65%)
+
+		> .logo
+			font-size: 20px
+		
+		> ul > li > a
+			font-size: 12px
+
+			&:after
+				height: 2px
+
 	> .logo
 		margin-left: 25px
 
 		color: white
-		font-family: $logoFont
-		font-size: 20px
+		font-family: $font2
 		font-weight: 500
 		letter-spacing: 1px
 
-		text-decoration: none	
+		text-decoration: none
+
+		transition: all 0.5s ease
 
 	> ul
 		// width: 100%
@@ -83,6 +96,8 @@ $logoFont: 'Montserrat', sans-serif
 
 				display: flex
 				align-items: center
+
+				transition: all 0.5s ease
 
 				&:after
 					content: ''
@@ -138,11 +153,12 @@ $logoFont: 'Montserrat', sans-serif
 		flex-direction: column
 		align-items: center
 		z-index: 1
-		margin-top: 40px
+		margin-top: 60px
+		width: 440px
 
 		> div
 			transition: all 0.5s ease
-			margin-bottom: 20px
+			margin-bottom: 30px
 			
 			> div
 				width: 200px
@@ -156,20 +172,22 @@ $logoFont: 'Montserrat', sans-serif
 			&:hover
 				transform: rotateY(180deg)
 
-				
-					
-
 		> .headerName
-			color: $c5
-			font-family: $mainFont
+			color: $cinza
+			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
-			letter-spacing: 3px
+			letter-spacing: 4px
 			text-shadow: 3px 3px #262c31
 			text-align: center
 
-svg
-	display: none
+			width: 432px
+			border-right: 2px solid transparent
+			
+			overflow: hidden
+			animation: write 4s steps(21) 1s 1 normal both,cursor 500ms steps(21) 14 normal
 
+			> span
+				white-space: nowrap				
 
 .about
 	width: 100%
@@ -181,7 +199,7 @@ svg
 	justify-content: flex-start
 	align-items: center
 
-	font-family: $mainFont
+	font-family: $font1
 	letter-spacing: 1px
 
 	> h3 
@@ -193,7 +211,7 @@ svg
 		font-size: 15px
 		margin-bottom: 100px
 		color: $verde
-		font-family: $logoFont
+		font-family: $font2
 		text-align: center
 
 	> .socialMedias
@@ -224,7 +242,7 @@ svg
 	background-color: $preto
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: $cinza
 		font-size: 28px
 		padding-bottom: 5px
@@ -239,42 +257,51 @@ svg
 			padding: 0
 
 			color: $cinza
-			font-family: $logoFont
+			font-family: $font2
 			font-size: 14px
 
 			> li
+				height: 26px
 				margin-bottom: 10px
-
-				border-bottom: 1px dashed $cinza
-				border-right: 1px solid $cinza
-				border-top: 1px dashed $cinza
-				border-left: 1px dashed lighten($preto, 40%)
-
-				background-color: lighten($preto, 5%)
-
-				text-align: right
 				padding: 3px 10px
+				background-color: lighten($preto, 5%)
+				text-align: right
+				overflow: hidden
 
-				&.level1
-					width: 10%
-				&.level2
-					width: 20%
-				&.level3
-					width: 30%
-				&.level4
-					width: 40%
-				&.level5
-					width: 50%
-				&.level6
-					width: 60%
-				&.level7
-					width: 70%
-				&.level8
-					width: 80%
-				&.level9
-					width: 90%
-				&.level10
-					width: 100%
+				border-bottom: 1px dashed $verde
+				border-right: 1px solid $verde
+				border-top: 1px dashed $verde
+				border-left: 1px dashed darken($verde, 20%)
+
+				transition: all 0.5s linear
+
+				&.-in
+					&.level
+						&.-o1
+							width: 10%
+						&.-o2
+							width: 20%
+						&.-o3
+							width: 30%
+						&.-o4
+							width: 40%
+						&.-o5
+							width: 50%
+						&.-o6
+							width: 60%
+						&.-o7
+							width: 70%
+						&.-o8
+							width: 80%
+						&.-o9
+							width: 90%
+						&.-o10
+							width: 100%
+
+				&.-out
+					width: 0
+					overflow: hidden
+					padding: 3px 0px 
 				
 				// &.level1, &.level2, &.level3
 				// 	background-color: #5ec35e
@@ -299,7 +326,7 @@ svg
 				justify-content: center
 				align-items: center
 
-				font-family: $mainFont
+				font-family: $font1
 				font-size: 10px
 
 				&:nth-child(1)
@@ -324,7 +351,7 @@ svg
 	background-color: $verde
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: $cinza
 		font-size: 28px
 		padding-bottom: 5px
@@ -375,7 +402,7 @@ svg
 				transition: opacity 0.2s ease
 
 				> h2 
-					font-family: $mainFont
+					font-family: $font1
 					margin-bottom: 20px
 
 				> svg
@@ -390,19 +417,151 @@ svg
 				> .case
 					transform: scale(1.1)
 
+	> #modal
+		width: 100%
+		min-height: 100vh
+		position: fixed
+		z-index: 11
+		top: 0
+		left: 0
+		background-color: rgba(0,0,0,0.8)
+		justify-content: center
+		padding-top: 50px
+		overflow-y: scroll
+
+		&.-hide
+			display: none
+			overflow: hidden
+		
+		&.-show
+			display: flex
+
+		> #closeModal
+			width: 23px
+			height: 23px
+			position: fixed
+			top: 25px
+			right: 50px
+			cursor: pointer
+
+			&::after
+				content: ''
+				width: 30px
+				height: 5px
+				position: absolute
+				top: 9px
+				left: -5px
+				background-color: white
+				transform: rotate(-45deg) 
+				border-radius: 10px
+				
+			&::before
+				content: ''
+				width: 30px
+				height: 5px
+				position: absolute
+				top: 9px 
+				left: -5px
+				background-color: white
+				transform: rotate(45deg)
+				border-radius: 10px
+
+		> .img
+			width: 800px
+			position: absolute
+			border: 5px solid darken($cinza, 10%)
+			margin-bottom: 50px
+			padding-bottom: -5px
+			background-color: white
+
+			animation: zoom 0.5s
+
+			> img
+				width: 100%
+
 .blog
 	width: 100%
-	height: 500px
 	padding: 40px 5%
 	background-color: $cinza
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: $preto
 		font-size: 28px
 		padding-bottom: 5px
 		border-bottom: 2px solid $preto
 		margin-bottom: 25px
+
+	> .blogContainer
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
+		
+		> .post
+			width: 30%
+			padding: 15px 15px 15px 15px
+			margin-bottom: 30px
+			font-family: $font2
+			border: 1px solid lighten($preto, 75%)
+			transition: box-shadow 0.2s ease
+
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			&:hover
+				box-shadow: 0px 0px 5px lighten($preto, 50%)
+
+				> .postlink > .postTitle
+					color: $verde
+			
+			> .postlink
+				display: block
+				text-decoration: none
+				color: $preto
+
+				> .postTitle
+					letter-spacing: 2px
+					font-size: 24px
+					margin-bottom: 3px
+					transition: color 0.2s ease
+				
+				> .infos
+					font-size: 12px
+					color: darken($cinza, 50%)
+					margin-bottom: 30px
+
+				> .peek
+					color: lighten($preto, 10%)
+					line-height: 22px
+					margin-bottom: 20px
+			
+			> .tags
+				align-self: flex-end
+				padding: 0
+				color: lighten($preto, 10%)
+				list-style-type: none
+				
+				display: flex
+
+				> li
+					margin-left: 5px
+					padding: 5px
+					border-radius: 3px
+					font-size: 14px
+					transition: background-color 0.2s ease
+
+					&:hover
+						background-color: $verde
+
+						> a
+							color: $cinza
+
+					> a 
+						text-decoration: none
+						color: lighten($preto, 10%)
+						transition: color 0.2s ease
 
 .contact
 	width: 100%
@@ -410,7 +569,7 @@ svg
 	background-color: $preto
 
 	> h3
-		font-family: $mainFont
+		font-family: $font1
 		color: white
 		font-size: 28px
 		padding-bottom: 5px
@@ -431,7 +590,7 @@ svg
 				background-color: transparent
 				padding: 10px
 				font-size: 14px
-				font-family: $mainFont
+				font-family: $font1
 				color: white
 				letter-spacing: 1px
 				
@@ -439,8 +598,8 @@ svg
 				border-radius: 10px
 
 				&::placeholder
-					font-family: $mainFont
-					color: $cinza
+					font-family: $font1
+					color: darken($cinza, 50%)
 					letter-spacing: 1px
 				
 				&:focus
@@ -451,7 +610,7 @@ svg
 			margin-bottom: 10px
 			background-color: transparent
 			padding: 10px
-			font-family: $mainFont
+			font-family: $font1
 			font-size: 14px
 			border: 1px solid $cinza
 			color: $cinza
@@ -460,8 +619,8 @@ svg
 			border-radius: 10px
 
 			&::placeholder
-				font-family: $mainFont
-				color: $cinza
+				font-family: $font1
+				color: darken($cinza, 50%)
 				letter-spacing: 1px
 
 			&:focus
@@ -478,7 +637,7 @@ svg
 			cursor: pointer
 			align-self: flex-end
 			
-			font-family: $mainFont
+			font-family: $font1
 			border: 1px solid $cinza
 			
 			transition: all 0.2s ease
@@ -496,7 +655,7 @@ svg
 
 		margin-bottom: 40px
 
-		font-family: $mainFont
+		font-family: $font1
 		color: $cinza
 		letter-spacing: 1px
 
@@ -518,7 +677,7 @@ svg
 	align-items: center
 	justify-content: space-around
 	
-	font-family: $mainFont
+	font-family: $font1
 
 	> .socialMedias
 		width: 35%
@@ -546,131 +705,26 @@ svg
 
 			> a
 				color: black
+				transition: color 0.2s ease
 
+				&:hover
+					color: $verde
 
-/* SandBox */
-.sandboxSection
-	width: 100%
-	min-height: 100vh
-	padding-top: 60px
-	padding-bottom: 60px
+@keyframes write
+	from
+		width: 0
+	to
+		width: 432px
 
-	background: url('imgs/sandbox-bg.jpg')
-	background-repeat: no-repeat
-	background-size: cover
-	background-attachment: fixed
+@keyframes cursor
+	from
+		border-right-color: transparent
+	to
+		border-right-color: rgba(255,255,255,.75)
 
-.aviso
-	margin-top: 20px
-	position: absolute
-	right: 0
-	bottom: 0
-
-	> p
-		width: 100%
-		
-		text-align: right
-		font-family: $mainFont
-		font-size: 12px
-		color: $cinza
-		line-height: 20px
-
-		> .red
-			text-transform: uppercase
-			color: darkred
-
-.sandPageTitle
-	margin: 30px 20px 0 20px
-	position: relative
-
-	font-family: $mainFont
-	font-size: 30px
-	color: $cinza
-	text-shadow: 1px 1px #262c31
-
-.sandList
-	width: 100%
-	padding: 0 20px
-
-	> .sandLine
-		width: 100%
-		list-style-type: none
-
-		border-top: 1px dashed $cinza
-
-		&:first-child
-			border-top: 1px solid $cinza
-
-		> a
-			width: 100%
-			height: 100%
-			padding: 30px 20px
-
-			display: block
-			text-decoration: none
-			position: relative
-
-			font-family: $mainFont
-			color: $cinza
-			text-shadow: 1px 1px #262c31
-
-			transition: background-color 0.2s ease
-
-			&:hover
-				background-color: rgba(37, 68, 96, .3)
-
-			> .date
-				position: absolute
-				right: 5px
-				bottom: 10px
-
-				font-size: 10px
-				font-style: italic
-
-			> .title
-				font-size: 16px
-
-
-
-/* SandBox Model */
-.sandContentHeader
-	position: absolute
-	top: 0
-	right: 0
-	
-	width: 30px
-	padding: 5px
-
-	> a,
-		width: 100%
-		height: 100%
-		display: block
-
-		> img
-			width: 100%
-
-.sandContent
-	width: 100%
-	height: 100vh
-	background-color: $cinza
-	position: relative
-	overflow: hidden
-
-	display: flex
-	justify-content: center
-	align-items: center
-
-.sandNotes
-	width: 100%
-	height: 50px
-	background-color: $verde
-	color: white
-	font-family: $mainFont
-	font-size: 12px
-	letter-spacing: 1px
-
-	display: flex
-	justify-content: center
-	align-items: center
-
+@keyframes zoom 
+	from
+		transform: scale(0) 
+	to
+		transform: scale(1)
 

@@ -2,7 +2,7 @@ doctype html
 html(lang="pt-br")
   include includes/head.pug
 
-  body
+  body#body
     include includes/svg-social.pug
     include includes/svg-icons.pug
 
@@ -15,9 +15,9 @@ html(lang="pt-br")
         div
           div
             img.avatar(src="imgs/avatar.png" alt="")
-        h1.headerName Eduardo Kling 
-          br 
-          | Mesiano
+        h1.headerName.anim-typewriter 
+          span Eduardo Kling 
+          span Mesiano
 
     section.about#sobre
       h3 Oi, eu sou o Dudu!
@@ -26,23 +26,23 @@ html(lang="pt-br")
         | Estudante de engenharia de computação e amante de tecnologia.
 
       div.socialMedias
-        a(href="#")
+        a(href="https://github.com/DuduKling" target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-github")
-        a(href="#")
+        a(href="https://www.linkedin.com/in/eduardo-kling-mesiano-2aab7b113/"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-linkedin")
-        a(href="#")
+        a(href="https://www.facebook.com/eduardokmesiano"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-facebook")
-        a(href="#")
+        a(href="https://twitter.com/Eduardo_Kling"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-twitter")
-        a(href="#")
+        a(href="mailto:eduardokmesiano@gmail.com"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-mail")
 
-    section.skills
+    section.skills#sk
       h3 Habilidades
       div.skillsList
         div.skillsExpertise
@@ -54,32 +54,32 @@ html(lang="pt-br")
             h2 Avançado
         
         ul
-          li.level9 HTML5
-          li.level6 JavaScript
-          li.level9 CSS3
-          li.level7 SVG
-          li.level4 Arduino
-          li.level7 Excel
-          li.level4 C
-          li.level2 C++
-          li.level6 Excel (VBA)
-          li.level8 Pug / Jade
-          li.level2 Python
-          li.level4 Jquery
-          li.level3 PHP
-          li.level7 Word
-          li.level6 Jkyll
-          li.level4 ReactJS
-          li.level5 mySQL
-          li.level4 Linux
-          li.level6 PorwerPoint
-          li.level5 Git / Github
-          li.level9 Sass
-          li.level4 Greensock
-          li.level7 Gulp
-          li.level3 Redes de computadores
-          li.level5 Wordpress
-          li.level4 LaTeX
+          li.level.-o9.-out HTML5
+          li.level.-o6.-out JavaScript
+          li.level.-o9.-out CSS3
+          li.level.-o7.-out SVG
+          li.level.-o4.-out Arduino
+          li.level.-o7.-out Excel
+          li.level.-o4.-out C
+          li.level.-o2.-out C++
+          li.level.-o6.-out Excel (VBA)
+          li.level.-o8.-out Pug / Jade
+          li.level.-o2.-out Python
+          li.level.-o4.-out Jquery
+          li.level.-o3.-out PHP
+          li.level.-o7.-out Word
+          li.level.-o6.-out Jkyll
+          li.level.-o4.-out ReactJS
+          li.level.-o5.-out mySQL
+          li.level.-o4.-out Linux
+          li.level.-o6.-out PorwerPoint
+          li.level.-o5.-out Git / Github
+          li.level.-o9.-out Sass
+          li.level.-o4.-out Greensock
+          li.level.-o7.-out Gulp
+          li.level.-o3.-out Redes de computadores
+          li.level.-o5.-out Wordpress
+          li.level.-o4.-out LaTeX
 
     section.portfolio#portfolio
       h3 Portfólio
@@ -114,10 +114,44 @@ html(lang="pt-br")
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
           img.case(src="./imgs/atelier-stortiboechat.png", alt="")
+      
+      div#modal.-hide
+        div#closeModal
+        div.img
+          img(src="#", alt="")
 
-    //- section.blog#blog
-    //-   h3 Blog
-    //-   div.blogContainer
+    section.blog#blog
+      h3 Blog
+      div.blogContainer
+      
+        div.post
+          a.postlink(href="#")
+            h2.postTitle Primeiro Post  
+            p.infos 22/10/2017 | 5 min
+            p.peek Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.
+          ul.tags
+            li 
+              a(href="#") Misc
+
+        div.post
+          a.postlink(href="#")
+            h2.postTitle Segundo Post
+            p.infos 22/10/2017 | HTML CSS JS 15 min
+            p.peek Aqui é Body Builder Ipsum PORRA! Eu quero esse 13 daqui a pouquinho aí. Ajuda o maluco que tá doente. Aqui é Body Builder Ipsum PORRA! Birl! Sabe o que é isso daí? Trapézio descendente é o nome disso aí.
+          ul.tags
+            li 
+              a(href="#") JS
+
+        div.post
+          a.postlink(href="#")
+            h2.postTitle Dilmês Ipsum
+            p.infos 22/10/2017 | Misc React 20 min
+            p.peek Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo muito importante!          
+          ul.tags
+            li 
+              a(href="#") HTML
+            li 
+              a(href="#") CSS
 
     section.contact#contato
       h3 Contato
@@ -136,24 +170,19 @@ html(lang="pt-br")
 
     footer.homeFooter
       div.socialMedias
-        a(href="#")
-          //- img(src="imgs/social-github.svg" alt="")
+        a(href="https://github.com/DuduKling" target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-github")
-        a(href="#")
-          //- img(src="imgs/social-linkedin.svg" alt="")
+        a(href="https://www.linkedin.com/in/eduardo-kling-mesiano-2aab7b113/"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-linkedin")
-        a(href="#")
-          //- img(src="imgs/social-facebook.svg" alt="")
+        a(href="https://www.facebook.com/eduardokmesiano"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-facebook")
-        a(href="#")
-          //- img(src="imgs/social-twitter.svg" alt="")
+        a(href="https://twitter.com/Eduardo_Kling"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-twitter")
-        a(href="#")
-          //- img(src="imgs/social-mail.svg" alt="")
+        a(href="mailto:eduardokmesiano@gmail.com"  target="_blank")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-mail")
 
@@ -163,3 +192,4 @@ html(lang="pt-br")
           a(href="https://dudukling.github.io/") Dudu
           |.
 
+  script(src="default.js" type='text/javascript')

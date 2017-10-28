@@ -2,7 +2,10 @@
 
 document.addEventListener("scroll", function(){
     SkillsAnimationOnScroll();
-    MenuChangeOnScroll();
+
+    if(screen.width > 800){
+        MenuChangeOnScroll();
+    }
 });
 
 /* Function to calculate position of a element referent to the page. */

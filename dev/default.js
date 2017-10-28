@@ -2,7 +2,10 @@
 
 document.addEventListener("scroll", function(){
     SkillsAnimationOnScroll();
-    MenuChangeOnScroll();
+
+    if(screen.width > 800){
+        MenuChangeOnScroll();
+    }
 });
 
 /* Function to calculate position of a element referent to the page. */
@@ -81,7 +84,7 @@ closeModal.addEventListener("click", function(){
     modal.classList.add("-hide");
 }, this);
 
-modal.addEventListener("click", function(e){
+modal.addEventListener("click", function(){
     if (e.target !== this)
     return;
 
@@ -91,3 +94,28 @@ modal.addEventListener("click", function(e){
     this.classList.add("-hide");
 }, this);
 
+
+/* Send email with mailto (Cause PHP doesn't work on Github). */
+let emailSubmit = document.getElementById("emailSubmit");
+
+emailSubmit.addEventListener("click", function(){
+    let name = document.getElementById("inputName");
+    let subject = document.getElementById("inputSubject");
+    let message = document.getElementById("inputMessage");
+
+    let nameV = name.value;
+    let subjectV = subject.value;
+    let messageV = message.value;
+
+    let subjectWithName = subjectV + " - " + nameV;
+    let res1 = subjectWithName.replace(/ /g, "%20");
+    let res2 = messageV.replace(/ /g, "%20").replace(/\n/g, "%0D%0A");
+    
+    let hyperReference = "mailto:eduardokmesiano@gmail.com?subject=" + res1 + "&body=" + res2;
+
+    emailSubmit.setAttribute("href", hyperReference);
+
+    name.value = "";
+    subject.value = "";
+    message.value = "";
+}, this);

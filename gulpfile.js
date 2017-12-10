@@ -10,7 +10,8 @@ var gulp = require('gulp'),
 	htmlmin = require('gulp-htmlmin'),
 	svgo = require('gulp-svgo'),
 	minify = require('gulp-minify'),
-	jshint = require('gulp-jshint');
+	jshint = require('gulp-jshint'),
+	jslint = require('gulp-jslint');
 
 gulp.task('default', ['server'] , function(){});
 
@@ -49,9 +50,10 @@ gulp.task('js', function(){
 		.pipe(plumber())
 		.pipe(jshint())
 		.pipe(jshint.reporter('jshint-stylish'))
+		// .pipe(jslint())
+		// .pipe(jslint.reporter('stylish'))
 		.pipe(minify({
 			ext:{
-				src:'-debug.js',
 				min:'.js'
 			},
 			exclude: ['tasks'],
@@ -89,7 +91,6 @@ gulp.task('build', function () {
 	gulp.src('./dev/*.js')
 		.pipe(minify({
 			ext:{
-				src:'-debug.js',
 				min:'.js'
 			},
 			exclude: ['tasks'],

@@ -1,5 +1,11 @@
 /* jshint esversion: 6 */
 
+// Polyfill to ForEach.
+(function () {
+    if ( typeof NodeList.prototype.forEach === "function" ) return false;
+    NodeList.prototype.forEach = Array.prototype.forEach;
+})();
+
 document.addEventListener("scroll", function () {
     SkillsAnimationOnScroll();
 
@@ -11,13 +17,13 @@ document.addEventListener("scroll", function () {
 /* Function to calculate position of a element referent to the page. */
 function offset(el) {
     let rect = el.getBoundingClientRect();
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = window.pageYOffset || window.scrollY;
     return {top: rect.top + scrollTop};
 }
 
 /* Animate Skills bars to expand only when the user screen is showing them. */
 let level = document.querySelectorAll(".level");
-console.log(level);
+
 let tela = window.innerHeight;
 // let liTopPositions = new Array();
 let liTopPositions = [];
@@ -30,7 +36,7 @@ level.forEach(function (e, i) {
 });
 
 function SkillsAnimationOnScroll() {
-    let topoTela = document.documentElement.scrollTop;
+    let topoTela = window.scrollY;
     let baixoTela = Number(topoTela + tela);
     
     level.forEach(function (e, i) {
@@ -50,7 +56,7 @@ let menu = document.getElementById("menu");
 let aboutTop = offset(about);
 
 function MenuChangeOnScroll() {
-    let topoTela2 = document.documentElement.scrollTop;
+    let topoTela2 = window.scrollY;
 
     if (aboutTop.top - 60 <= topoTela2) {
         menu.classList.remove("-top");

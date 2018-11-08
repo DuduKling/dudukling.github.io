@@ -16,7 +16,9 @@
   "bugs": {
     "url": "https://github.com/DuduKling/dudukling.github.io/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",

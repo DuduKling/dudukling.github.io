@@ -1,10 +1,14 @@
 doctype html
-html(lang="pt-br")
+html(lang="pt-br" dir="ltr")
   include includes/head.pug
 
-  body#body
+  body#js-body
     include includes/svg-social.pug
     include includes/svg-icons.pug
+
+    noscript
+      div.noScript
+        p Este site fica melhor com o JavaScript habilitado. Por favor, habilite!
 
     header.homeHeader
       div.background
@@ -14,7 +18,7 @@ html(lang="pt-br")
       div.present
         div
           div
-            img.avatar(src="imgs/avatar.png" alt="")
+            img.avatar(src="imgs/avatar.png" alt="Imagem do avatar")
         h1.headerName1
           span Eduardo Kling
           br
@@ -22,26 +26,26 @@ html(lang="pt-br")
           span Mesiano
           br
 
-    section.about#sobre
+    section.about#js-sobre
       h3 Oi, eu sou o Dudu!
 
       p.aboutMeSumUp Desenvolvedor Front-End de Petrópolis, RJ. <br />
         | Estudante de engenharia de computação e amante de tecnologia.
 
       div.socialMedias
-        a(href="https://github.com/DuduKling" target="_blank")
+        a(href="https://github.com/DuduKling" target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-github")
-        a(href="https://www.linkedin.com/in/eduardo-kling-mesiano-2aab7b113/"  target="_blank")
+        a(href="https://www.linkedin.com/in/eduardo-kling-mesiano-2aab7b113/"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-linkedin")
-        a(href="https://www.facebook.com/eduardokmesiano"  target="_blank")
+        a(href="https://www.facebook.com/eduardokmesiano"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-facebook")
-        a(href="https://twitter.com/Eduardo_Kling"  target="_blank")
+        a(href="https://twitter.com/Eduardo_Kling"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-twitter")
-        a(href="mailto:eduardokmesiano@gmail.com"  target="_blank")
+        a(href="mailto:eduardokmesiano@gmail.com"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-mail")
 
@@ -92,36 +96,36 @@ html(lang="pt-br")
             h2 Load Interiores
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-load.png", alt="") 
+          img.case(src="./imgs/atelier-load.png", alt="Imagem de exemplo do portfólio 1") 
         div.frame
           div.hover
             h2 Clínica Dr. Tannure
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-tannure.png", alt="")
+          img.case(src="./imgs/atelier-tannure.png", alt="Imagem de exemplo do portfólio 2")
         div.frame
           div.hover
             h2 Reanult Serra
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-renaultserra.png", alt="")
+          img.case(src="./imgs/atelier-renaultserra.png", alt="Imagem de exemplo do portfólio 2")
         div.frame
           div.hover
             h2 Buska Imóvel
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-buska.png", alt="")
+          img.case(src="./imgs/atelier-buska.png", alt="Imagem de exemplo do portfólio 3")
         div.frame
           div.hover
             h2 Storti & Boechat
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-stortiboechat.png", alt="")
+          img.case(src="./imgs/atelier-stortiboechat.png", alt="Imagem de exemplo do portfólio 4")
       
-      div#modal.-hide
-        div#closeModal
+      div#js-modal.modal.-hide
+        div#js-closeModal.closeModal
         div.img
-          img(src="#", alt="")
+          img(src="#", alt="Imagemde exemplo do portfólio grande")
 
     section.blog#blog
       h3 Blog
@@ -168,26 +172,26 @@ html(lang="pt-br")
 
       form(action="#")
         div.textField
-          input(type="text" id="inputName" placeholder="// Nome Completo")
-          input(type="text" id="inputSubject" placeholder="// Assunto")
-        textarea(name="message" id="inputMessage" cols="30" rows="10" placeholder="// Mensagem")
-        a(href="#" id="emailSubmit" target="_blank") Enviar Mensagem
+          input(type="text" id="js-inputName" placeholder="// Nome Completo")
+          input(type="text" id="js-inputSubject" placeholder="// Assunto")
+        textarea(name="message" id="js-inputMessage" cols="30" rows="10" placeholder="// Mensagem")
+        a(href="#" id="js-emailSubmit" class="emailSubmit" target="_blank" rel="noopener") Enviar Mensagem
 
     footer.homeFooter
       div.socialMedias
-        a(href="https://github.com/DuduKling" target="_blank")
+        a(href="https://github.com/DuduKling" target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-github")
-        a(href="https://www.linkedin.com/in/eduardo-kling-mesiano-2aab7b113/"  target="_blank")
+        a(href="https://www.linkedin.com/in/eduardo-kling-mesiano-2aab7b113/"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-linkedin")
-        a(href="https://www.facebook.com/eduardokmesiano"  target="_blank")
+        a(href="https://www.facebook.com/eduardokmesiano"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-facebook")
-        a(href="https://twitter.com/Eduardo_Kling"  target="_blank")
+        a(href="https://twitter.com/Eduardo_Kling"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-twitter")
-        a(href="mailto:eduardokmesiano@gmail.com"  target="_blank")
+        a(href="mailto:eduardokmesiano@gmail.com"  target="_blank" rel="noopener")
           svg(viewBox="0 0 24 24")
             use(xlink:href="#svg-mail")
 
@@ -197,4 +201,5 @@ html(lang="pt-br")
           a(href="https://dudukling.github.io/") Dudu
           |.
 
-    script(src="default.js" type='text/javascript')
+    script(src="default.js" async type='text/javascript')
+

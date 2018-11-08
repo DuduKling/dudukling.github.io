@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
 	jslint = require('gulp-jslint'),
 	uglify = require('gulp-uglify'),
+	uglifyJS = require('uglify-js'),
 	pump = require('pump'),
 	babel = require("gulp-babel"),
 	concat = require("gulp-concat");

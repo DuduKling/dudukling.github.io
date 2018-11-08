@@ -70,6 +70,9 @@ gulp.task('imgs', function() {
 	.pipe(imagemin())
 	.pipe(svgo())
 	.pipe(gulp.dest('./imgs/'));
+	gulp.src('./dev/*.png')
+	.pipe(imagemin())
+	.pipe(gulp.dest('./'));
 });
 
 gulp.task('build', function () {
@@ -93,6 +96,9 @@ gulp.task('build', function () {
 		.pipe(imagemin())
 		.pipe(svgo())
 		.pipe(gulp.dest('./imgs/'));
+	gulp.src('./dev/*.png')
+		.pipe(imagemin())
+		.pipe(gulp.dest('./'));
 
 	gulp.src('./dev/*.js')
 		.pipe(plumber())

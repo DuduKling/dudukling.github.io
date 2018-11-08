@@ -18,7 +18,7 @@ html(lang="pt-br" dir="ltr")
       div.present
         div
           div
-            img.avatar(src="imgs/avatar.png" alt="Imagem do avatar")
+            img.avatar(src="imgs/avatar.png" alt="Desenho de uma pessoa de cabelo preto e camisa azul em um fundo verde")
         h1.headerName1
           span Eduardo Kling
           br
@@ -26,7 +26,7 @@ html(lang="pt-br" dir="ltr")
           span Mesiano
           br
 
-    section.about#js-sobre
+    section.about#sobre
       h3 Oi, eu sou o Dudu!
 
       p.aboutMeSumUp Desenvolvedor Front-End de Petrópolis, RJ. <br />
@@ -96,36 +96,36 @@ html(lang="pt-br" dir="ltr")
             h2 Load Interiores
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-load.png", alt="Imagem de exemplo do portfólio 1") 
+          img.case(src="./imgs/atelier-load.png", alt="Imagem de exemplo do portfólio - Site Load Design") 
         div.frame
           div.hover
             h2 Clínica Dr. Tannure
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-tannure.png", alt="Imagem de exemplo do portfólio 2")
+          img.case(src="./imgs/atelier-tannure.png", alt="Imagem de exemplo do portfólio - Site Tannure")
         div.frame
           div.hover
             h2 Reanult Serra
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-renaultserra.png", alt="Imagem de exemplo do portfólio 2")
+          img.case(src="./imgs/atelier-renaultserra.png", alt="Imagem de exemplo do portfólio - Site Renault Serra")
         div.frame
           div.hover
             h2 Buska Imóvel
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-buska.png", alt="Imagem de exemplo do portfólio 3")
+          img.case(src="./imgs/atelier-buska.png", alt="Imagem de exemplo do portfólio - Site Buska")
         div.frame
           div.hover
             h2 Storti & Boechat
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-stortiboechat.png", alt="Imagem de exemplo do portfólio 4")
+          img.case(src="./imgs/atelier-stortiboechat.png", alt="Imagem de exemplo do portfólio - Site Storti e Boechat")
       
       div#js-modal.modal.-hide
         div#js-closeModal.closeModal
         div.img
-          img(src="#", alt="Imagemde exemplo do portfólio grande")
+          img(src="#", alt="Imagem de exemplo do portfólio tamanho maior")
 
     section.blog#blog
       h3 Blog
@@ -172,9 +172,9 @@ html(lang="pt-br" dir="ltr")
 
       form(action="#")
         div.textField
-          input(type="text" id="js-inputName" placeholder="// Nome Completo")
-          input(type="text" id="js-inputSubject" placeholder="// Assunto")
-        textarea(name="message" id="js-inputMessage" cols="30" rows="10" placeholder="// Mensagem")
+          input(type="text" id="js-inputName" placeholder="// Nome Completo" aria-label="Nome Completo")
+          input(type="text" id="js-inputSubject" placeholder="// Assunto" aria-label="Assunto")
+        textarea(name="message" id="js-inputMessage" cols="30" rows="10" placeholder="// Mensagem" aria-label="Mensagem")
         a(href="#" id="js-emailSubmit" class="emailSubmit" target="_blank" rel="noopener") Enviar Mensagem
 
     footer.homeFooter

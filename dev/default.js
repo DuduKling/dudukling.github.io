@@ -51,7 +51,7 @@ function SkillsAnimationOnScroll() {
 }
 
 /* Change style of Menu when user scroll down after the ATF (Above The Fold). */
-let about = document.getElementById("js-sobre");
+let about = document.getElementById("sobre");
 let menu = document.getElementById("js-menu");
 let aboutTop = offset(about);
 

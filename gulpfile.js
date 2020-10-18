@@ -15,21 +15,21 @@ const gulp = require('gulp'),
 
 const paths = {
 	sass: {
-		src: './dev/*.sass',
+		src: './src/*.sass',
 		dest: './',
 	},
 	pug: {
-		src: './dev/*.pug',
-		src2: './dev/includes/*.pug',
+		src: './src/*.pug',
+		src2: './src/includes/*.pug',
 		dest: './',
 	},
 	js: {
-		src: './dev/*.js',
+		src: './src/*.js',
 		dest: './',
 	},
 	imgs: {
-		src: './dev/imgs/*',
-		src2: './dev/*.png',
+		src: './src/imgs/*',
+		src2: './src/*.png',
 		dest: './imgs/',
 	},
 	root: {
@@ -43,7 +43,7 @@ const paths = {
 function runWatch() {
 	browserSync.init({
 		server: {
-			baseDir: './'
+			baseDir: paths.root.src,
 		}
 	});
 
@@ -59,7 +59,9 @@ function runWatch() {
 
 function runSass() {
 	return gulp.src(paths.sass.src)
+		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(paths.sass.dest));
 }
 
@@ -70,9 +72,7 @@ function runSassPrd() {
 			overrideBrowserslist: ['defaults'],
 			cascade: false
 		}))
-		.pipe(sourcemaps.init())
 		.pipe(cssnano())
-		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(paths.sass.dest));
 }
 

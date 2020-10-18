@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
 	browserSync = require('browser-sync').create(),
 	sass = require('gulp-sass'),
 	pug = require('gulp-pug'),
@@ -7,88 +7,86 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssnano = require('gulp-cssnano'),
 	sourcemaps = require('gulp-sourcemaps'),
-	htmlmin = require('gulp-htmlmin'),
 	svgo = require('gulp-svgo'),
 	minify = require('gulp-minify'),
-	jshint = require('gulp-jshint'),
-	jslint = require('gulp-jslint');
+	jshint = require('gulp-jshint');
 
-gulp.task('default', ['server'] , function(){});
+const paths = {
+	sass: {
+		src: './dev/*.sass',
+		dest: './',
+	},
+	pug: {
+		src: './dev/*.pug',
+		src2: './dev/includes/*.pug',
+		dest: './',
+	},
+	js: {
+		src: './dev/*.js',
+		dest: './',
+	},
+	imgs: {
+		src: './dev/imgs/*',
+		dest: './imgs/',
+	},
+	root: {
+		src: './',
+		css: './*.css',
+		html: './*.html',
+		js: './*.js',
+	},
+};
 
-gulp.task('server', function() {
+function runWatch() {
 	browserSync.init({
 		server: {
 			baseDir: './'
 		}
 	});
 
-	gulp.watch("./dev/*.sass", ['sass']);
-	gulp.watch("./dev/*.pug", ['pug']);
-	gulp.watch("./dev/includes/*.pug", ['pug']);
-	gulp.watch("./dev/*.js", ['js']);
+	gulp.watch(paths.sass.src, runSass);
+	gulp.watch(paths.pug.src, runPug);
+	gulp.watch(paths.pug.src2, runPug);
+	gulp.watch(paths.js.src, runJs);
 
-	gulp.watch("./*.css").on('change', browserSync.reload);
-	gulp.watch("./*.html").on('change', browserSync.reload);
-	gulp.watch("./*.js").on('change', browserSync.reload);
-});
+	gulp.watch(paths.root.css, browserSync.reload);
+	gulp.watch(paths.root.html, browserSync.reload);
+	gulp.watch(paths.root.js, browserSync.reload);
+}
 
-gulp.task('sass', function() {
-	gulp.src("./dev/*.sass")
+const runBuild = gulp.parallel(runSassPrd, runPug, runJsPrd, runImgs);
+
+function runSass() {
+	return gulp.src(paths.sass.src)
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest("./"));
-});
+		.pipe(gulp.dest(paths.sass.dest));
+}
 
-gulp.task('pug', function() {
-	gulp.src("./dev/*.pug")
-		.pipe(plumber())
-		.pipe(pug())
-		.pipe(gulp.dest("./"));
-});
-
-gulp.task('js', function(){
-	gulp.src('./dev/*.js')
-		.pipe(plumber())
-		.pipe(jshint())
-		.pipe(jshint.reporter('jshint-stylish'))
-		// .pipe(jslint())
-		// .pipe(jslint.reporter('stylish'))
-		.pipe(minify({
-			ext:{
-				min:'.js'
-			},
-			exclude: ['tasks'],
-			ignoreFiles: ['.combo.js', '-min.js']
-		}))
-		.pipe(gulp.dest('./'));
-});
-
-gulp.task('imgs', function() {
-	gulp.src('./dev/imgs/*')
-	.pipe(imagemin())
-	.pipe(svgo())
-	.pipe(gulp.dest('./imgs/'));
-});
-
-gulp.task('build', function () {
-	gulp.src('./dev/*.sass')
+function runSassPrd() {
+	return gulp.src(paths.sass.src)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
-			browsers: ['last 10 versions'],
+			overrideBrowserslist: ['defaults'],
 			cascade: false
 		}))
 		.pipe(sourcemaps.init())
 		.pipe(cssnano())
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./'));
-	gulp.src("./dev/*.pug")
+		.pipe(gulp.dest(paths.sass.dest));
+}
+
+function runPug() {
+	return gulp.src(paths.pug.src)
 		.pipe(plumber())
 		.pipe(pug())
-		.pipe(gulp.dest("./"));
-	gulp.src('./dev/imgs/*')
-		.pipe(imagemin())
-		.pipe(svgo())
-		.pipe(gulp.dest('./imgs/'));
-	gulp.src('./dev/*.js')
+		.pipe(gulp.dest(paths.pug.dest));
+}
+
+function runJs() {
+	return gulp.src(paths.js.src)
+		.pipe(plumber())
+		.pipe(jshint())
+		.pipe(jshint.reporter('jshint-stylish'))
 		.pipe(minify({
 			ext:{
 				min:'.js'
@@ -96,5 +94,33 @@ gulp.task('build', function () {
 			exclude: ['tasks'],
 			ignoreFiles: ['.combo.js', '-min.js']
 		}))
-		.pipe(gulp.dest('./'));
-});
+		.pipe(gulp.dest(paths.js.dest));
+}
+
+function runJsPrd() {
+	return gulp.src(paths.js.src)
+		.pipe(minify({
+			ext:{
+				min:'.js'
+			},
+			exclude: ['tasks'],
+			ignoreFiles: ['.combo.js', '-min.js']
+		}))
+		.pipe(gulp.dest(paths.js.dest));
+}
+
+function runImgs() {
+	return gulp.src(paths.imgs.src)
+		.pipe(imagemin())
+		.pipe(svgo())
+		.pipe(gulp.dest(paths.imgs.dest));
+}
+
+exports.runWatch = runWatch;
+exports.runBuild = runBuild;
+exports.runSass = runSass;
+exports.runPug = runPug;
+exports.runJs = runJs;
+exports.runImgs = runImgs;
+
+exports.default = runWatch;

@@ -8,8 +8,10 @@ const gulp = require('gulp'),
 	cssnano = require('gulp-cssnano'),
 	sourcemaps = require('gulp-sourcemaps'),
 	svgo = require('gulp-svgo'),
-	minify = require('gulp-minify'),
-	jshint = require('gulp-jshint');
+	uglify = require('gulp-uglify'),
+	babel = require('gulp-babel'),
+	concat = require('gulp-concat');
+
 
 const paths = {
 	sass: {
@@ -27,6 +29,7 @@ const paths = {
 	},
 	imgs: {
 		src: './dev/imgs/*',
+		src2: './dev/*.png',
 		dest: './imgs/',
 	},
 	root: {
@@ -53,8 +56,6 @@ function runWatch() {
 	gulp.watch(paths.root.html, browserSync.reload);
 	gulp.watch(paths.root.js, browserSync.reload);
 }
-
-const runBuild = gulp.parallel(runSassPrd, runPug, runJsPrd, runImgs);
 
 function runSass() {
 	return gulp.src(paths.sass.src)
@@ -85,36 +86,42 @@ function runPug() {
 function runJs() {
 	return gulp.src(paths.js.src)
 		.pipe(plumber())
-		.pipe(jshint())
-		.pipe(jshint.reporter('jshint-stylish'))
-		.pipe(minify({
-			ext:{
-				min:'.js'
-			},
-			exclude: ['tasks'],
-			ignoreFiles: ['.combo.js', '-min.js']
+		.pipe(sourcemaps.init())
+		.pipe(babel({
+			presets: ['@babel/env']
 		}))
+		.pipe(concat("default.js"))
+		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest(paths.js.dest));
 }
 
 function runJsPrd() {
 	return gulp.src(paths.js.src)
-		.pipe(minify({
-			ext:{
-				min:'.js'
-			},
-			exclude: ['tasks'],
-			ignoreFiles: ['.combo.js', '-min.js']
+		.pipe(plumber())
+		.pipe(babel({
+			presets: ['@babel/env']
 		}))
+		.pipe(concat("default.js"))
+		.pipe(uglify())
 		.pipe(gulp.dest(paths.js.dest));
 }
 
-function runImgs() {
+function runImgsAssets() {
 	return gulp.src(paths.imgs.src)
 		.pipe(imagemin())
 		.pipe(svgo())
 		.pipe(gulp.dest(paths.imgs.dest));
 }
+
+function runImgsIcons() {
+	return gulp.src(paths.imgs.src2)
+		.pipe(imagemin())
+		.pipe(gulp.dest(paths.root.src));
+}
+
+const runImgs = gulp.parallel(runImgsAssets, runImgsIcons);
+const runBuild = gulp.parallel(runSassPrd, runPug, runJsPrd, runImgs);
+
 
 exports.runWatch = runWatch;
 exports.runBuild = runBuild;

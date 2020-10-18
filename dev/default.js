@@ -1,5 +1,11 @@
 /* jshint esversion: 6 */
 
+// Polyfill to ForEach.
+(function () {
+    if ( typeof NodeList.prototype.forEach === "function" ) return false;
+    NodeList.prototype.forEach = Array.prototype.forEach;
+})();
+
 document.addEventListener("scroll", function () {
     SkillsAnimationOnScroll();
 
@@ -11,13 +17,13 @@ document.addEventListener("scroll", function () {
 /* Function to calculate position of a element referent to the page. */
 function offset(el) {
     let rect = el.getBoundingClientRect();
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = window.pageYOffset || window.scrollY;
     return {top: rect.top + scrollTop};
 }
 
 /* Animate Skills bars to expand only when the user screen is showing them. */
 let level = document.querySelectorAll(".level");
-console.log(level);
+
 let tela = window.innerHeight;
 // let liTopPositions = new Array();
 let liTopPositions = [];
@@ -30,7 +36,7 @@ level.forEach(function (e, i) {
 });
 
 function SkillsAnimationOnScroll() {
-    let topoTela = document.documentElement.scrollTop;
+    let topoTela = window.scrollY;
     let baixoTela = Number(topoTela + tela);
     
     level.forEach(function (e, i) {
@@ -46,11 +52,11 @@ function SkillsAnimationOnScroll() {
 
 /* Change style of Menu when user scroll down after the ATF (Above The Fold). */
 let about = document.getElementById("sobre");
-let menu = document.getElementById("menu");
+let menu = document.getElementById("js-menu");
 let aboutTop = offset(about);
 
 function MenuChangeOnScroll() {
-    let topoTela2 = document.documentElement.scrollTop;
+    let topoTela2 = window.scrollY;
 
     if (aboutTop.top - 60 <= topoTela2) {
         menu.classList.remove("-top");
@@ -63,10 +69,10 @@ function MenuChangeOnScroll() {
 
 
 /* A shitty kind of Lightbox */
-let body = document.getElementById("body");
+let body = document.getElementById("js-body");
 let skill = document.querySelectorAll(".frame");
-let modal = document.getElementById("modal");
-let closeModal = document.getElementById("closeModal");
+let modal = document.getElementById("js-modal");
+let closeModal = document.getElementById("js-closeModal");
 
 skill.forEach(function (e, i) {
     skill[i].addEventListener("click", function () {
@@ -98,12 +104,12 @@ modal.addEventListener("click", function (e){
 
 
 /* Send email with mailto (Cause PHP doesn't work on Github). */
-let emailSubmit = document.getElementById("emailSubmit");
+let emailSubmit = document.getElementById("js-emailSubmit");
 
 emailSubmit.addEventListener("click", function () {
-    let name = document.getElementById("inputName");
-    let subject = document.getElementById("inputSubject");
-    let message = document.getElementById("inputMessage");
+    let name = document.getElementById("js-inputName");
+    let subject = document.getElementById("js-inputSubject");
+    let message = document.getElementById("js-inputMessage");
 
     let nameV = name.value;
     let subjectV = subject.value;

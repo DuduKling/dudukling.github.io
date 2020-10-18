@@ -127,7 +127,7 @@ $font2: 'Montserrat', sans-serif
 				&:hover:after
 					content: none
 	
-	> #respMenu
+	> .respMenu
 		display: none
 
 	> .hamburgerMenu
@@ -209,6 +209,7 @@ $font2: 'Montserrat', sans-serif
 			letter-spacing: 4px
 			text-shadow: 3px 3px #262c31
 			text-align: center
+			height: 35px;
 
 			border-right: 2px solid transparent
 			
@@ -235,6 +236,20 @@ $font2: 'Montserrat', sans-serif
 			width: 182px
 			animation: write2 2.5s steps(9) 5s 1 normal both,cursor 500ms steps(9) 5s 8 normal
 
+.noScript
+	width: 100%
+	height: 30px
+	background-color: rgba(44, 173, 136, 0.52)
+	color: $cinza
+	position: fixed
+	top: 60px
+	left: 0
+	z-index: 10
+	display: flex
+	justify-content: center
+	align-items: center
+	font-family: "Varela Round", sans-serif
+	font-size: 12px
 
 .about
 	width: 100%
@@ -417,7 +432,7 @@ $font2: 'Montserrat', sans-serif
 			border: 1px solid $cinza
 			border-radius: 15px
 			margin: 0 20px 30px 20px
-			// background-color: $cinza
+			background-color: $cinza
 
 			position: relative
 			overflow: hidden
@@ -461,7 +476,7 @@ $font2: 'Montserrat', sans-serif
 				> .case
 					transform: scale(1.1)
 
-	> #modal
+	> .modal
 		width: 100%
 		min-height: 100vh
 		position: fixed
@@ -480,7 +495,7 @@ $font2: 'Montserrat', sans-serif
 		&.-show
 			display: flex
 
-		> #closeModal
+		> .closeModal
 			width: 23px
 			height: 23px
 			position: fixed
@@ -605,6 +620,18 @@ $font2: 'Montserrat', sans-serif
 						text-decoration: none
 						color: lighten($preto, 10%)
 						transition: color 0.2s ease
+	
+	> .link-blog
+		color: $cinza
+		background-color: $verde
+		padding: 5px 15px
+		border-radius: 5px
+		transition: all 0.3s ease
+		text-decoration: none
+		font-family: $font1
+
+		&:hover 
+			background-color: darken($verde, 10%)
 
 .contact
 	width: 100%
@@ -688,7 +715,7 @@ $font2: 'Montserrat', sans-serif
 					border-color: $verde
 					outline: none	
 
-		> #emailSubmit
+		> .emailSubmit
 			padding: 10px
 			background-color: $cinza
 			
@@ -825,11 +852,11 @@ $font2: 'Montserrat', sans-serif
 				min-width: auto
 				max-width: none
 
-		> #modal
+		> .modal
 			> .img
 				width: 100%
 			
-			> #closeModal
+			> .closeModal
 				top: 15px
 				right: 15px
 			
@@ -878,7 +905,7 @@ $font2: 'Montserrat', sans-serif
 		> .hamburgerMenu
 			display: flex
 
-		> #respMenu:checked + ul
+		> .respMenu:checked + ul
 			height: 318px
 		
 @media only screen and (max-width: 500px)

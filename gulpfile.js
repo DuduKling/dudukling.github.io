@@ -1,17 +1,16 @@
-const gulp = require('gulp'),
-	browserSync = require('browser-sync').create(),
-	sass = require('gulp-sass'),
-	pug = require('gulp-pug'),
-	plumber = require('gulp-plumber'),
-	imagemin = require('gulp-imagemin'),
-	autoprefixer = require('gulp-autoprefixer'),
-	cssnano = require('gulp-cssnano'),
-	sourcemaps = require('gulp-sourcemaps'),
-	svgo = require('gulp-svgo'),
-	uglify = require('gulp-uglify'),
-	babel = require('gulp-babel'),
-	concat = require('gulp-concat');
-
+import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
+import browserSync from 'browser-sync';
+import sass from 'gulp-sass';
+import pug from 'gulp-pug';
+import plumber from 'gulp-plumber';
+import autoprefixer from 'gulp-autoprefixer';
+import cssnano from 'gulp-cssnano';
+import sourcemaps from 'gulp-sourcemaps';
+import svgo from 'gulp-svgo';
+import uglify from 'gulp-uglify';
+import babel from 'gulp-babel';
+import concat from 'gulp-concat';
 
 const paths = {
 	sass: {
@@ -122,12 +121,12 @@ function runImgsIcons() {
 const runImgs = gulp.parallel(runImgsAssets, runImgsIcons);
 const runBuild = gulp.parallel(runSassPrd, runPug, runJsPrd, runImgs);
 
-
-exports.runWatch = runWatch;
-exports.runBuild = runBuild;
-exports.runSass = runSass;
-exports.runPug = runPug;
-exports.runJs = runJs;
-exports.runImgs = runImgs;
-
-exports.default = runWatch;
+export default runWatch;
+export {
+	runWatch,
+	runBuild,
+	runSass,
+	runPug,
+	runJs,
+	runImgs,
+};

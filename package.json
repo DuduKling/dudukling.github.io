@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/DuduKling/dudukling.github.io/issues"
   },
+  "type": "module",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.15.8",

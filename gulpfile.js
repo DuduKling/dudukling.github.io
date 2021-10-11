@@ -46,7 +46,9 @@ const paths = {
 };
 
 function runWatch() {
-	browserSync.init({
+	const bs = browserSync.create();
+
+	bs.init({
 		server: {
 			baseDir: paths.root.src,
 		}
@@ -57,9 +59,9 @@ function runWatch() {
 	gulp.watch(paths.pugIncludes.src, runPug);
 	gulp.watch(paths.js.src, runJs);
 
-	gulp.watch(paths.root.css, browserSync.reload);
-	gulp.watch(paths.root.html, browserSync.reload);
-	gulp.watch(paths.root.js, browserSync.reload);
+	gulp.watch(paths.root.css, bs.reload);
+	gulp.watch(paths.root.html, bs.reload);
+	gulp.watch(paths.root.js, bs.reload);
 }
 
 function runSass() {

@@ -23,7 +23,7 @@ const paths = {
 		dest: './',
 	},
 	pugIncludes: {
-		src: './src/includes/*.pug',
+		src: './src/includes/**/*.pug',
 	},
 	js: {
 		src: './src/assets/*.js',

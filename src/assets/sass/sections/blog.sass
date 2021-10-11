@@ -1,0 +1,101 @@
+.blog
+	width: 100%
+	padding: 40px 5%
+	background-color: $cinza
+
+	> h3
+		font-family: $font1
+		color: $preto
+		font-size: 28px
+		padding-bottom: 5px
+		border-bottom: 2px solid $preto
+		margin-bottom: 25px
+
+	> .blogContainer
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
+		
+		> .post
+			width: 30%
+			padding: 15px 15px 15px 15px
+			margin-bottom: 30px
+			font-family: $font2
+			border: 1px solid lighten($preto, 75%)
+			transition: box-shadow 0.2s ease
+
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			&:hover
+				box-shadow: 0px 0px 5px lighten($preto, 50%)
+
+				> .postlink > .postTitle
+					color: $verde
+			
+			> .postlink
+				display: block
+				text-decoration: none
+				color: $preto
+
+				> .postTitle
+					letter-spacing: 2px
+					font-size: 24px
+					margin-bottom: 3px
+					transition: color 0.2s ease
+				
+				> .infos
+					font-size: 12px
+					color: darken($cinza, 50%)
+					margin-bottom: 30px
+
+				> .peek
+					color: lighten($preto, 10%)
+					line-height: 22px
+					margin-bottom: 20px
+			
+			> .tags
+				align-self: flex-end
+				padding: 0
+				color: lighten($preto, 10%)
+				list-style-type: none
+				
+				display: flex
+
+				> li
+					margin-left: 5px
+					padding: 5px
+					border-radius: 3px
+					font-size: 14px
+					transition: background-color 0.2s ease
+
+					&:hover
+						background-color: $verde
+
+						> a
+							color: $cinza
+
+					> a 
+						text-decoration: none
+						color: lighten($preto, 10%)
+						transition: color 0.2s ease
+	
+	> .link-blog
+		color: $cinza
+		background-color: $verde
+		padding: 5px 15px
+		border-radius: 5px
+		transition: all 0.3s ease
+		text-decoration: none
+		font-family: $font1
+
+		&:hover 
+			background-color: darken($verde, 10%)
+
+@media only screen and (max-width: 1000px)
+	.blog
+		> .blogContainer		
+			> .post
+				width: 100%

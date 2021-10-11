@@ -1,0 +1,163 @@
+.portfolio
+	width: 100%
+	padding: 40px 5%
+	background-color: $verde
+
+	> h3
+		font-family: $font1
+		color: $cinza
+		font-size: 28px
+		padding-bottom: 5px
+		border-bottom: 2px solid $cinza
+		margin-bottom: 25px
+
+	> .portfolioContainer
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+
+		> .frame
+			height: 400px
+			min-width: 250px
+			max-width: calc(30% - 20px)
+			flex-grow: 1
+
+			border: 1px solid $cinza
+			border-radius: 15px
+			margin: 0 20px 30px 20px
+			background-color: $cinza
+
+			position: relative
+			overflow: hidden
+			cursor: pointer
+
+			transition: all 0.2s ease
+
+			> .case
+				width: 100%
+				transition: all 0.2s ease
+				z-index: 0
+
+			> .hover
+				width: 100%
+				height: 100%
+				background-color: rgba(248,248,248,0.7)
+
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				position: absolute
+				z-index: 1
+
+				opacity: 0
+				transition: opacity 0.2s ease
+
+				> h2 
+					font-family: $font1
+					margin-bottom: 20px
+
+				> svg
+					display: block
+					width: 35px
+					height: 35px
+
+			&:hover
+				> .hover
+					opacity: 1
+
+				> .case
+					transform: scale(1.1)
+
+	> .modal
+		width: 100%
+		min-height: 100vh
+		position: fixed
+		z-index: 11
+		top: 0
+		left: 0
+		background-color: rgba(0,0,0,0.8)
+		justify-content: center
+		padding-top: 50px
+		overflow-y: scroll
+
+		&.-hide
+			display: none
+			overflow: hidden
+		
+		&.-show
+			display: flex
+
+		> .closeModal
+			width: 23px
+			height: 23px
+			position: fixed
+			top: 25px
+			right: 50px
+			cursor: pointer
+
+			&::after
+				content: ''
+				width: 30px
+				height: 5px
+				position: absolute
+				top: 9px
+				left: -5px
+				background-color: white
+				transform: rotate(-45deg) 
+				border-radius: 10px
+				
+			&::before
+				content: ''
+				width: 30px
+				height: 5px
+				position: absolute
+				top: 9px 
+				left: -5px
+				background-color: white
+				transform: rotate(45deg)
+				border-radius: 10px
+
+		> .img
+			width: 800px
+			position: absolute
+			border: 5px solid darken($cinza, 10%)
+			margin-bottom: 50px
+			background-color: white
+
+			animation: zoom 0.5s
+
+			> img
+				width: 100%
+
+
+@keyframes zoom
+	from
+		transform: scale(0) 
+	to
+		transform: scale(1)
+
+@media only screen and (max-width: 1000px)
+	.portfolio
+		> .portfolioContainer
+			> .frame
+				height: 400px
+				min-width: 300px
+
+@media only screen and (max-width: 800px)
+	.portfolio
+		> .portfolioContainer
+			> .frame
+				height: 300px
+				min-width: auto
+				max-width: none
+
+		> .modal
+			> .img
+				width: 100%
+			
+			> .closeModal
+				top: 15px
+				right: 15px
+			

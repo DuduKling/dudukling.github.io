@@ -1,0 +1,56 @@
+.homeFooter
+	width: 100%
+	height: 50vh
+	padding: 8vh 5% 0 5%
+	background-color: $cinza
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+	
+	font-family: $font1
+
+	> .socialMedias
+		width: 35%
+		display: flex
+		justify-content: space-around
+
+		> a 
+			> svg
+				display: block
+				width: 50px
+				height: 50px
+				transition: all 0.2s ease
+
+				&:hover
+					fill: $verde
+				
+	
+	> .copyrightText
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		> p
+			margin-bottom: 5px
+
+			> a
+				color: black
+				transition: color 0.2s ease
+
+				&:hover
+					color: $verde
+
+@media only screen and (max-width: 1000px)
+	.homeFooter
+		> .socialMedias
+			width: auto
+			flex-wrap: wrap
+
+			> a
+				margin-right: 20px
+				margin-bottom: 20px
+
+				&:last-child
+					margin-right: 0

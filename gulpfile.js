@@ -15,8 +15,11 @@ import concat from 'gulp-concat';
 
 const paths = {
 	sass: {
-		src: './src/assets/*.sass',
+		src: './src/assets/style.sass',
 		dest: './assets/',
+	},
+	sassImports: {
+		src: './src/assets/**/*.sass',
 	},
 	pug: {
 		src: './src/index.pug',
@@ -39,22 +42,18 @@ const paths = {
 	},
 	root: {
 		src: './',
-		css: './*.css',
+		css: './assets/*.css',
 		html: './*.html',
-		js: './*.js',
+		js: './assets/*.js',
 	},
 };
 
 function runWatch() {
 	const bs = browserSync.create();
-
-	bs.init({
-		server: {
-			baseDir: paths.root.src,
-		}
-	});
+	bs.init({ server: { baseDir: paths.root.src } });
 
 	gulp.watch(paths.sass.src, runSass);
+	gulp.watch(paths.sassImports.src, runSass);
 	gulp.watch(paths.pug.src, runPug);
 	gulp.watch(paths.pugIncludes.src, runPug);
 	gulp.watch(paths.js.src, runJs);

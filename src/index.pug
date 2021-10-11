@@ -1,10 +1,10 @@
 doctype html
 html(lang="pt-br" dir="ltr")
-  include includes/head.pug
+  include assets/includes/head.pug
 
   body#js-body
-    include includes/svg-social.pug
-    include includes/svg-icons.pug
+    include assets/includes/svg-social.pug
+    include assets/includes/svg-icons.pug
 
     noscript
       div.noScript
@@ -13,12 +13,12 @@ html(lang="pt-br" dir="ltr")
     header.homeHeader
       div.background
 
-      include includes/menu.pug
+      include assets/includes/menu.pug
 
       div.present
         div
           div
-            img.avatar(src="imgs/avatar.png" alt="Desenho de uma pessoa de cabelo preto e camisa azul em um fundo verde")
+            img.avatar(src="assets/images/avatar.png" alt="Desenho de uma pessoa de cabelo preto e camisa azul em um fundo verde")
         h1.headerName1
           span Eduardo Kling
           br
@@ -96,31 +96,31 @@ html(lang="pt-br" dir="ltr")
             h2 Load Interiores
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-load.png", alt="Imagem de exemplo do portfólio - Site Load Design") 
+          img.case(src="./assets/images/atelier-load.png", alt="Imagem de exemplo do portfólio - Site Load Design") 
         div.frame
           div.hover
             h2 Clínica Dr. Tannure
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-tannure.png", alt="Imagem de exemplo do portfólio - Site Tannure")
+          img.case(src="./assets/images/atelier-tannure.png", alt="Imagem de exemplo do portfólio - Site Tannure")
         div.frame
           div.hover
             h2 Reanult Serra
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-renaultserra.png", alt="Imagem de exemplo do portfólio - Site Renault Serra")
+          img.case(src="./assets/images/atelier-renaultserra.png", alt="Imagem de exemplo do portfólio - Site Renault Serra")
         div.frame
           div.hover
             h2 Buska Imóvel
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-buska.png", alt="Imagem de exemplo do portfólio - Site Buska")
+          img.case(src="./assets/images/atelier-buska.png", alt="Imagem de exemplo do portfólio - Site Buska")
         div.frame
           div.hover
             h2 Storti & Boechat
             svg(viewBox="0 0 24 24")
               use(xlink:href="#svg-magnifier")
-          img.case(src="./imgs/atelier-stortiboechat.png", alt="Imagem de exemplo do portfólio - Site Storti e Boechat")
+          img.case(src="./assets/images/atelier-stortiboechat.png", alt="Imagem de exemplo do portfólio - Site Storti e Boechat")
       
       div#js-modal.modal.-hide
         div#js-closeModal.closeModal
@@ -201,5 +201,4 @@ html(lang="pt-br" dir="ltr")
           a(href="https://dudukling.github.io/") Dudu
           |.
 
-    script(src="default.js" async type='text/javascript')
-
+    script(src="assets/default.js" async type='text/javascript')

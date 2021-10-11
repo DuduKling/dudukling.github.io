@@ -1,7 +1,8 @@
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import browserSync from 'browser-sync';
-import sass from 'gulp-sass';
+import gulpSass from 'gulp-sass';
+import originalSass from 'sass';
 import pug from 'gulp-pug';
 import plumber from 'gulp-plumber';
 import autoprefixer from 'gulp-autoprefixer';
@@ -14,22 +15,27 @@ import concat from 'gulp-concat';
 
 const paths = {
 	sass: {
-		src: './src/*.sass',
-		dest: './',
+		src: './src/assets/*.sass',
+		dest: './assets/',
 	},
 	pug: {
-		src: './src/*.pug',
-		src2: './src/includes/*.pug',
+		src: './src/index.pug',
 		dest: './',
+	},
+	pugIncludes: {
+		src: './src/includes/*.pug',
 	},
 	js: {
-		src: './src/*.js',
-		dest: './',
+		src: './src/assets/*.js',
+		dest: './assets/',
 	},
 	imgs: {
-		src: './src/imgs/*',
-		src2: './src/*.png',
-		dest: './imgs/',
+		src: './src/assets/images/*',
+		dest: './assets/images/',
+	},
+	icons: {
+		src: './src/assets/icons/*.png',
+		dest: './assets/icons/',
 	},
 	root: {
 		src: './',
@@ -48,7 +54,7 @@ function runWatch() {
 
 	gulp.watch(paths.sass.src, runSass);
 	gulp.watch(paths.pug.src, runPug);
-	gulp.watch(paths.pug.src2, runPug);
+	gulp.watch(paths.pugIncludes.src, runPug);
 	gulp.watch(paths.js.src, runJs);
 
 	gulp.watch(paths.root.css, browserSync.reload);
@@ -57,6 +63,7 @@ function runWatch() {
 }
 
 function runSass() {
+	const sass = gulpSass(originalSass);
 	return gulp.src(paths.sass.src)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
@@ -65,6 +72,7 @@ function runSass() {
 }
 
 function runSassPrd() {
+	const sass = gulpSass(originalSass);
 	return gulp.src(paths.sass.src)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
@@ -113,9 +121,9 @@ function runImgsAssets() {
 }
 
 function runImgsIcons() {
-	return gulp.src(paths.imgs.src2)
+	return gulp.src(paths.icons.src)
 		.pipe(imagemin())
-		.pipe(gulp.dest(paths.root.src));
+		.pipe(gulp.dest(paths.icons.dest));
 }
 
 const runImgs = gulp.parallel(runImgsAssets, runImgsIcons);

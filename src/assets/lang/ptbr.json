@@ -27,7 +27,38 @@
         "portfolio": "Portfólio",
         "blog": "Blog",
         "resume": "Currículo",
-        "contact": "Contato"
+        "contact": "Contato",
+        "language": "Idioma"
+    },
+    "languageModal": {
+        "ptbr": {
+            "title": "Português",
+            "url": "index.html",
+            "flags": [
+                {
+                    "path": "Flag_of_Brazil",
+                    "alt": "Bandeira do Brasil"
+                },
+                {
+                    "path": "Flag_of_Portugal",
+                    "alt": "Bandeira de Portugal"
+                }
+            ]
+        },
+        "eng": {
+            "title": "Inglês",
+            "url": "index-eng.html",
+            "flags": [
+                {
+                    "path": "Flag_of_the_United_States",
+                    "alt": "Bandeira dos Estados Unidos"
+                },
+                {
+                    "path": "Flag_of_the_United_Kingdom",
+                    "alt": "Bandeira do Reino Unido"
+                }
+            ]
+        }
     },
     "strings": {
         "noScript": "Este site fica melhor com o JavaScript habilitado. Por favor, habilite!",

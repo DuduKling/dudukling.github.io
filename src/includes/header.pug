@@ -14,16 +14,20 @@ header.homeHeader
     ul
       li
         a(href="index.html") #{menu.home}
-      li 
+      li
         a(href="#sobre") #{menu.about}
-      li 
+      li
         a(href="#portfolio") #{menu.portfolio}
-      li 
+      li
         a(href="#blog") #{menu.blog}
-      li 
+      li
         a(href=info.resume target="_blank" rel="noopener") #{menu.resume}
-      li 
+      li
         a(href="#contato") #{menu.contact}
+      li
+        button#langBtn #{menu.language}
+
+      include languages.pug
 
   div.present
     div

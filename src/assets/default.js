@@ -127,3 +127,23 @@ emailSubmit.addEventListener("click", function () {
     subject.value = "";
     message.value = "";
 });
+
+
+
+
+
+
+
+// ##################
+const langModal = document.getElementById('langModal');
+const langBtn = document.getElementById('langBtn');
+const langModalClose = document.getElementById('langModalClose');
+
+langBtn.addEventListener('click', () => { langModal.style.display = 'block'; });
+langModalClose.addEventListener('click', () => { langModal.style.display = 'none';});
+
+window.addEventListener('click', (event) => {
+    if (event.target == langModal) {
+        langModal.style.display = 'none';
+    }
+});

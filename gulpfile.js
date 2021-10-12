@@ -32,8 +32,13 @@ const paths = {
 			includes: './src/includes/**/*.pug',
 			lang: './src/assets/lang/ptbr.json',
 		},
-	pugIncludes: {
-		src: './src/includes/**/*.pug',
+		eng: {
+			src: './src/index.pug',
+			dest: './',
+			name: 'index-eng.html',
+			includes: './src/includes/**/*.pug',
+			lang: './src/assets/lang/eng.json',
+		},
 	},
 	js: {
 		src: './src/assets/*.js',
@@ -72,6 +77,11 @@ function runWatch() {
 	gulp.watch(paths.pug.ptbr.src, runPugPtbr);
 	gulp.watch(paths.pug.ptbr.lang, runPugPtbr);
 	gulp.watch(paths.pug.ptbr.includes, runPugPtbr);
+
+	const runPugEng = () => runPug(paths.pug.eng);
+	gulp.watch(paths.pug.eng.src, runPugEng);
+	gulp.watch(paths.pug.eng.lang, runPugEng);
+	gulp.watch(paths.pug.eng.includes, runPugEng);
 
 	gulp.watch(paths.js.src, runJs);
 

@@ -1,0 +1,122 @@
+{
+    "language": "eng",
+    "locale": "en_US",
+    "info": {
+        "title": "Dudu Kling",
+        "description": "Dudu Kling's Personal Blog",
+        "nickName": "Dudu",
+        "name": "Eduardo Kling",
+        "surname": "Mesiano",
+        "url": "https://dudukling.github.io",
+        "copyright": "Copyright ☺ 2017",
+        "copyrightMessage": "Made with ♥ by ",
+        "resume": "Curriculum_Eduardo_K_Mesiano.pdf"
+    },
+    "social": {
+        "github": "https://github.com/DuduKling",
+        "linkedin": "https://www.linkedin.com/in/eduardoklingmesiano",
+        "facebook": "https://www.facebook.com/eduardokmesiano",
+        "twitter": "https://twitter.com/Eduardo_Kling",
+        "twitterUsername": "@Eduardo_Kling",
+        "mail": "eduardokmesiano@gmail.com",
+        "blog": "https://dudukling.github.io/blog"
+    },
+    "menu": {
+        "home": "Home",
+        "about": "About",
+        "portfolio": "Portfolio",
+        "blog": "Blog",
+        "resume": "Resume",
+        "contact": "Contact"
+    },
+    "strings": {
+        "noScript": "This site is better with JavaScript enabled. Please enable!",
+        "header": {
+            "presentAlt": "Drawing of a person with black hair and a blue shirt on a green background"
+        },
+        "about": {
+            "main": "Hi, I'm Dudu!",
+            "firstLine": "Front-End Developer from Brazil.",
+            "secondLine": "Computer engineering student and technology lover."
+        },
+        "blog": {
+            "title": "Blog",
+            "button": "Blog >",
+            "categories": {
+                "html": {
+                    "title": "HTML",
+                    "url": "#"
+                },
+                "misc": {
+                    "title": "Misc",
+                    "url": "#"
+                },
+                "javascript": {
+                    "title": "JS",
+                    "url": "#"
+                },
+                "css": {
+                    "title": "CSS",
+                    "url": "#"
+                }
+            },
+            "posts": {
+                "first": {
+                    "url": "#",
+                    "title": "Fist Post",
+                    "infos": "22/10/2017 | 5 min",
+                    "peek": "Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose."
+                },
+                "second": {
+                    "url": "#",
+                    "title": "Second Post",
+                    "infos": "22/10/2017 | 15 min",
+                    "peek": "Aqui é Body Builder Ipsum PORRA! Eu quero esse 13 daqui a pouquinho aí. Ajuda o maluco que tá doente. Aqui é Body Builder Ipsum PORRA! Birl! Sabe o que é isso daí? Trapézio descendente é o nome disso aí."
+                },
+                "third": {
+                    "url": "#",
+                    "title": "Dilmês Ipsum",
+                    "infos": "22/10/2017 | 20 min",
+                    "peek": "Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo muito importante!"
+                }
+            }
+        },
+        "contact": {
+            "title": "Contact",
+            "inputName": "Full name",
+            "inputSubject": "Subject",
+            "inputMessage": "Message",
+            "emailSubmit": "Send Message"
+        },
+        "portfolio": {
+            "title": "Portfolio",
+            "alt": "Larger size portfolio sample image",
+            "cases": {
+                "load": {
+                    "title": "Load Interiores",
+                    "alt": "Portfolio example image - Site Load Design"
+                },
+                "tannure": {
+                    "title": "Clínica Dr. Tannure",
+                    "alt": "Portfolio example image - Site Tannure"
+                },
+                "renault": {
+                    "title": "Renault Serra",
+                    "alt": "Portfolio example image - Site Renault Serra"
+                },
+                "buska": {
+                    "title": "Buska Imóvel",
+                    "alt": "Portfolio example image - Site Buska"
+                },
+                "storti": {
+                    "title": "Storti & Boechat",
+                    "alt": "Portfolio example image - Site Storti e Boechat"
+                }
+            }
+        },
+        "skills": {
+            "title": "Skills & Tools",
+            "text": "Some languages ​​and tools I use or have used"
+        }
+    }
+}

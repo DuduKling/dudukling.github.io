@@ -2,9 +2,9 @@ footer.homeFooter
   include social-medias.pug
 
   div.copyrightText
-    p Copyright ☺ 2017
-    p Criado com ♥ por 
-      a(href="https://dudukling.github.io/") Dudu
+    p #{info.copyright}
+    p #{info.copyrightMessage}
+      a(href=info.url) #{info.nickName}
       |.
 
 script(src="assets/default.js" async type='text/javascript')

@@ -1,7 +1,9 @@
-section.about#sobre
-  h3 Oi, eu sou o Dudu!
+- var about = strings.about;
 
-  p.aboutMeSumUp Desenvolvedor Front-End de Petrópolis, RJ. <br />
-    | Estudante de engenharia de computação e amante de tecnologia.
+section.about#sobre
+  h3 #{about.main}
+
+  p.aboutMeSumUp #{about.firstLine} <br />
+    | #{about.secondLine}
 
   include ../social-medias.pug

@@ -1,34 +1,37 @@
+- var blog = strings.blog;
+- var post = strings.blog.posts;
+- var category = strings.blog.categories;
+
 section.blog#blog
-  h3 Blog
+  h3 #{blog.title}
   div.blogContainer
-  
     div.post
-      a.postlink(href="#")
-        h2.postTitle Primeiro Post  
-        p.infos 22/10/2017 | 5 min
-        p.peek Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.
+      a.postlink(href=post.first.url)
+        h2.postTitle #{post.first.title}
+        p.infos #{post.first.infos}
+        p.peek #{post.first.peek}
       ul.tags
         li 
-          a(href="#") Misc
+          a(href=category.misc.url) #{category.misc.title}
 
     div.post
-      a.postlink(href="#")
-        h2.postTitle Segundo Post
-        p.infos 22/10/2017 | 15 min
-        p.peek Aqui é Body Builder Ipsum PORRA! Eu quero esse 13 daqui a pouquinho aí. Ajuda o maluco que tá doente. Aqui é Body Builder Ipsum PORRA! Birl! Sabe o que é isso daí? Trapézio descendente é o nome disso aí.
+      a.postlink(href=post.second.url)
+        h2.postTitle #{post.second.title}
+        p.infos #{post.second.infos}
+        p.peek #{post.second.peek}
       ul.tags
         li 
-          a(href="#") JS
+          a(href=category.javascript.url) #{category.javascript.title}
 
     div.post
-      a.postlink(href="#")
-        h2.postTitle Dilmês Ipsum
-        p.infos 22/10/2017 | 20 min
-        p.peek Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo muito importante!          
+      a.postlink(href=post.third.url)
+        h2.postTitle #{post.third.title}
+        p.infos #{post.third.infos}
+        p.peek #{post.third.peek}
       ul.tags
         li 
-          a(href="#") HTML
+          a(href=category.html.url) #{category.html.title}
         li 
-          a(href="#") CSS
+          a(href=category.css.url) #{category.css.title}
 
-  a.link-blog(href="https://dudukling.github.io/blog") Blog >
+  a.link-blog(href=social.blog) #{blog.button}

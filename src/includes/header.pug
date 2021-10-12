@@ -2,7 +2,7 @@ header.homeHeader
   div.background
 
   nav.menu#js-menu.-top
-    a(href="index.html").logo &lt; Dudu Kling /&gt;
+    a(href="index.html").logo &lt; #{info.title} /&gt;
 
     label.hamburgerMenu(for="respMenu")
       .line1
@@ -13,25 +13,25 @@ header.homeHeader
 
     ul
       li
-        a(href="index.html") Home
+        a(href="index.html") #{menu.home}
       li 
-        a(href="#sobre") Sobre
+        a(href="#sobre") #{menu.about}
       li 
-        a(href="#portfolio") Portfólio
+        a(href="#portfolio") #{menu.portfolio}
       li 
-        a(href="#blog") Blog
+        a(href="#blog") #{menu.blog}
       li 
-        a(href="Curriculum_Eduardo_K_Mesiano.pdf" target="_blank" rel="noopener") Currículo
+        a(href=info.resume target="_blank" rel="noopener") #{menu.resume}
       li 
-        a(href="#contato") Contato
+        a(href="#contato") #{menu.contact}
 
   div.present
     div
-        div
-            img.avatar(src="assets/images/avatar.png" alt="Desenho de uma pessoa de cabelo preto e camisa azul em um fundo verde")
+      div
+        img.avatar(src="assets/images/avatar.png" alt=strings.header.presentAlt)
     h1.headerName1
-        span Eduardo Kling
-        br
+      span #{info.name}
+      br
     h1.headerName2
-        span Mesiano
-        br
+      span #{info.surname}
+      br

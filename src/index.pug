@@ -1,5 +1,5 @@
 doctype html
-html(lang="pt-br" dir="ltr")
+html(lang=language dir="ltr")
   include includes/head.pug
 
   body#js-body
@@ -8,7 +8,7 @@ html(lang="pt-br" dir="ltr")
 
     noscript
       div.noScript
-        p Este site fica melhor com o JavaScript habilitado. Por favor, habilite!
+        p #{strings.noScript}
 
     include includes/header.pug
 

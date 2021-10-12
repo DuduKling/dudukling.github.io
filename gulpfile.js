@@ -4,6 +4,8 @@ import browserSync from 'browser-sync';
 import gulpSass from 'gulp-sass';
 import originalSass from 'sass';
 import pug from 'gulp-pug';
+import data from 'gulp-data';
+import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import autoprefixer from 'gulp-autoprefixer';
 import cssnano from 'gulp-cssnano';
@@ -12,6 +14,7 @@ import svgo from 'gulp-svgo';
 import uglify from 'gulp-uglify';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
+import fs from 'fs';
 
 const paths = {
 	sass: {
@@ -22,9 +25,13 @@ const paths = {
 		src: './src/assets/**/*.sass',
 	},
 	pug: {
-		src: './src/index.pug',
-		dest: './',
-	},
+		ptbr: {
+			src: './src/index.pug',
+			dest: './',
+			name: 'index.html',
+			includes: './src/includes/**/*.pug',
+			lang: './src/assets/lang/ptbr.json',
+		},
 	pugIncludes: {
 		src: './src/includes/**/*.pug',
 	},
@@ -60,8 +67,12 @@ function runWatch() {
 
 	gulp.watch(paths.sass.src, runSass);
 	gulp.watch(paths.sassImports.src, runSass);
-	gulp.watch(paths.pug.src, runPug);
-	gulp.watch(paths.pugIncludes.src, runPug);
+
+	const runPugPtbr = () => runPug(paths.pug.ptbr);
+	gulp.watch(paths.pug.ptbr.src, runPugPtbr);
+	gulp.watch(paths.pug.ptbr.lang, runPugPtbr);
+	gulp.watch(paths.pug.ptbr.includes, runPugPtbr);
+
 	gulp.watch(paths.js.src, runJs);
 
 	gulp.watch(paths.root.css, reload);
@@ -90,11 +101,25 @@ function runSassPrd() {
 		.pipe(gulp.dest(paths.sass.dest));
 }
 
-function runPug() {
-	return gulp.src(paths.pug.src)
+function runPug(path) {
+	return _pug(path);
+}
+
+function runPugLangs(done) {
+	for (const lang of Object.values(paths.pug)) {
+		_pug(lang);
+	}
+
+	return done();
+}
+
+function _pug(path) {
+	return gulp.src(path.src)
 		.pipe(plumber())
+		.pipe(data(() => JSON.parse(fs.readFileSync(path.lang))))
 		.pipe(pug())
-		.pipe(gulp.dest(paths.pug.dest));
+		.pipe(rename(path.name))
+		.pipe(gulp.dest(path.dest));
 }
 
 function runJs() {
@@ -134,14 +159,14 @@ function runImgsIcons() {
 }
 
 const runImgs = gulp.parallel(runImgsAssets, runImgsIcons);
-const runBuild = gulp.parallel(runSassPrd, runPug, runJsPrd, runImgs);
+const runBuild = gulp.parallel(runSassPrd, runPugLangs, runJsPrd, runImgs);
 
 export default runWatch;
 export {
 	runWatch,
 	runBuild,
 	runSass,
-	runPug,
+	runPugLangs,
 	runJs,
 	runImgs,
 };

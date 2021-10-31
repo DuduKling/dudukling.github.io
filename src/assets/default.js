@@ -134,16 +134,20 @@ emailSubmit.addEventListener("click", function () {
 
 
 
-// ##################
-const langBtn = document.getElementById('langBtn');
-const langModal = document.getElementById('langModal');
-const langModalClose = document.getElementById('langModalClose');
+// ########## MODAL ##########
+const modalHandler = ([btn, aModal, closeBtn, cssClass]) => {
+    const elementBtn = document.getElementById(btn);
+    const elementModal = document.getElementById(aModal);
+    const elementCloseBtn = document.getElementById(closeBtn);
 
-langBtn.addEventListener('click', () => { langModal.classList.add('langModalShow'); });
-langModalClose.addEventListener('click', () => { langModal.classList.remove('langModalShow'); });
+    const classes = elementModal.classList;
 
-window.addEventListener('click', (event) => {
-    if (event.target === langModal) {
-        langModal.classList.remove('langModalShow'); 
-    }
-});
+    elementBtn.addEventListener('click', () => { classes.add(cssClass); });
+    elementCloseBtn.addEventListener('click', () => { classes.remove(cssClass); });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === elementModal) { classes.remove(cssClass); }
+    });
+}
+
+modalHandler(['langBtn', 'langModal', 'langModalClose', 'langModalShow']);

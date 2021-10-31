@@ -64,6 +64,21 @@
             }
         }
     },
+    "themeModal": {
+        "selected": "Selecionado",
+        "themes": {
+            "dark": {
+                "title": "Escuro",
+                "imagePath": "Moon",
+                "imageAlt": "Image of the moon"
+            },
+            "light": {
+                "title": "Claro",
+                "imagePath": "Sun",
+                "imageAlt": "Image of the sun"
+            }
+        }
+    },
     "strings": {
         "noScript": "Este site fica melhor com o JavaScript habilitado. Por favor, habilite!",
         "header": {

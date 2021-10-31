@@ -151,3 +151,4 @@ const modalHandler = ([btn, aModal, closeBtn, cssClass]) => {
 }
 
 modalHandler(['langBtn', 'langModal', 'langModalClose', 'langModalShow']);
+modalHandler(['themeBtn', 'themeModal', 'themeModalClose', 'themeModalShow']);

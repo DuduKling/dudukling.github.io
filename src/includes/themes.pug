@@ -1,0 +1,11 @@
+- var modal = themeModal;
+
+div#themeModal.themeModal
+  div.themeModal-content
+    span#themeModalClose.themeModalClose &times;
+
+    ul.themeModalList
+      each theme, key in modal.themes
+        li
+          a(href="/") #{theme.title}
+            img(src="./assets/images/"+theme.imagePath+".svg", alt=theme.imageAlt)

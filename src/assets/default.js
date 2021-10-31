@@ -135,15 +135,15 @@ emailSubmit.addEventListener("click", function () {
 
 
 // ##################
-const langModal = document.getElementById('langModal');
 const langBtn = document.getElementById('langBtn');
+const langModal = document.getElementById('langModal');
 const langModalClose = document.getElementById('langModalClose');
 
-langBtn.addEventListener('click', () => { langModal.style.display = 'block'; });
-langModalClose.addEventListener('click', () => { langModal.style.display = 'none';});
+langBtn.addEventListener('click', () => { langModal.classList.add('langModalShow'); });
+langModalClose.addEventListener('click', () => { langModal.classList.remove('langModalShow'); });
 
 window.addEventListener('click', (event) => {
-    if (event.target == langModal) {
-        langModal.style.display = 'none';
+    if (event.target === langModal) {
+        langModal.classList.remove('langModalShow'); 
     }
 });

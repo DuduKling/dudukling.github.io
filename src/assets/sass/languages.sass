@@ -9,15 +9,14 @@
 	z-index: 10
 
 	overflow: auto
-	background-color: rgba(0,0,0,0.8)
+	background-color: var(--color-black-opacity-075)
 	font-family: $font1
 	transition: opacity 0.3s ease-in-out, height 0s 0.3s ease-in-out
 
 	> .langModal-content
-		background-color: $cinza
+		background-color: var(--color-grey)
 		margin: 15% auto
 		padding: 20px
-		border: 1px solid #888
 		min-width: 300px
 		max-width: 600px
 		width: 80%
@@ -29,7 +28,7 @@
 			top: 5px
 			right: 15px
 
-			color: #aaa
+			color: var(--color-black)
 			font-size: 28px
 			font-weight: bold
 
@@ -58,7 +57,7 @@
 	> li
 		height: 50px
 		border-radius: 10px
-		background-color: $cinza
+		background-color: var(--color-grey)
 
 		display: flex
 		justify-content: center
@@ -68,7 +67,7 @@
 		transition: all 0.5s ease
 
 		&:hover
-			background-color: #e7e7e7
+			background-color: var(--color-grey-dark-10)
 
 		&:not(:last-child)::after
 			content: ""
@@ -77,7 +76,7 @@
 			left: 10px
 			width: calc(100% - 20px)
 			height: 1px
-			background-color: #d5d5d5
+			background-color: var(--color-green)
 
 		> a, span
 			height: 100%
@@ -89,7 +88,7 @@
 			align-items: center
 
 			text-decoration: none
-			color: $azul
+			color: var(--color-blue)
 
 			> .langFlags
 				display: flex
@@ -103,4 +102,4 @@
 
 		> .disabled
 			border-radius: 10px
-			background-color: #d5d5d5
+			background-color: var(--color-green)

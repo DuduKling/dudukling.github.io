@@ -18,7 +18,7 @@
 
 	&.-top
 		height: 60px
-		background-color: rgba(255, 255, 255, 0.1)
+		background-color: var(--color-grey-opacity-01)
 
 		> .logo
 			font-size: 28px
@@ -32,8 +32,8 @@
 
 	&.-scroll
 		height: 40px
-		background-color: $preto
-		border-bottom: 1px solid darken($cinza, 65%)
+		background-color: var(--color-black)
+		border-bottom: 1px solid var(--color-grey-dark-65)
 
 		> .logo
 			font-size: 20px
@@ -104,7 +104,7 @@
 						background-color: white
 
 			> a[href="#"]
-				color: #353535
+				color: var(--color-black)
 				cursor: default
 
 				&:hover:after
@@ -162,30 +162,30 @@
 		> .line1
 			width: 100%
 			height: 5px
-			background-color: $cinza
+			background-color: var(--color-grey)
 		
 		> .line2
 			width: 100%
 			height: 5px
-			background-color: $cinza
+			background-color: var(--color-grey)
 		
 		> .line3
 			width: 100%
 			height: 5px
-			background-color: $cinza
+			background-color: var(--color-grey)
 
 @keyframes cursor
 	from
 		border-right-color: transparent
 	to
-		border-right-color: rgba(255,255,255,.75)
+		border-right-color: var(--color-grey-opacity-075)
 
 @media only screen and (max-width: 800px)
 	.menu
-		border-bottom: 1px solid darken($cinza, 65%)
+		border-bottom: 1px solid var(--color-grey-dark-65)
 
 		&.-top
-			background-color: $preto
+			background-color: var(--color-black)
 
 			> ul
 				width: 100%
@@ -195,7 +195,7 @@
 				top: 60px
 
 				overflow: hidden
-				background-color: $preto
+				background-color: var(--color-black)
 				flex-direction: column
 				justify-content: flex-start
 
@@ -203,7 +203,7 @@
 					height: auto
 					width: 100%
 					margin-right: 0
-					border-bottom: 1px solid $cinza
+					border-bottom: 1px solid var(--color-grey)
 
 					> a
 						padding: 15px 0
@@ -214,7 +214,7 @@
 							content: none
 
 						&:hover
-							background-color: lighten($preto, 10%)
+							background-color: var(--color-black-light-10)
 							&:after
 								content: none
 
@@ -281,11 +281,11 @@
 				transform: rotateY(180deg)
 
 		> .headerName1
-			color: $cinza
+			color: var(--color-grey)
 			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
 			letter-spacing: 4px
-			text-shadow: 3px 3px #262c31
+			text-shadow: 3px 3px var(--color-black)
 			text-align: center
 			height: 35px
 
@@ -300,11 +300,11 @@
 				white-space: nowrap	
 				
 		> .headerName2
-			color: $cinza
+			color: var(--color-grey)
 			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
 			letter-spacing: 4px
-			text-shadow: 3px 3px #262c31
+			text-shadow: 3px 3px var(--color-black)
 			text-align: center
 
 			border-right: 2px solid transparent
@@ -317,8 +317,8 @@
 .noScript
 	width: 100%
 	height: 30px
-	background-color: rgba(44, 173, 136, 0.52)
-	color: $cinza
+	background-color: var(--color-green-opacity-05)
+	color: var(--color-grey)
 	position: fixed
 	top: 60px
 	left: 0

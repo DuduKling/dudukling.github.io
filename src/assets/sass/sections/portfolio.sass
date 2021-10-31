@@ -1,14 +1,14 @@
 .portfolio
 	width: 100%
 	padding: 40px 5%
-	background-color: $verde
+	background-color: var(--color-green)
 
 	> h3
 		font-family: $font1
-		color: $cinza
+		color: var(--color-grey)
 		font-size: 28px
 		padding-bottom: 5px
-		border-bottom: 2px solid $cinza
+		border-bottom: 2px solid var(--color-grey)
 		margin-bottom: 25px
 
 	> .portfolioContainer
@@ -23,10 +23,10 @@
 			max-width: calc(30% - 20px)
 			flex-grow: 1
 
-			border: 1px solid $cinza
+			border: 1px solid var(--color-grey)
 			border-radius: 15px
 			margin: 0 20px 30px 20px
-			background-color: $cinza
+			background-color: var(--color-grey)
 
 			position: relative
 			overflow: hidden
@@ -42,7 +42,7 @@
 			> .hover
 				width: 100%
 				height: 100%
-				background-color: rgba(248,248,248,0.7)
+				background-color: var(--color-grey-opacity-075)
 
 				display: flex
 				flex-direction: column
@@ -77,7 +77,7 @@
 		z-index: 11
 		top: 0
 		left: 0
-		background-color: rgba(0,0,0,0.8)
+		background-color: var(--color-black-opacity-075)
 		justify-content: center
 		padding-top: 50px
 		overflow-y: scroll
@@ -122,7 +122,7 @@
 		> .img
 			width: 800px
 			position: absolute
-			border: 5px solid darken($cinza, 10%)
+			border: 5px solid var(--color-grey-dark-10)
 			margin-bottom: 50px
 			background-color: white
 

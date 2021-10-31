@@ -2,18 +2,18 @@
 	width: 100%
 	padding: 40px 5%
 	position: relative
-	background-color: $preto
+	background-color: var(--color-black)
 
 	> h3
 		font-family: $font1
-		color: $cinza
+		color: var(--color-grey)
 		font-size: 28px
 		padding-bottom: 5px
-		border-bottom: 2px solid $cinza
+		border-bottom: 2px solid var(--color-grey)
 		margin-bottom: 25px
 
 	> p
-		color: $cinza
+		color: var(--color-grey)
 		font-family: "Montserrat", sans-serif
 		margin-bottom: 40px
 
@@ -23,7 +23,7 @@
 			list-style-type: none
 			padding: 0
 
-			color: $cinza
+			color: var(--color-grey)
 			font-family: $font2
 			font-size: 14px
 
@@ -48,7 +48,7 @@
 					margin-top: -30px
 
 				> .skill
-					background-color: $cinza
+					background-color: var(--color-grey)
 
 					width: 100px
 					height: 100px
@@ -70,8 +70,8 @@
 					+ .tooltipText
 						visibility: hidden
 						width: 120px
-						background-color: #555
-						color: #fff
+						background-color: var(--color-green-dark-10)
+						color: var(--color-grey)
 						text-align: center
 						padding: 5px 0
 						border-radius: 6px
@@ -93,7 +93,7 @@
 							margin-left: -5px
 							border-width: 5px
 							border-style: solid
-							border-color: #555 transparent transparent transparent
+							border-color: var(--color-green-dark-10) transparent transparent transparent
 
 					&:hover
 						transform: scale(1.2)
@@ -116,100 +116,3 @@
 							object-fit: contain
 
 							transition: all 0.6s ease
-
-
-
-
-
-	// > .skillsList
-	// 	position: relative
-
-	// 	> ul
-	// 		list-style-type: none
-	// 		padding: 0
-
-	// 		color: $cinza
-	// 		font-family: $font2
-	// 		font-size: 14px
-
-	// 		> li
-	// 			height: 26px
-	// 			margin-bottom: 10px
-	// 			padding: 3px 10px
-	// 			background-color: lighten($preto, 5%)
-	// 			text-align: right
-	// 			overflow: hidden
-
-	// 			border-bottom: 1px dashed $verde
-	// 			border-right: 1px solid $verde
-	// 			border-top: 1px dashed $verde
-	// 			border-left: 1px dashed darken($verde, 20%)
-
-	// 			transition: all 0.5s linear
-
-	// 			&.-in
-	// 				&.level
-	// 					&.-o1
-	// 						width: 10%
-	// 					&.-o2
-	// 						width: 20%
-	// 					&.-o3
-	// 						width: 30%
-	// 					&.-o4
-	// 						width: 40%
-	// 					&.-o5
-	// 						width: 50%
-	// 					&.-o6
-	// 						width: 60%
-	// 					&.-o7
-	// 						width: 70%
-	// 					&.-o8
-	// 						width: 80%
-	// 					&.-o9
-	// 						width: 90%
-	// 					&.-o10
-	// 						width: 100%
-
-	// 			&.-out
-	// 				width: 0
-	// 				overflow: hidden
-	// 				padding: 3px 0px 
-				
-	// 			// &.level1, &.level2, &.level3
-	// 			// 	background-color: #5ec35e
-	// 			// &.level4, &.level5, &.level6, &.level7
-	// 			// 	background-color: rgba(255, 183, 51, 0.7)
-	// 			// &.level8, &.level9, &.level10
-	// 			// 	background-color: rgba(255, 19, 19, 0.5)
-
-	// 	> .skillsExpertise
-	// 		width: 100%
-	// 		margin-bottom: 30px
-	// 		display: flex
-	// 		flex-direction: row
-	// 		justify-content: space-around
-	// 		align-items: flex-start
-	// 		z-index: 0
-
-	// 		> div
-	// 			height: 25px
-	// 			display: flex
-	// 			justify-content: center
-	// 			align-items: center
-
-	// 			font-family: $font1
-	// 			font-size: 10px
-
-	// 			&:nth-child(1)
-	// 				width: 33%
-	// 				background-color: #5ec35e
-	// 				margin-right: 5px
-
-	// 			&:nth-child(2)
-	// 				width: 38%
-	// 				background-color: #ffb733
-	// 				margin-right: 5px
-
-	// 			&:nth-child(3)
-	// 				width: 33%
-	// 				background-color: #ff1313

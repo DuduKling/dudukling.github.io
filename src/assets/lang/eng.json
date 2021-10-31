@@ -28,36 +28,40 @@
         "blog": "Blog",
         "resume": "Resume",
         "contact": "Contact",
-        "language": "Language"
+        "language": "Language",
+        "theme": "Theme"
     },
     "languageModal": {
-        "ptbr": {
-            "title": "Portuguese",
-            "url": "index.html",
-            "flags": [
-                {
-                    "path": "Flag_of_Brazil",
-                    "alt": "Flag of Brazil"
-                },
-                {
-                    "path": "Flag_of_Portugal",
-                    "alt": "Flag of Portugal"
-                }
-            ]
-        },
-        "eng": {
-            "title": "English",
-            "url": "index-eng.html",
-            "flags": [
-                {
-                    "path": "Flag_of_the_United_States",
-                    "alt": "Flag of the United States"
-                },
-                {
-                    "path": "Flag_of_the_United_Kingdom",
-                    "alt": "Flag of the United Kingdom"
-                }
-            ]
+        "selected": "Selected",
+        "languages": {
+            "pt-br": {
+                "title": "Portuguese",
+                "url": "index.html",
+                "flags": [
+                    {
+                        "path": "Flag_of_Brazil",
+                        "alt": "Flag of Brazil"
+                    },
+                    {
+                        "path": "Flag_of_Portugal",
+                        "alt": "Flag of Portugal"
+                    }
+                ]
+            },
+            "eng": {
+                "title": "English",
+                "url": "index-eng.html",
+                "flags": [
+                    {
+                        "path": "Flag_of_the_United_States",
+                        "alt": "Flag of the United States"
+                    },
+                    {
+                        "path": "Flag_of_the_United_Kingdom",
+                        "alt": "Flag of the United Kingdom"
+                    }
+                ]
+            }
         }
     },
     "strings": {

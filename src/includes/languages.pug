@@ -1,13 +1,20 @@
-- var languages = languageModal;
+- var modal = languageModal;
 
 div#langModal.langModal
   div.langModal-content
     span#langModalClose.langModalClose &times;
 
     ul.langModalList
-      each lang, key in languageModal
+      each lang, key in modal.languages
         li
-          a(href="/"+lang.url) #{lang.title}
-            div.langFlags
-              each flag in lang.flags
-                img(src="./assets/images/"+flag.path+".svg", alt=flag.alt)
+          if language == key
+            span.disabled #{lang.title}
+              span (#{languageModal.selected})
+              div.langFlags
+                each flag in lang.flags
+                  img(src="./assets/images/"+flag.path+".svg", alt=flag.alt)
+          else
+            a(href="/"+lang.url) #{lang.title}
+              div.langFlags
+                each flag in lang.flags
+                  img(src="./assets/images/"+flag.path+".svg", alt=flag.alt)

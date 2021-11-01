@@ -6,6 +6,7 @@ div#themeModal.themeModal
 
     ul.themeModalList
       each theme, key in modal.themes
-        li
-          a(href="/") #{theme.title}
+        li.themeItem
+          span.hiddenKey #{key}
+          button(onclick="themeHandler(\""+key+"\")") #{theme.title}
             img(src="./assets/images/"+theme.imagePath+".svg", alt=theme.imageAlt)

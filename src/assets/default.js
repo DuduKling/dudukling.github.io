@@ -142,13 +142,57 @@ const modalHandler = ([btn, aModal, closeBtn, cssClass]) => {
 
     const classes = elementModal.classList;
 
-    elementBtn.addEventListener('click', () => { classes.add(cssClass); });
-    elementCloseBtn.addEventListener('click', () => { classes.remove(cssClass); });
+    const open = () => { classes.add(cssClass); }
+    const close = () => { classes.remove(cssClass); }
+
+    elementBtn.addEventListener('click', open);
+    elementCloseBtn.addEventListener('click', close);
 
     window.addEventListener('click', (event) => {
-        if (event.target === elementModal) { classes.remove(cssClass); }
+        if (event.target === elementModal) { close(); }
     });
 }
 
 modalHandler(['langBtn', 'langModal', 'langModalClose', 'langModalShow']);
-modalHandler(['themeBtn', 'themeModal', 'themeModalClose', 'themeModalShow']);
+
+
+// ########## THEME ##########
+const theme = {
+    btn: 'themeBtn',
+    modal: 'themeModal',
+    closeBtn: 'themeModalClose',
+    cssClass: 'themeModalShow',
+    localStorageKey: 'theme',
+    documentAttr: 'data-theme',
+}
+
+modalHandler([theme.btn, theme.modal, theme.closeBtn, theme.cssClass]);
+
+const getStoredTheme = (localStorageKey) => {
+    const storedTheme = localStorage.getItem(localStorageKey) || document.documentElement.getAttribute(theme.documentAttr) || null;
+    if (storedTheme) { themeHandler(storedTheme) }
+}
+
+getStoredTheme(theme.localStorageKey);
+
+function themeHandler(key) {
+    console.log(key);
+
+    // Set Theme
+    document.documentElement.setAttribute(theme.documentAttr, key);
+    localStorage.setItem(theme.localStorageKey, key);
+
+    // UpdateButtons
+    const themeModalList = document.querySelectorAll('.themeItem');
+
+    for (const themeItem of themeModalList) {
+        const themeItemButton = themeItem.querySelector('button');
+        const themeItemKey = themeItem.querySelector('.hiddenKey').innerHTML;
+
+        if (themeItemKey === key) {
+            themeItemButton.setAttribute('disabled', true);
+        } else {
+            themeItemButton.removeAttribute('disabled')
+        }
+    }
+}

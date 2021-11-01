@@ -28,7 +28,7 @@
 			top: 5px
 			right: 15px
 
-			color: var(--color-black)
+			color: var(--color-black-light-50)
 			font-size: 28px
 			font-weight: bold
 
@@ -66,6 +66,9 @@
 		position: relative
 		transition: all 0.5s ease
 
+		> .hiddenKey
+			display: none
+
 		&:hover
 			background-color: var(--color-grey-dark-10)
 
@@ -78,7 +81,7 @@
 			height: 1px
 			background-color: var(--color-green)
 
-		> a, span
+		> button
 			height: 100%
 			width: 100%
 			padding: 20px
@@ -87,8 +90,13 @@
 			justify-content: space-between
 			align-items: center
 
-			text-decoration: none
+			background: none
+			border: none
+			font: inherit
+			cursor: pointer
+
 			color: var(--color-blue)
+			transition: all 0s ease
 
 			> img
 				width: 30px
@@ -97,6 +105,9 @@
 				border-radius: 50%
 				margin: 5px
 
-		> .disabled
-			border-radius: 10px
-			background-color: var(--color-green)
+			&:disabled
+				cursor: not-allowed
+				border-radius: 10px
+				background-color: var(--color-green)
+				transition: all 1s 0s ease
+				color: var(--color-grey)

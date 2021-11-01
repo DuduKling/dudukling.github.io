@@ -1,0 +1,184 @@
+{
+    "language": "pt-br",
+    "locale": "_ptBR",
+    "info": {
+        "title": "Dudu Kling",
+        "description": "Site pessoal do Dudu Kling",
+        "nickName": "Dudu",
+        "name": "Eduardo Kling",
+        "surname": "Mesiano",
+        "url": "https://dudukling.github.io",
+        "copyright": "Copyright ☺ 2017",
+        "copyrightMessageStart": "Criado com ",
+        "copyrightMessageIcon": "♥ ",
+        "copyrightMessageEnd": "por ",
+        "resume": "Curriculum_Eduardo_K_Mesiano.pdf"
+    },
+    "social": {
+        "github": "https://github.com/DuduKling",
+        "linkedin": "https://www.linkedin.com/in/eduardoklingmesiano",
+        "facebook": "https://www.facebook.com/eduardokmesiano",
+        "twitter": "https://twitter.com/Eduardo_Kling",
+        "twitterUsername": "@Eduardo_Kling",
+        "mail": "eduardokmesiano@gmail.com",
+        "blog": "https://dudukling.github.io/blog"
+    },
+    "menu": {
+        "home": "Home",
+        "about": "Sobre",
+        "portfolio": "Portfólio",
+        "blog": "Blog",
+        "resume": "Currículo",
+        "contact": "Contato",
+        "language": "Idioma",
+        "theme": "Tema"
+    },
+    "languageModal": {
+        "selected": "Selecionado",
+        "languages": {
+            "pt-br": {
+                "title": "Português",
+                "url": "index.html",
+                "flags": [
+                    {
+                        "path": "Flag_of_Brazil",
+                        "alt": "Bandeira do Brasil"
+                    },
+                    {
+                        "path": "Flag_of_Portugal",
+                        "alt": "Bandeira de Portugal"
+                    }
+                ]
+            },
+            "eng": {
+                "title": "Inglês",
+                "url": "index-eng.html",
+                "flags": [
+                    {
+                        "path": "Flag_of_the_United_States",
+                        "alt": "Bandeira dos Estados Unidos"
+                    },
+                    {
+                        "path": "Flag_of_the_United_Kingdom",
+                        "alt": "Bandeira do Reino Unido"
+                    }
+                ]
+            }
+        }
+    },
+    "themeModal": {
+        "selected": "Selecionado",
+        "themes": {
+            "dark": {
+                "title": "Escuro",
+                "imagePath": "Moon",
+                "imageAlt": "Imagem de uma lua"
+            },
+            "light": {
+                "title": "Claro",
+                "imagePath": "Sun",
+                "imageAlt": "Imagem de um sol"
+            },
+            "blue": {
+                "title": "Azul / Claro",
+                "imagePath": "Blue",
+                "imageAlt": "Imagem de um círculo azul"
+            },
+            "darkblue": {
+                "title": "Azul / Escuro",
+                "imagePath": "BlueSquare",
+                "imageAlt": "Imagem de um quadrado azul"
+            }
+        }
+    },
+    "strings": {
+        "noScript": "Este site fica melhor com o JavaScript habilitado. Por favor, habilite!",
+        "header": {
+            "presentAlt": "Desenho de uma pessoa de cabelo preto e camisa azul em um fundo verde"
+        },
+        "about": {
+            "main": "Oi, eu sou o Dudu!",
+            "firstLine": "Desenvolvedor Front-End de Petrópolis, RJ.",
+            "secondLine": "Estudante de engenharia de computação e amante de tecnologia."
+        },
+        "blog": {
+            "title": "Blog",
+            "button": "Blog >",
+            "categories": {
+                "html": {
+                    "title": "HTML",
+                    "url": "#"
+                },
+                "misc": {
+                    "title": "Misc",
+                    "url": "#"
+                },
+                "javascript": {
+                    "title": "JS",
+                    "url": "#"
+                },
+                "css": {
+                    "title": "CSS",
+                    "url": "#"
+                }
+            },
+            "posts": {
+                "first": {
+                    "url": "#",
+                    "title": "Primeiro Post",
+                    "infos": "22/10/2017 | 5 min",
+                    "peek": "Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose."
+                },
+                "second": {
+                    "url": "#",
+                    "title": "Segundo Post",
+                    "infos": "22/10/2017 | 15 min",
+                    "peek": "Aqui é Body Builder Ipsum PORRA! Eu quero esse 13 daqui a pouquinho aí. Ajuda o maluco que tá doente. Aqui é Body Builder Ipsum PORRA! Birl! Sabe o que é isso daí? Trapézio descendente é o nome disso aí."
+                },
+                "third": {
+                    "url": "#",
+                    "title": "Dilmês Ipsum",
+                    "infos": "22/10/2017 | 20 min",
+                    "peek": "Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo muito importante!"
+                }
+            }
+        },
+        "contact": {
+            "title": "Contato",
+            "inputName": "Nome Completo",
+            "inputSubject": "Assunto",
+            "inputMessage": "Mensagem",
+            "emailSubmit": "Enviar Mensagem"
+        },
+        "portfolio": {
+            "title": "Portfólio",
+            "alt": "Imagem de exemplo do portfólio tamanho maior",
+            "cases": {
+                "load": {
+                    "title": "Load Interiores",
+                    "alt": "Imagem de exemplo do portfólio - Site Load Design"
+                },
+                "tannure": {
+                    "title": "Clínica Dr. Tannure",
+                    "alt": "Imagem de exemplo do portfólio - Site Tannure"
+                },
+                "renault": {
+                    "title": "Renault Serra",
+                    "alt": "Imagem de exemplo do portfólio - Site Renault Serra"
+                },
+                "buska": {
+                    "title": "Buska Imóvel",
+                    "alt": "Imagem de exemplo do portfólio - Site Buska"
+                },
+                "storti": {
+                    "title": "Storti & Boechat",
+                    "alt": "Imagem de exemplo do portfólio - Site Storti e Boechat"
+                }
+            }
+        },
+        "skills": {
+            "title": "Habilidades & Ferramentas",
+            "text": "Algumas linguagens e ferramentas que utilizo ou já utilizei"
+        }
+    }
+}

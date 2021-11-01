@@ -1,0 +1,12 @@
+footer.homeFooter
+  include social-medias.pug
+
+  div.copyrightText
+    p #{info.copyright}
+    p #{info.copyrightMessageStart}
+      span.icon #{info.copyrightMessageIcon}
+      |#{info.copyrightMessageEnd}
+      a(href=info.url) #{info.nickName}
+      |.
+
+script(src="assets/default.js" async type='text/javascript')

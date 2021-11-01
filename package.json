@@ -1,5 +1,6 @@
 {
   "name": "dudukling.github.io",
+  "author": "Eduardo Kling Mesiano",
   "version": "1.0.0",
   "description": "My Personal Web Site",
   "main": "index.js",
@@ -11,30 +12,33 @@
     "type": "git",
     "url": "git+https://github.com/DuduKling/dudukling.github.io.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DuduKling/dudukling.github.io/issues"
   },
+  "type": "module",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-data": "^1.3.1",
+    "gulp-imagemin": "^8.0.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-svgo": "^2.2.1",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.42.1"
   },
   "homepage": "https://github.com/DuduKling/dudukling.github.io#readme"
 }

@@ -1,0 +1,41 @@
+- var portfolio = strings.portfolio;
+- var cases = strings.portfolio.cases;
+
+section.portfolio#portfolio
+  h3 #{portfolio.title}
+  div.portfolioContainer
+    div.frame
+      div.hover
+        h2 #{cases.load.title}
+        svg(viewBox="0 0 24 24")
+          use(xlink:href="#svg-magnifier")
+      img.case(src="./assets/images/atelier-load.png", alt=cases.load.alt) 
+    div.frame
+      div.hover
+        h2 #{cases.tannure.title}
+        svg(viewBox="0 0 24 24")
+          use(xlink:href="#svg-magnifier")
+      img.case(src="./assets/images/atelier-tannure.png", alt=cases.tannure.alt)
+    div.frame
+      div.hover
+        h2 #{cases.renault.title}
+        svg(viewBox="0 0 24 24")
+          use(xlink:href="#svg-magnifier")
+      img.case(src="./assets/images/atelier-renaultserra.png", alt=cases.renault.alt)
+    div.frame
+      div.hover
+        h2 #{cases.buska.title}
+        svg(viewBox="0 0 24 24")
+          use(xlink:href="#svg-magnifier")
+      img.case(src="./assets/images/atelier-buska.png", alt=cases.buska.alt)
+    div.frame
+      div.hover
+        h2 #{cases.storti.title}
+        svg(viewBox="0 0 24 24")
+          use(xlink:href="#svg-magnifier")
+      img.case(src="./assets/images/atelier-stortiboechat.png", alt=cases.storti.alt)
+
+  div#js-modal.modal.-hide
+    div#js-closeModal.closeModal
+    div.img
+      img(src="#", alt=portfolio.alt)

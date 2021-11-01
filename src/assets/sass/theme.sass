@@ -1,0 +1,124 @@
+@function hexToRGB($hex)
+	@return red($hex), green($hex), blue($hex)
+
+$green: #2CAD88
+$blue: 	#2D6BE9
+
+$grey: #f8f8f8
+$black: #222222
+
+$font1: 'Varela Round', sans-serif
+$font2: 'Montserrat', sans-serif
+
+:root
+	--color-main: #{$green}
+	--color-main-dark-10: #{darken($green, 10%)}
+	--color-main-opacity-05: rgba(#{hexToRGB($green)}, 0.5)
+
+	--color-menu-text: #{$grey}
+	--color-menu-text-shadow: #{$black}
+	--color-menu-bg-top: rgba(#{hexToRGB($black)}, 0.8)
+
+	--color-text-main-title: #{darken($green, 17%)}
+	--color-text-main-subtitle: #{darken($green, 25%)}
+
+	--color-text-secondary-title: #{darken($green, 30%)}
+
+	--color-tooltip-text-main: #{$black}
+	--color-tooltip-bg-main: #{lighten($green, 10%)}
+	--color-tooltip-bg-main-opacity: rgba(#{hexToRGB(lighten($green, 10%))}, 0.5)
+
+	--color-bg-social: #{$black}
+	--color-bg-social-back: #{$green}
+
+	--color-modal-shadow: rgba(#{hexToRGB($black)}, 0.75)
+	--color-modal-bg: #{$grey}
+	--color-modal-bg-hover: #{darken($grey, 10%)}
+	--color-modal-close: #{lighten($black, 50%)}
+	--color-modal-close-hover: #{$black}
+
+	--color-skills-item-bg: #{$grey}
+
+	--color-bg: #{$grey}
+	--color-bg-dark-10: #{darken($grey, 10%)}
+	--color-bg-dark-50: #{darken($grey, 50%)}
+	--color-bg-dark-65: #{darken($grey, 65%)}
+	--color-bg-opacity-075: rgba(#{hexToRGB($grey)}, 0.75)
+
+	--color-text: #{$black}
+	--color-text-light-10: #{lighten($black, 10%)}
+	--color-text-light-50: #{lighten($black, 50%)}
+	--color-text-light-75: #{lighten($black, 75%)}
+
+[data-theme="dark"]
+	--color-text-main-title: #{lighten($green, 10%)}
+	--color-text-main-subtitle: #{lighten($green, 10%)}
+
+	--color-text-secondary-title: #{$black}
+
+	--color-bg-social: #{$grey}
+
+	--color-modal-bg: #{lighten($black, 10%)}
+	--color-modal-bg-hover: #{$black}
+	--color-modal-close: #{darken($grey, 50%)}
+
+	--color-skills-item-bg: #{darken($grey, 10%)}
+
+	--color-bg: #{$black}
+	--color-bg-dark-10: #{lighten($black, 10%)}
+	--color-bg-dark-50: #{lighten($black, 50%)}
+	--color-bg-dark-65: #{lighten($black, 65%)}
+	--color-bg-opacity-075: rgba(#{hexToRGB($black)}, 0.75)
+
+	--color-text: #{$grey}
+	--color-text-light-10: #{darken($grey, 10%)}
+	--color-text-light-50: #{darken($grey, 50%)}
+	--color-text-light-75: #{darken($grey, 75%)}
+
+[data-theme="blue"]
+	--color-main: #{$blue}
+	--color-main-dark-10: #{darken($blue, 10%)}
+	--color-main-opacity-05: rgba(#{hexToRGB($blue)}, 0.5)
+
+	--color-text-main-title: #{darken($blue, 17%)}
+	--color-text-main-subtitle: #{darken($blue, 25%)}
+
+	--color-text-secondary-title: #{darken($blue, 30%)}
+
+	--color-tooltip-bg-main: #{lighten($blue, 10%)}
+	--color-tooltip-bg-main-opacity: rgba(#{hexToRGB(lighten($blue, 10%))}, 0.5)
+
+	--color-bg-social-back: #{$blue}
+
+[data-theme="darkblue"]
+	--color-main: #{$blue}
+	--color-main-dark-10: #{darken($blue, 10%)}
+	--color-main-opacity-05: rgba(#{hexToRGB($blue)}, 0.5)
+
+	--color-text-main-title: #{lighten($blue, 10%)}
+	--color-text-main-subtitle: #{lighten($blue, 10%)}
+
+	--color-text-secondary-title: #{$black}
+
+	--color-tooltip-bg-main: #{lighten($blue, 10%)}
+	--color-tooltip-bg-main-opacity: rgba(#{hexToRGB(lighten($blue, 10%))}, 0.5)
+
+	--color-bg-social: #{$grey}
+	--color-bg-social-back: #{$blue}
+
+	--color-modal-bg: #{lighten($black, 10%)}
+	--color-modal-bg-hover: #{$black}
+	--color-modal-close: #{darken($grey, 50%)}
+
+	--color-skills-item-bg: #{darken($grey, 10%)}
+
+	--color-bg: #{$black}
+	--color-bg-dark-10: #{lighten($black, 10%)}
+	--color-bg-dark-50: #{lighten($black, 50%)}
+	--color-bg-dark-65: #{lighten($black, 65%)}
+	--color-bg-opacity-075: rgba(#{hexToRGB($black)}, 0.75)
+
+	--color-text: #{$grey}
+	--color-text-light-10: #{darken($grey, 10%)}
+	--color-text-light-50: #{darken($grey, 50%)}
+	--color-text-light-75: #{darken($grey, 75%)}

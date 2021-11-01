@@ -1,0 +1,60 @@
+.homeFooter
+	width: 100%
+	height: 50vh
+	padding: 8vh 5% 0 5%
+	background-color: var(--color-bg)
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+
+	font-family: $font1
+	color: var(--color-text)
+
+	> .socialMedias
+		width: 35%
+		display: flex
+		justify-content: space-around
+
+		> a
+			> svg
+				display: block
+				width: 50px
+				height: 50px
+				transition: all 0.2s ease
+				fill: var(--color-bg-social)
+
+				&:hover
+					fill: var(--color-main)
+
+	> .copyrightText
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		> p
+			margin-bottom: 5px
+
+			> .icon
+				color: var(--color-main)
+
+			> a
+				color: var(--color-text)
+				transition: color 0.2s ease
+
+				&:hover
+					color: var(--color-main)
+
+@media only screen and (max-width: 1000px)
+	.homeFooter
+		> .socialMedias
+			width: auto
+			flex-wrap: wrap
+
+			> a
+				margin-right: 20px
+				margin-bottom: 20px
+
+				&:last-child
+					margin-right: 0

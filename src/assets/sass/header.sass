@@ -1,0 +1,373 @@
+.menu
+	width: 100%
+
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10
+
+	font-family: $font1
+	font-size: 12px
+
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+	transition: all 0.5s ease
+
+	&.-top
+		height: 60px
+		background-color: var(--color-menu-bg-top)
+
+		> .logo
+			font-size: 28px
+
+		> ul > li
+			> a, > button
+				font-size: 18px
+
+				&:after
+					height: 4px
+
+	&.-scroll
+		height: 40px
+		background-color: var(--color-modal-bg)
+		border-bottom: 1px solid var(--color-main-dark-10)
+
+		> .logo
+			font-size: 20px
+
+		> ul > li
+			> a, > button
+				font-size: 12px
+
+				&:after
+					height: 2px
+
+	> .logo
+		margin-left: 25px
+
+		color: var(--color-main)
+		font-family: $font2
+		font-weight: 500
+		letter-spacing: 1px
+
+		text-decoration: none
+
+		transition: all 0.5s ease
+
+	> ul
+		height: 100%
+
+		margin: 0
+		padding: 0
+		list-style-type: none
+
+		display: flex
+		justify-content: flex-end
+
+		transition: all 0.4s ease
+
+		> li
+			height: 100%
+			margin-right: 12px
+
+			> a
+				height: 100%
+				display: block
+				position: relative
+				padding: 0 5px
+
+				color: var(--color-main)
+				text-decoration: none
+
+				display: flex
+				align-items: center
+
+				transition: all 0.5s ease
+
+				&:after
+					content: ''
+					width: 100%
+					height: 2px
+
+					position: absolute
+					bottom: 0
+					left: 0
+					background-color: transparent
+					transition: background-color 0.3s ease
+
+				&:hover
+					&:after
+						content: ''
+						background-color: var(--color-main)
+
+			> a[href="#"]
+				color: var(--color-text)
+				cursor: default
+
+				&:hover:after
+					content: none
+
+			> button
+				height: 100%
+				display: block
+				position: relative
+				padding: 0 5px
+
+				font-family: $font1
+				cursor: pointer
+
+				color: var(--color-main)
+				text-decoration: none
+				background-color: transparent
+				border: none
+
+				display: flex
+				align-items: center
+
+				transition: all 0.5s ease
+
+				&:after
+					content: ''
+					width: 100%
+					height: 2px
+
+					position: absolute
+					bottom: 0
+					left: 0
+					background-color: transparent
+					transition: background-color 0.3s ease
+
+				&:hover
+					&:after
+						content: ''
+						background-color: var(--color-main)
+
+	> .respMenu
+		display: none
+
+	> .hamburgerMenu
+		display: none
+		width: 30px
+		height: 30px
+		margin-right: 15px
+
+		flex-direction: column
+		justify-content: space-between
+
+		> .line1, > .line2, > .line3
+			width: 100%
+			height: 5px
+			background-color: var(--color-main)
+
+@keyframes cursor
+	from
+		border-right-color: transparent
+	to
+		border-right-color: var(--color-bg-opacity-075)
+
+@media only screen and (max-width: 900px)
+	.menu
+		border-bottom: 1px solid var(--color-bg-dark-65)
+
+		&.-top
+			background-color: var(--color-modal-bg)
+
+			> ul
+				width: 100%
+				height: 0
+
+				position: absolute
+				top: 60px
+
+				overflow: hidden
+				background-color: var(--color-modal-bg)
+				flex-direction: column
+				justify-content: flex-start
+
+				> li
+					height: auto
+					width: 100%
+					margin-right: 0
+					border-bottom: 1px solid var(--color-main)
+
+					> a, button
+						color: var(--color-main)
+						padding: 15px 0
+						text-align: center
+						justify-content: center
+						width: 100%
+
+						&:after
+							content: none
+
+						&:hover
+							background-color: var(--color-modal-bg-hover)
+
+							&:after
+								content: none
+
+		&.-scroll
+			> ul
+				width: 100%
+				height: 0
+
+				position: absolute
+				top: 40px
+
+				overflow: hidden
+				background-color: var(--color-modal-bg)
+				flex-direction: column
+				justify-content: flex-start
+
+				> li
+					height: auto
+					width: 100%
+					margin-right: 0
+					border-bottom: 1px solid var(--color-main)
+
+					> a, button
+						color: var(--color-main)
+						padding: 15px 0
+						text-align: center
+						justify-content: center
+						width: 100%
+
+						&:after
+							content: none
+
+						&:hover
+							background-color: var(--color-modal-bg-hover)
+
+							&:after
+								content: none
+
+		> .hamburgerMenu
+			display: flex
+			height: 25px
+
+		> .respMenu:checked + ul
+			height: auto
+
+@media only screen and (max-width: 500px)
+	.menu
+		&.-top
+			> .logo
+				margin-left: 15px
+				font-size: 20px
+
+.homeHeader
+	width: 100%
+	height: 100vh
+	position: relative
+	overflow: hidden
+
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: black
+
+	> .background
+		width: 100%
+		height: 100vh
+
+		position: absolute
+		z-index: 0
+
+		background: url('images/home-bg.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-attachment: fixed
+		filter: blur(3px)
+
+	> .present
+		display: flex
+		flex-direction: column
+		align-items: center
+		z-index: 1
+		margin-top: 60px
+		width: 440px
+
+		> div
+			transition: all 0.5s ease
+			margin-bottom: 30px
+
+			> div
+				width: 200px
+				height: 200px
+				border-radius: 50%
+				overflow: hidden
+				background-color: var(--color-main)
+				transition: all 0.3s ease
+
+				> .avatar
+					width: 100%
+
+			&:hover
+				transform: rotateY(180deg)
+
+				> div
+					background-color: var(--color-main-dark-10)
+
+		> .headerName1
+			color: var(--color-menu-text)
+			font-family: 'Anonymous Pro', monospace
+			font-size: 30px
+			letter-spacing: 4px
+			text-shadow: 3px 3px var(--color-menu-text-shadow)
+			text-align: center
+			height: 35px
+
+			border-right: 2px solid transparent
+
+			overflow: hidden
+
+			width: 286px
+			animation: write1 4s steps(14) 1s 1 normal both,cursor 500ms steps(14) 10 normal
+
+			> span
+				white-space: nowrap
+
+		> .headerName2
+			color: var(--color-menu-text)
+			font-family: 'Anonymous Pro', monospace
+			font-size: 30px
+			letter-spacing: 4px
+			text-shadow: 3px 3px var(--color-menu-text-shadow)
+			text-align: center
+
+			border-right: 2px solid transparent
+
+			overflow: hidden
+
+			width: 182px
+			animation: write2 2.5s steps(9) 5s 1 normal both,cursor 500ms steps(9) 5s 8 normal
+
+.noScript
+	width: 100%
+	height: 30px
+	background-color: var(--color-main-opacity-05)
+	color: var(--color-menu-text)
+	position: fixed
+	top: 60px
+	left: 0
+	z-index: 10
+	display: flex
+	justify-content: center
+	align-items: center
+	font-family: "Varela Round", sans-serif
+	font-size: 12px
+
+@keyframes write1
+	from
+		width: 0
+	to
+		width: 286px
+
+@keyframes write2
+	from
+		width: 0
+	to
+		width: 182px

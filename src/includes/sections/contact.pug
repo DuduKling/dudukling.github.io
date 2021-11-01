@@ -1,0 +1,16 @@
+- var contact = strings.contact;
+
+section.contact#contato
+  h3 #{contact.title}
+
+  div.email
+    svg(viewBox="0 0 24 24")
+      use(xlink:href="#svg-email")
+    p #{social.mail}
+
+  form(action="#")
+    div.textField
+      input(type="text" id="js-inputName" placeholder="// "+contact.inputName aria-label=contact.inputName)
+      input(type="text" id="js-inputSubject" placeholder="// "+contact.inputSubject aria-label=contact.inputSubject)
+    textarea(name="message" id="js-inputMessage" cols="30" rows="10" placeholder="// "+contact.inputMessage aria-label=contact.inputMessage)
+    a(href="#" id="js-emailSubmit" class="emailSubmit" target="_blank" rel="noopener") #{contact.emailSubmit}

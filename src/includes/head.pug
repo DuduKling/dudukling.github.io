@@ -11,22 +11,22 @@ head
 
         gtag('config', 'UA-128971343-1');
 
-    title Dudu Kling
+    title #{info.title}
 
     meta(http-equiv="Content-Type" content="text/html")
-    meta(name="description" content="Dudu Kling's personal site")
+    meta(name="description" content=info.description)
 
     //- Icons
-    link(rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dudukling.github.io/apple-touch-icon-144x144.png")
-    link(rel="apple-touch-icon-precomposed" sizes="152x152" href="https://dudukling.github.io/apple-touch-icon-152x152.png")
-    link(rel="icon" type="image/png" href="https://dudukling.github.io/favicon-32x32.png" sizes="32x32")
-    link(rel="icon" type="image/png" href="https://dudukling.github.io/favicon-16x16.png" sizes="16x16")
-    meta(name="application-name" content="Dudu Kling")
+    link(rel="apple-touch-icon-precomposed" sizes="144x144" href=info.url+"/assets/icons/apple-touch-icon-144x144.png")
+    link(rel="apple-touch-icon-precomposed" sizes="152x152" href=info.url+"/assets/icons/apple-touch-icon-152x152.png")
+    link(rel="icon" type="image/png" href=info.url+"/assets/icons/favicon-32x32.png" sizes="32x32")
+    link(rel="icon" type="image/png" href=info.url+"/assets/icons/favicon-16x16.png" sizes="16x16")
+    meta(name="application-name" content=info.title)
     meta(name="msapplication-TileColor" content="#2CAD88")
-    meta(name="msapplication-TileImage" content="https://dudukling.github.io/mstile-144x144.png")
+    meta(name="msapplication-TileImage" content=info.url+"/assets/icons/mstile-144x144.png")
     meta(name="msapplication-config" content="browserconfig.xml")
     //- Apple Touch Icon (at least 200x200px)
-    link(rel="apple-touch-icon" href="/apple-touch-icon-152x152.png")
+    link(rel="apple-touch-icon" href="assets/icons/apple-touch-icon-152x152.png")
     //-  To run web application in full-screen
     meta(name="apple-mobile-web-app-capable" content="yes")
     //- Status Bar Style (see Supported Meta Tags below for available values)
@@ -35,39 +35,36 @@ head
 
 
     //- Preloads
-    link(rel="preload" href="style.css" as="style")
-    link(rel="preload" href="default.js" as="script")
-    
+    link(rel="preload" href="assets/style.css" as="style")
+    link(rel="preload" href="assets/default.js" as="script")
+
     //- Fonts
     link(href="https://fonts.googleapis.com/css?family=Montserrat:300,500|Varela+Round" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet")
 
-
-
-    link(rel="canonical" href="https://dudukling.github.io/")
-    link(rel="stylesheet" type="text/css" href="style.css")
+    link(rel="canonical" href=info.url+"/")
+    link(rel="stylesheet" type="text/css" href="assets/style.css")
 
     link(rel="dns-prefetch" href="https://example.com")
     link(rel="preconnect" href="https://example.com")
 
-    link(rel="prefetch" href="imgs/avatar.png")
-
+    link(rel="prefetch" href="assets/icons/avatar.png")
 
     //- Facebook
     meta(property="og:type" content="website")
-    meta(property="og:url" content="https://dudukling.github.io/")
-    meta(property="og:title" content="Dudu Kling")
-    meta(property="og:image" content="https://dudukling.github.io/icon.png")
-    meta(property="og:description" content="Dudu Kling's personal site")
-    meta(property="og:site_name" content="Dudu Kling")
-    meta(property="og:locale" content="_ptBR")
+    meta(property="og:url" content=info.url+"/")
+    meta(property="og:title" content=info.title)
+    meta(property="og:image" content=info.url+"/assets/icons/icon.png")
+    meta(property="og:description" content=info.description)
+    meta(property="og:site_name" content=info.title)
+    meta(property="og:locale" content=locale)
     meta(property="og:image:width" content="1200")
     meta(property="og:image:height" content="630")
 
     //- Twitter
     meta(name="twitter:card" content="summary")
-    meta(name="twitter:creator" content="@Eduardo_Kling")
-    meta(name="twitter:url" content="https://dudukling.github.io/")
-    meta(name="twitter:title" content="Dudu Kling")
-    meta(name="twitter:description" content="Dudu Kling's personal site")
-    meta(name="twitter:image" content="https://dudukling.github.io/icon.png")
+    meta(name="twitter:creator" content=social.twitterUsername)
+    meta(name="twitter:url" content=info.url+"/")
+    meta(name="twitter:title" content=info.title)
+    meta(name="twitter:description" content=info.description)
+    meta(name="twitter:image" content=info.url+"/assets/icons/icon.png")

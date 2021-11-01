@@ -7,8 +7,6 @@
 })();
 
 document.addEventListener("scroll", function () {
-    SkillsAnimationOnScroll();
-
     if (screen.width > 800) {
         MenuChangeOnScroll();
     }
@@ -19,35 +17,6 @@ function offset(el) {
     let rect = el.getBoundingClientRect();
     let scrollTop = window.pageYOffset || window.scrollY;
     return {top: rect.top + scrollTop};
-}
-
-/* Animate Skills bars to expand only when the user screen is showing them. */
-let level = document.querySelectorAll(".level");
-
-let tela = window.innerHeight;
-// let liTopPositions = new Array();
-let liTopPositions = [];
-let liBotPositions = [];
-
-level.forEach(function (e, i) {
-    let liTop = offset(level[i]);
-    liTopPositions.push(liTop.top);
-    liBotPositions.push(liTop.top + 26);
-});
-
-function SkillsAnimationOnScroll() {
-    let topoTela = window.scrollY;
-    let baixoTela = Number(topoTela + tela);
-    
-    level.forEach(function (e, i) {
-        if (baixoTela >= liBotPositions[i] && Number(topoTela - 80) <= liTopPositions[i]) {
-            level[i].classList.remove("-out");
-            level[i].classList.add("-in");
-        } else {
-            level[i].classList.remove("-in");
-            level[i].classList.add("-out");
-        }
-    });
 }
 
 /* Change style of Menu when user scroll down after the ATF (Above The Fold). */
@@ -127,3 +96,70 @@ emailSubmit.addEventListener("click", function () {
     subject.value = "";
     message.value = "";
 });
+
+
+
+
+
+
+
+// ########## MODAL ##########
+const modalHandler = ([btn, aModal, closeBtn, cssClass]) => {
+    const elementBtn = document.getElementById(btn);
+    const elementModal = document.getElementById(aModal);
+    const elementCloseBtn = document.getElementById(closeBtn);
+
+    const classes = elementModal.classList;
+
+    const open = () => { classes.add(cssClass); }
+    const close = () => { classes.remove(cssClass); }
+
+    elementBtn.addEventListener('click', open);
+    elementCloseBtn.addEventListener('click', close);
+
+    window.addEventListener('click', (event) => {
+        if (event.target === elementModal) { close(); }
+    });
+}
+
+modalHandler(['langBtn', 'langModal', 'langModalClose', 'langModalShow']);
+
+
+// ########## THEME ##########
+const theme = {
+    btn: 'themeBtn',
+    modal: 'themeModal',
+    closeBtn: 'themeModalClose',
+    cssClass: 'themeModalShow',
+    localStorageKey: 'theme',
+    documentAttr: 'data-theme',
+}
+
+modalHandler([theme.btn, theme.modal, theme.closeBtn, theme.cssClass]);
+
+const getStoredTheme = (localStorageKey) => {
+    const storedTheme = localStorage.getItem(localStorageKey) || document.documentElement.getAttribute(theme.documentAttr) || null;
+    if (storedTheme) { themeHandler(storedTheme) }
+}
+
+getStoredTheme(theme.localStorageKey);
+
+function themeHandler(key) {
+    // Set Theme
+    document.documentElement.setAttribute(theme.documentAttr, key);
+    localStorage.setItem(theme.localStorageKey, key);
+
+    // UpdateButtons
+    const themeModalList = document.querySelectorAll('.themeItem');
+
+    for (const themeItem of themeModalList) {
+        const themeItemButton = themeItem.querySelector('button');
+        const themeItemKey = themeItem.querySelector('.hiddenKey').innerHTML;
+
+        if (themeItemKey === key) {
+            themeItemButton.setAttribute('disabled', true);
+        } else {
+            themeItemButton.removeAttribute('disabled')
+        }
+    }
+}

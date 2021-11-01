@@ -1,0 +1,37 @@
+- var blog = strings.blog;
+- var post = strings.blog.posts;
+- var category = strings.blog.categories;
+
+section.blog#blog
+  h3 #{blog.title}
+  div.blogContainer
+    div.post
+      a.postlink(href=post.first.url)
+        h2.postTitle #{post.first.title}
+        p.infos #{post.first.infos}
+        p.peek #{post.first.peek}
+      ul.tags
+        li 
+          a(href=category.misc.url) #{category.misc.title}
+
+    div.post
+      a.postlink(href=post.second.url)
+        h2.postTitle #{post.second.title}
+        p.infos #{post.second.infos}
+        p.peek #{post.second.peek}
+      ul.tags
+        li 
+          a(href=category.javascript.url) #{category.javascript.title}
+
+    div.post
+      a.postlink(href=post.third.url)
+        h2.postTitle #{post.third.title}
+        p.infos #{post.third.infos}
+        p.peek #{post.third.peek}
+      ul.tags
+        li 
+          a(href=category.html.url) #{category.html.title}
+        li 
+          a(href=category.css.url) #{category.css.title}
+
+  a.link-blog(href=social.blog) #{blog.button}

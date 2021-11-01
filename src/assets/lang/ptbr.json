@@ -72,12 +72,22 @@
             "dark": {
                 "title": "Escuro",
                 "imagePath": "Moon",
-                "imageAlt": "Image of the moon"
+                "imageAlt": "Imagem de uma lua"
             },
             "light": {
                 "title": "Claro",
                 "imagePath": "Sun",
-                "imageAlt": "Image of the sun"
+                "imageAlt": "Imagem de um sol"
+            },
+            "blue": {
+                "title": "Azul / Claro",
+                "imagePath": "Blue",
+                "imageAlt": "Imagem de um círculo azul"
+            },
+            "darkblue": {
+                "title": "Azul / Escuro",
+                "imagePath": "BlueSquare",
+                "imageAlt": "Imagem de um quadrado azul"
             }
         }
     },

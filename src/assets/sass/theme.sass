@@ -2,7 +2,8 @@
 	@return red($hex), green($hex), blue($hex)
 
 $green: #2CAD88
-$blue: 	#254460
+$blue: 	#2D6BE9
+
 $grey: #f8f8f8
 $black: #222222
 
@@ -55,6 +56,52 @@ $font2: 'Montserrat', sans-serif
 	--color-text-secondary-title: #{$black}
 
 	--color-bg-social: #{$grey}
+
+	--color-modal-bg: #{lighten($black, 10%)}
+	--color-modal-bg-hover: #{$black}
+	--color-modal-close: #{darken($grey, 50%)}
+
+	--color-skills-item-bg: #{darken($grey, 10%)}
+
+	--color-bg: #{$black}
+	--color-bg-dark-10: #{lighten($black, 10%)}
+	--color-bg-dark-50: #{lighten($black, 50%)}
+	--color-bg-dark-65: #{lighten($black, 65%)}
+	--color-bg-opacity-075: rgba(#{hexToRGB($black)}, 0.75)
+
+	--color-text: #{$grey}
+	--color-text-light-10: #{darken($grey, 10%)}
+	--color-text-light-50: #{darken($grey, 50%)}
+	--color-text-light-75: #{darken($grey, 75%)}
+
+[data-theme="blue"]
+	--color-main: #{$blue}
+	--color-main-dark-10: #{darken($blue, 10%)}
+	--color-main-opacity-05: rgba(#{hexToRGB($blue)}, 0.5)
+
+	--color-text-main-title: #{darken($blue, 17%)}
+	--color-text-main-subtitle: #{darken($blue, 25%)}
+
+	--color-text-secondary-title: #{darken($blue, 30%)}
+
+	--color-tooltip-bg-main: #{lighten($blue, 10%)}
+
+	--color-bg-social-back: #{$blue}
+
+[data-theme="darkblue"]
+	--color-main: #{$blue}
+	--color-main-dark-10: #{darken($blue, 10%)}
+	--color-main-opacity-05: rgba(#{hexToRGB($blue)}, 0.5)
+
+	--color-text-main-title: #{lighten($blue, 10%)}
+	--color-text-main-subtitle: #{lighten($blue, 10%)}
+
+	--color-text-secondary-title: #{$black}
+
+	--color-tooltip-bg-main: #{lighten($blue, 10%)}
+
+	--color-bg-social: #{$grey}
+	--color-bg-social-back: #{$blue}
 
 	--color-modal-bg: #{lighten($black, 10%)}
 	--color-modal-bg-hover: #{$black}

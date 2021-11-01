@@ -15,8 +15,9 @@ $font2: 'Montserrat', sans-serif
 	--color-main-dark-10: #{darken($green, 10%)}
 	--color-main-opacity-05: rgba(#{hexToRGB($green)}, 0.5)
 
-	--color-text-menu: #{$grey}
-	--color-text-menu-back: #{$black}
+	--color-menu-text: #{$grey}
+	--color-menu-text-shadow: #{$black}
+	--color-menu-bg-top: rgba(#{hexToRGB($black)}, 0.8)
 
 	--color-text-main-title: #{darken($green, 17%)}
 	--color-text-main-subtitle: #{darken($green, 25%)}
@@ -25,6 +26,7 @@ $font2: 'Montserrat', sans-serif
 
 	--color-tooltip-text-main: #{$black}
 	--color-tooltip-bg-main: #{lighten($green, 10%)}
+	--color-tooltip-bg-main-opacity: rgba(#{hexToRGB(lighten($green, 10%))}, 0.5)
 
 	--color-bg-social: #{$black}
 	--color-bg-social-back: #{$green}
@@ -41,7 +43,6 @@ $font2: 'Montserrat', sans-serif
 	--color-bg-dark-10: #{darken($grey, 10%)}
 	--color-bg-dark-50: #{darken($grey, 50%)}
 	--color-bg-dark-65: #{darken($grey, 65%)}
-	--color-bg-opacity-01: rgba(#{hexToRGB($grey)}, 0.1)
 	--color-bg-opacity-075: rgba(#{hexToRGB($grey)}, 0.75)
 
 	--color-text: #{$black}
@@ -85,6 +86,7 @@ $font2: 'Montserrat', sans-serif
 	--color-text-secondary-title: #{darken($blue, 30%)}
 
 	--color-tooltip-bg-main: #{lighten($blue, 10%)}
+	--color-tooltip-bg-main-opacity: rgba(#{hexToRGB(lighten($blue, 10%))}, 0.5)
 
 	--color-bg-social-back: #{$blue}
 
@@ -99,6 +101,7 @@ $font2: 'Montserrat', sans-serif
 	--color-text-secondary-title: #{$black}
 
 	--color-tooltip-bg-main: #{lighten($blue, 10%)}
+	--color-tooltip-bg-main-opacity: rgba(#{hexToRGB(lighten($blue, 10%))}, 0.5)
 
 	--color-bg-social: #{$grey}
 	--color-bg-social-back: #{$blue}

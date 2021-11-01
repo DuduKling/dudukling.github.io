@@ -18,7 +18,7 @@
 
 	&.-top
 		height: 60px
-		background-color: var(--color-bg-opacity-01)
+		background-color: var(--color-menu-bg-top)
 
 		> .logo
 			font-size: 28px
@@ -32,7 +32,7 @@
 
 	&.-scroll
 		height: 40px
-		background-color: var(--color-main)
+		background-color: var(--color-modal-bg)
 		border-bottom: 1px solid var(--color-main-dark-10)
 
 		> .logo
@@ -48,7 +48,7 @@
 	> .logo
 		margin-left: 25px
 
-		color: var(--color-text-menu)
+		color: var(--color-main)
 		font-family: $font2
 		font-weight: 500
 		letter-spacing: 1px
@@ -79,7 +79,7 @@
 				position: relative
 				padding: 0 5px
 
-				color: var(--color-text-menu)
+				color: var(--color-main)
 				text-decoration: none
 
 				display: flex
@@ -101,7 +101,7 @@
 				&:hover
 					&:after
 						content: ''
-						background-color: var(--color-text-menu)
+						background-color: var(--color-main)
 
 			> a[href="#"]
 				color: var(--color-text)
@@ -119,7 +119,7 @@
 				font-family: $font1
 				cursor: pointer
 
-				color: var(--color-text-menu)
+				color: var(--color-main)
 				text-decoration: none
 				background-color: transparent
 				border: none
@@ -143,7 +143,7 @@
 				&:hover
 					&:after
 						content: ''
-						background-color: var(--color-text-menu)
+						background-color: var(--color-main)
 
 	> .respMenu
 		display: none
@@ -157,20 +157,10 @@
 		flex-direction: column
 		justify-content: space-between
 
-		> .line1
+		> .line1, > .line2, > .line3
 			width: 100%
 			height: 5px
-			background-color: var(--color-bg)
-
-		> .line2
-			width: 100%
-			height: 5px
-			background-color: var(--color-bg)
-
-		> .line3
-			width: 100%
-			height: 5px
-			background-color: var(--color-bg)
+			background-color: var(--color-main)
 
 @keyframes cursor
 	from
@@ -178,12 +168,12 @@
 	to
 		border-right-color: var(--color-bg-opacity-075)
 
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: 900px)
 	.menu
 		border-bottom: 1px solid var(--color-bg-dark-65)
 
 		&.-top
-			background-color: var(--color-text)
+			background-color: var(--color-modal-bg)
 
 			> ul
 				width: 100%
@@ -193,7 +183,7 @@
 				top: 60px
 
 				overflow: hidden
-				background-color: var(--color-text)
+				background-color: var(--color-modal-bg)
 				flex-direction: column
 				justify-content: flex-start
 
@@ -201,26 +191,65 @@
 					height: auto
 					width: 100%
 					margin-right: 0
-					border-bottom: 1px solid var(--color-bg)
+					border-bottom: 1px solid var(--color-main)
 
-					> a
+					> a, button
+						color: var(--color-main)
 						padding: 15px 0
 						text-align: center
 						justify-content: center
+						width: 100%
 
 						&:after
 							content: none
 
 						&:hover
-							background-color: var(--color-text-light-10)
+							background-color: var(--color-modal-bg-hover)
+
+							&:after
+								content: none
+
+		&.-scroll
+			> ul
+				width: 100%
+				height: 0
+
+				position: absolute
+				top: 40px
+
+				overflow: hidden
+				background-color: var(--color-modal-bg)
+				flex-direction: column
+				justify-content: flex-start
+
+				> li
+					height: auto
+					width: 100%
+					margin-right: 0
+					border-bottom: 1px solid var(--color-main)
+
+					> a, button
+						color: var(--color-main)
+						padding: 15px 0
+						text-align: center
+						justify-content: center
+						width: 100%
+
+						&:after
+							content: none
+
+						&:hover
+							background-color: var(--color-modal-bg-hover)
+
 							&:after
 								content: none
 
 		> .hamburgerMenu
 			display: flex
+			height: 25px
 
 		> .respMenu:checked + ul
-			height: 318px
+			height: auto
 
 @media only screen and (max-width: 500px)
 	.menu
@@ -283,11 +312,11 @@
 					background-color: var(--color-main-dark-10)
 
 		> .headerName1
-			color: var(--color-text-menu)
+			color: var(--color-menu-text)
 			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
 			letter-spacing: 4px
-			text-shadow: 3px 3px var(--color-text-menu-back)
+			text-shadow: 3px 3px var(--color-menu-text-shadow)
 			text-align: center
 			height: 35px
 
@@ -302,11 +331,11 @@
 				white-space: nowrap
 
 		> .headerName2
-			color: var(--color-text-menu)
+			color: var(--color-menu-text)
 			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
 			letter-spacing: 4px
-			text-shadow: 3px 3px var(--color-text-menu-back)
+			text-shadow: 3px 3px var(--color-menu-text-shadow)
 			text-align: center
 
 			border-right: 2px solid transparent
@@ -320,7 +349,7 @@
 	width: 100%
 	height: 30px
 	background-color: var(--color-main-opacity-05)
-	color: var(--color-text-menu)
+	color: var(--color-menu-text)
 	position: fixed
 	top: 60px
 	left: 0

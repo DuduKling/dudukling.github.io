@@ -270,12 +270,17 @@
 				height: 200px
 				border-radius: 50%
 				overflow: hidden
+				background-color: var(--color-main)
+				transition: all 0.3s ease
 
 				> .avatar
 					width: 100%
 
 			&:hover
 				transform: rotateY(180deg)
+
+				> div
+					background-color: var(--color-main-dark-10)
 
 		> .headerName1
 			color: var(--color-text-menu)

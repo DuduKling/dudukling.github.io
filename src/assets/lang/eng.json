@@ -9,7 +9,9 @@
         "surname": "Mesiano",
         "url": "https://dudukling.github.io",
         "copyright": "Copyright ☺ 2017",
-        "copyrightMessage": "Made with ♥ by ",
+        "copyrightMessageStart": "Made with ",
+        "copyrightMessageIcon": "♥ ",
+        "copyrightMessageEnd": "by ",
         "resume": "Curriculum_Eduardo_K_Mesiano.pdf"
     },
     "social": {

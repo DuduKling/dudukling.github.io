@@ -3,7 +3,9 @@ footer.homeFooter
 
   div.copyrightText
     p #{info.copyright}
-    p #{info.copyrightMessage}
+    p #{info.copyrightMessageStart}
+      span.icon #{info.copyrightMessageIcon}
+      |#{info.copyrightMessageEnd}
       a(href=info.url) #{info.nickName}
       |.
 

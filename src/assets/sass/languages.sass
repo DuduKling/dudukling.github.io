@@ -9,12 +9,12 @@
 	z-index: 10
 
 	overflow: auto
-	background-color: var(--color-black-opacity-075)
+	background-color: var(--color-modal-shadow)
 	font-family: $font1
 	transition: opacity 0.3s ease-in-out, height 0s 0.3s ease-in-out
 
 	> .langModal-content
-		background-color: var(--color-grey)
+		background-color: var(--color-modal-bg)
 		margin: 15% auto
 		padding: 20px
 		min-width: 300px
@@ -28,13 +28,13 @@
 			top: 5px
 			right: 15px
 
-			color: var(--color-black-light-50)
+			color: var(--color-modal-close)
 			font-size: 28px
 			font-weight: bold
 
 			&:hover,
 			&:focus
-				color: black
+				color: var(--color-modal-close-hover)
 				text-decoration: none
 				cursor: pointer
 
@@ -57,7 +57,7 @@
 	> li
 		height: 50px
 		border-radius: 10px
-		background-color: var(--color-grey)
+		background-color: var(--color-modal-bg)
 
 		display: flex
 		justify-content: center
@@ -67,7 +67,7 @@
 		transition: all 0.5s ease
 
 		&:hover
-			background-color: var(--color-grey-dark-10)
+			background-color: var(--color-modal-bg-hover)
 
 		&:not(:last-child)::after
 			content: ""
@@ -76,7 +76,7 @@
 			left: 10px
 			width: calc(100% - 20px)
 			height: 1px
-			background-color: var(--color-green)
+			background-color: var(--color-main)
 
 		> a, span
 			height: 100%
@@ -88,7 +88,7 @@
 			align-items: center
 
 			text-decoration: none
-			color: var(--color-blue)
+			color: var(--color-main)
 
 			> .langFlags
 				display: flex
@@ -101,5 +101,10 @@
 					margin: 5px
 
 		> .disabled
+			cursor: not-allowed
 			border-radius: 10px
-			background-color: var(--color-green)
+			background-color: var(--color-main)
+			color: var(--color-bg)
+
+			> span
+				color: var(--color-bg)

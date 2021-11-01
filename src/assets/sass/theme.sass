@@ -4,32 +4,71 @@
 $green: #2CAD88
 $blue: 	#254460
 $grey: #f8f8f8
-$black: #1F2421
+$black: #222222
 
 $font1: 'Varela Round', sans-serif
 $font2: 'Montserrat', sans-serif
 
 :root
-	--color-green: #{$green}
-	--color-green-dark-10: #{darken($green, 10%)}
-	--color-green-opacity-05: rgba(#{hexToRGB($green)}, 0.5)
+	--color-main: #{$green}
+	--color-main-dark-10: #{darken($green, 10%)}
+	--color-main-opacity-05: rgba(#{hexToRGB($green)}, 0.5)
 
-	--color-blue: #{$blue}
+	--color-text-menu: #{$grey}
+	--color-text-menu-back: #{$black}
 
-	--color-grey: #{$grey}
-	--color-grey-dark-10: #{darken($grey, 10%)}
-	--color-grey-dark-50: #{darken($grey, 50%)}
-	--color-grey-dark-65: #{darken($grey, 65%)}
-	--color-grey-opacity-01: rgba(#{hexToRGB($grey)}, 0.1)
-	--color-grey-opacity-075: rgba(#{hexToRGB($grey)}, 0.75)
+	--color-text-main-title: #{darken($green, 17%)}
+	--color-text-main-subtitle: #{darken($green, 25%)}
 
-	--color-black: #{$black}
-	--color-black-light-10: #{lighten($black, 10%)}
-	--color-black-light-50: #{lighten($black, 50%)}
-	--color-black-light-75: #{lighten($black, 75%)}
-	--color-black-opacity-075: rgba(#{hexToRGB($black)}, 0.75)
+	--color-text-secondary-title: #{darken($green, 30%)}
+
+	--color-tooltip-text-main: #{$black}
+	--color-tooltip-bg-main: #{lighten($green, 10%)}
+
+	--color-bg-social: #{$black}
+	--color-bg-social-back: #{$green}
+
+	--color-modal-shadow: rgba(#{hexToRGB($black)}, 0.75)
+	--color-modal-bg: #{$grey}
+	--color-modal-bg-hover: #{darken($grey, 10%)}
+	--color-modal-close: #{lighten($black, 50%)}
+	--color-modal-close-hover: #{$black}
+
+	--color-skills-item-bg: #{$grey}
+
+	--color-bg: #{$grey}
+	--color-bg-dark-10: #{darken($grey, 10%)}
+	--color-bg-dark-50: #{darken($grey, 50%)}
+	--color-bg-dark-65: #{darken($grey, 65%)}
+	--color-bg-opacity-01: rgba(#{hexToRGB($grey)}, 0.1)
+	--color-bg-opacity-075: rgba(#{hexToRGB($grey)}, 0.75)
+
+	--color-text: #{$black}
+	--color-text-light-10: #{lighten($black, 10%)}
+	--color-text-light-50: #{lighten($black, 50%)}
+	--color-text-light-75: #{lighten($black, 75%)}
 
 [data-theme="dark"]
-	--color-green: red
-	--color-green-dark-10: #{darken(red, 10%)}
-	--color-green-opacity-05: rgba(#{hexToRGB(red)}, 0.5)
+	--color-text-main-title: #{lighten($green, 10%)}
+	--color-text-main-subtitle: #{lighten($green, 10%)}
+
+	--color-text-secondary-title: #{$black}
+
+	--color-bg-social: #{$grey}
+
+	--color-modal-bg: #{lighten($black, 10%)}
+	--color-modal-bg-hover: #{$black}
+	--color-modal-close: #{darken($grey, 50%)}
+
+	--color-skills-item-bg: #{darken($grey, 10%)}
+
+	--color-bg: #{$black}
+	--color-bg-dark-10: #{lighten($black, 10%)}
+	--color-bg-dark-50: #{lighten($black, 50%)}
+	--color-bg-dark-65: #{lighten($black, 65%)}
+	--color-bg-opacity-075: rgba(#{hexToRGB($black)}, 0.75)
+
+	--color-text: #{$grey}
+	--color-text-light-10: #{darken($grey, 10%)}
+	--color-text-light-50: #{darken($grey, 50%)}
+	--color-text-light-75: #{darken($grey, 75%)}

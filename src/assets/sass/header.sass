@@ -18,11 +18,11 @@
 
 	&.-top
 		height: 60px
-		background-color: var(--color-grey-opacity-01)
+		background-color: var(--color-bg-opacity-01)
 
 		> .logo
 			font-size: 28px
-		
+
 		> ul > li
 			> a, > button
 				font-size: 18px
@@ -32,12 +32,12 @@
 
 	&.-scroll
 		height: 40px
-		background-color: var(--color-black)
-		border-bottom: 1px solid var(--color-grey-dark-65)
+		background-color: var(--color-main)
+		border-bottom: 1px solid var(--color-main-dark-10)
 
 		> .logo
 			font-size: 20px
-		
+
 		> ul > li
 			> a, > button
 				font-size: 12px
@@ -48,7 +48,7 @@
 	> .logo
 		margin-left: 25px
 
-		color: white
+		color: var(--color-text-menu)
 		font-family: $font2
 		font-weight: 500
 		letter-spacing: 1px
@@ -79,7 +79,7 @@
 				position: relative
 				padding: 0 5px
 
-				color: white
+				color: var(--color-text-menu)
 				text-decoration: none
 
 				display: flex
@@ -91,7 +91,7 @@
 					content: ''
 					width: 100%
 					height: 2px
-					
+
 					position: absolute
 					bottom: 0
 					left: 0
@@ -101,10 +101,10 @@
 				&:hover
 					&:after
 						content: ''
-						background-color: white
+						background-color: var(--color-text-menu)
 
 			> a[href="#"]
-				color: var(--color-black)
+				color: var(--color-text)
 				cursor: default
 
 				&:hover:after
@@ -119,7 +119,7 @@
 				font-family: $font1
 				cursor: pointer
 
-				color: white
+				color: var(--color-text-menu)
 				text-decoration: none
 				background-color: transparent
 				border: none
@@ -143,9 +143,7 @@
 				&:hover
 					&:after
 						content: ''
-						background-color: white
-
-
+						background-color: var(--color-text-menu)
 
 	> .respMenu
 		display: none
@@ -162,30 +160,30 @@
 		> .line1
 			width: 100%
 			height: 5px
-			background-color: var(--color-grey)
-		
+			background-color: var(--color-bg)
+
 		> .line2
 			width: 100%
 			height: 5px
-			background-color: var(--color-grey)
-		
+			background-color: var(--color-bg)
+
 		> .line3
 			width: 100%
 			height: 5px
-			background-color: var(--color-grey)
+			background-color: var(--color-bg)
 
 @keyframes cursor
 	from
 		border-right-color: transparent
 	to
-		border-right-color: var(--color-grey-opacity-075)
+		border-right-color: var(--color-bg-opacity-075)
 
 @media only screen and (max-width: 800px)
 	.menu
-		border-bottom: 1px solid var(--color-grey-dark-65)
+		border-bottom: 1px solid var(--color-bg-dark-65)
 
 		&.-top
-			background-color: var(--color-black)
+			background-color: var(--color-text)
 
 			> ul
 				width: 100%
@@ -195,7 +193,7 @@
 				top: 60px
 
 				overflow: hidden
-				background-color: var(--color-black)
+				background-color: var(--color-text)
 				flex-direction: column
 				justify-content: flex-start
 
@@ -203,7 +201,7 @@
 					height: auto
 					width: 100%
 					margin-right: 0
-					border-bottom: 1px solid var(--color-grey)
+					border-bottom: 1px solid var(--color-bg)
 
 					> a
 						padding: 15px 0
@@ -214,11 +212,10 @@
 							content: none
 
 						&:hover
-							background-color: var(--color-black-light-10)
+							background-color: var(--color-text-light-10)
 							&:after
 								content: none
 
-			
 		> .hamburgerMenu
 			display: flex
 
@@ -267,7 +264,7 @@
 		> div
 			transition: all 0.5s ease
 			margin-bottom: 30px
-			
+
 			> div
 				width: 200px
 				height: 200px
@@ -281,34 +278,34 @@
 				transform: rotateY(180deg)
 
 		> .headerName1
-			color: var(--color-grey)
+			color: var(--color-text-menu)
 			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
 			letter-spacing: 4px
-			text-shadow: 3px 3px var(--color-black)
+			text-shadow: 3px 3px var(--color-text-menu-back)
 			text-align: center
 			height: 35px
 
 			border-right: 2px solid transparent
-			
+
 			overflow: hidden
 
 			width: 286px
 			animation: write1 4s steps(14) 1s 1 normal both,cursor 500ms steps(14) 10 normal
-			
+
 			> span
-				white-space: nowrap	
-				
+				white-space: nowrap
+
 		> .headerName2
-			color: var(--color-grey)
+			color: var(--color-text-menu)
 			font-family: 'Anonymous Pro', monospace
 			font-size: 30px
 			letter-spacing: 4px
-			text-shadow: 3px 3px var(--color-black)
+			text-shadow: 3px 3px var(--color-text-menu-back)
 			text-align: center
 
 			border-right: 2px solid transparent
-			
+
 			overflow: hidden
 
 			width: 182px
@@ -317,8 +314,8 @@
 .noScript
 	width: 100%
 	height: 30px
-	background-color: var(--color-green-opacity-05)
-	color: var(--color-grey)
+	background-color: var(--color-main-opacity-05)
+	color: var(--color-text-menu)
 	position: fixed
 	top: 60px
 	left: 0

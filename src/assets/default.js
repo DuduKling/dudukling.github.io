@@ -7,8 +7,6 @@
 })();
 
 document.addEventListener("scroll", function () {
-    SkillsAnimationOnScroll();
-
     if (screen.width > 800) {
         MenuChangeOnScroll();
     }
@@ -19,35 +17,6 @@ function offset(el) {
     let rect = el.getBoundingClientRect();
     let scrollTop = window.pageYOffset || window.scrollY;
     return {top: rect.top + scrollTop};
-}
-
-/* Animate Skills bars to expand only when the user screen is showing them. */
-let level = document.querySelectorAll(".level");
-
-let tela = window.innerHeight;
-// let liTopPositions = new Array();
-let liTopPositions = [];
-let liBotPositions = [];
-
-level.forEach(function (e, i) {
-    let liTop = offset(level[i]);
-    liTopPositions.push(liTop.top);
-    liBotPositions.push(liTop.top + 26);
-});
-
-function SkillsAnimationOnScroll() {
-    let topoTela = window.scrollY;
-    let baixoTela = Number(topoTela + tela);
-    
-    level.forEach(function (e, i) {
-        if (baixoTela >= liBotPositions[i] && Number(topoTela - 80) <= liTopPositions[i]) {
-            level[i].classList.remove("-out");
-            level[i].classList.add("-in");
-        } else {
-            level[i].classList.remove("-in");
-            level[i].classList.add("-out");
-        }
-    });
 }
 
 /* Change style of Menu when user scroll down after the ATF (Above The Fold). */
@@ -176,8 +145,6 @@ const getStoredTheme = (localStorageKey) => {
 getStoredTheme(theme.localStorageKey);
 
 function themeHandler(key) {
-    console.log(key);
-
     // Set Theme
     document.documentElement.setAttribute(theme.documentAttr, key);
     localStorage.setItem(theme.localStorageKey, key);

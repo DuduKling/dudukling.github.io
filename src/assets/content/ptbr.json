@@ -180,6 +180,40 @@
         "skills": {
             "title": "Habilidades & Ferramentas",
             "text": "Algumas linguagens e ferramentas que utilizo ou já utilizei"
+        },
+        "experiences": {
+            "title": "Experiências",
+            "text": "",
+            "timeline": [
+                {
+                    "time": "Mar. 2019 - Atual",
+                    "title": "Desenvolvedor de Sistemas Pl.",
+                    "company": "Stone Age",
+                    "location": "Rio de Janeiro",
+                    "description": ""
+                },
+                {
+                    "time": "Fev. 2017 - Fev. 2019",
+                    "title": "Estágio na Área de TI",
+                    "company": "Safran Helicopter Engines",
+                    "location": "Duque de Caxias",
+                    "description": ""
+                },
+                {
+                    "time": "Jun. 2016 - Fev. 2017",
+                    "title": "Estágio em Desenvolvimento Web - Front-end",
+                    "company": "Atelier Design",
+                    "location": "Petrópolis",
+                    "description": ""
+                },
+                {
+                    "time": "Jan. 2015 - Jun. 2016",
+                    "title": "Estagiário de TI",
+                    "company": "Prefeitura Municipal de Petrópolis",
+                    "location": "Petrópolis",
+                    "description": ""
+                }
+            ]
         }
     }
 }

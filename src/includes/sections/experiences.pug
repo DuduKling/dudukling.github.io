@@ -1,0 +1,24 @@
+- var exp = strings.experiences;
+
+section.experiences#ex
+  h3 #{exp.title}
+  p #{exp.text}
+
+  div.experiencesArea
+    ul.timeline
+      each timelineItem in exp.timeline
+        li.item(data-time=timelineItem.time)
+          h3.title #{timelineItem.title}
+          div.subtitle
+            if timelineItem.company
+              div.company
+                svg(viewBox="0 0 48 48")
+                  use(xlink:href="#svg-company")
+                p #{timelineItem.company}
+            if timelineItem.location
+              div.location
+                svg(viewBox="0 0 24 24")
+                  use(xlink:href="#svg-mapMarkerPin")
+                p #{timelineItem.location}
+          if timelineItem.description
+            p.description #{timelineItem.description}

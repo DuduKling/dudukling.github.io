@@ -180,6 +180,40 @@
         "skills": {
             "title": "Skills & Tools",
             "text": "Some languages ​​and tools I use or have used"
+        },
+        "experiences": {
+            "title": "Experiences",
+            "text": "",
+            "timeline": [
+                {
+                    "time": "Mar. 2019 - Present",
+                    "title": "Software Developer",
+                    "company": "Stone Age",
+                    "location": "Rio de Janeiro, Brazil",
+                    "description": ""
+                },
+                {
+                    "time": "Feb. 2017 - Feb. 2019",
+                    "title": "IT Internship",
+                    "company": "Safran Helicopter Engines",
+                    "location": "Duque de Caxias, Brazil",
+                    "description": ""
+                },
+                {
+                    "time": "Jun. 2016 - Feb. 2017",
+                    "title": "Internship in Web Development - Front-end",
+                    "company": "Atelier Design",
+                    "location": "Petrópolis, Brazil",
+                    "description": ""
+                },
+                {
+                    "time": "Jan. 2015 - Jun. 2016",
+                    "title": "IT Internship",
+                    "company": "City Hall of Petrópolis",
+                    "location": "Petrópolis, Brazil",
+                    "description": ""
+                }
+            ]
         }
     }
 }

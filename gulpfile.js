@@ -30,14 +30,14 @@ const paths = {
 			dest: './',
 			name: 'index.html',
 			includes: './src/includes/**/*.pug',
-			lang: './src/assets/lang/ptbr.json',
+			lang: './src/assets/content/ptbr.json',
 		},
 		eng: {
 			src: './src/index.pug',
 			dest: './',
 			name: 'index-eng.html',
 			includes: './src/includes/**/*.pug',
-			lang: './src/assets/lang/eng.json',
+			lang: './src/assets/content/eng.json',
 		},
 	},
 	js: {

@@ -98,8 +98,8 @@
         },
         "about": {
             "main": "Oi, eu sou o Dudu!",
-            "firstLine": "Desenvolvedor Front-End de Petrópolis, RJ.",
-            "secondLine": "Estudante de engenharia de computação e amante de tecnologia."
+            "firstLine": "Desenvolvedor de Software e amante de tecnologia.",
+            "secondLine": "Formado em Engenharia da computação e com pós-graduação em Ciência de Dados.",
         },
         "blog": {
             "title": "Blog",

@@ -98,8 +98,8 @@
         },
         "about": {
             "main": "Hi, I'm Dudu!",
-            "firstLine": "Front-End Developer from Brazil.",
-            "secondLine": "Computer engineering student and technology lover."
+            "firstLine": "Software Developer from Brazil and technology lover.",
+            "secondLine": "Graduated in Computer Engineering and post graduated in Data Science.",
         },
         "blog": {
             "title": "Blog",

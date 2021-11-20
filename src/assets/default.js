@@ -39,17 +39,18 @@ function MenuChangeOnScroll() {
 
 /* A shitty kind of Lightbox */
 let body = document.getElementById("js-body");
-let skill = document.querySelectorAll(".frame");
+let portfolioFrame = document.querySelectorAll(".frame");
 let modal = document.getElementById("js-modal");
 let closeModal = document.getElementById("js-closeModal");
 
-skill.forEach(function (e, i) {
-    skill[i].addEventListener("click", function () {
+portfolioFrame.forEach(function (e, i) {
+    portfolioFrame[i].addEventListener("click", function () {
         let newSrc = this.children[1].getAttribute("src");
-        modal.children[1].children[0].setAttribute("src", newSrc);
+        modal.children[1].children[0].setAttribute("src", newSrc.replace('-thumb', ''));
+
+        body.setAttribute("style", "overflow: hidden;");
         modal.classList.remove("-hide");
         modal.classList.add("-show");
-        body.setAttribute("style", "overflow: hidden;");
     });
 });
 

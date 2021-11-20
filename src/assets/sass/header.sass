@@ -24,7 +24,8 @@
 			font-size: 28px
 
 		> ul > li
-			> a, > button
+			> a,
+			> button
 				font-size: 18px
 
 				&:after
@@ -39,11 +40,16 @@
 			font-size: 20px
 
 		> ul > li
-			> a, > button
+			> a,
+			> button
 				font-size: 12px
 
 				&:after
 					height: 2px
+
+				svg
+					width: 13px
+					height: 13px
 
 	> .logo
 		margin-left: 25px
@@ -103,6 +109,13 @@
 						content: ''
 						background-color: var(--color-main)
 
+				svg
+					width: 15px
+					height: 15px
+					display: block
+					margin-left: 10px
+					fill: var(--color-main)
+
 			> a[href="#"]
 				color: var(--color-text)
 				cursor: default
@@ -144,6 +157,15 @@
 					&:after
 						content: ''
 						background-color: var(--color-main)
+
+				> .label
+					display: none
+
+				svg
+					width: 15px
+					height: 15px
+					display: block
+					fill: var(--color-main)
 
 	> .respMenu
 		display: none
@@ -193,7 +215,8 @@
 					margin-right: 0
 					border-bottom: 1px solid var(--color-main)
 
-					> a, button
+					> a,
+					> button
 						color: var(--color-main)
 						padding: 15px 0
 						text-align: center
@@ -208,6 +231,12 @@
 
 							&:after
 								content: none
+
+						svg
+							margin-left: 10px
+
+						> .label
+							display: block
 
 		&.-scroll
 			> ul
@@ -228,7 +257,8 @@
 					margin-right: 0
 					border-bottom: 1px solid var(--color-main)
 
-					> a, button
+					> a,
+					> button
 						color: var(--color-main)
 						padding: 15px 0
 						text-align: center
@@ -243,6 +273,12 @@
 
 							&:after
 								content: none
+
+						svg
+							margin-left: 5px
+
+						> .label
+							display: block
 
 		> .hamburgerMenu
 			display: flex
@@ -357,7 +393,7 @@
 				width: 3px
 				padding: 10px 15px
 				height: 35px
-				border: 2px solid var(--color-text-light-10)
+				border: 2px solid var(--color-menu-text)
 				border-radius: 25px
 				opacity: 0.75
 				box-sizing: content-box
@@ -366,7 +402,7 @@
 					width: 3px
 					height: 10px
 					border-radius: 25%
-					background-color: var(--color-text-light-10)
+					background-color: var(--color-menu-text)
 					animation: scroll 2.2s cubic-bezier(.15,.41,.69,.94) infinite
 
 .noScript

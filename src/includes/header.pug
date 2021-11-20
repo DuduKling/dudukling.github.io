@@ -21,13 +21,21 @@ header.homeHeader
       li
         a(href="#blog") #{menu.blog}
       li
-        a(href=info.resume target="_blank" rel="noopener") #{menu.resume}
-      li
         a(href="#contato") #{menu.contact}
       li
-        button#langBtn #{menu.language}
+        a(href=info.resume target="_blank" rel="noopener") #{menu.resume}
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-external-link")
       li
-        button#themeBtn #{menu.theme}
+        button#langBtn
+          p.label #{menu.language}
+          svg(viewBox="0 0 512 512")
+            use(xlink:href="#svg-world")
+      li
+        button#themeBtn
+          p.label #{menu.theme}
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-paint")
 
   div.present
     div.presentAvatarContainer

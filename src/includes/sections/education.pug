@@ -1,0 +1,46 @@
+- var ed = strings.education;
+
+section.education#ex
+  h3 #{ed.title}
+  p #{ed.text}
+
+  div.educationArea
+    ul.timeline
+
+      each timelineItem, i in ed.timeline
+        li.item(class=(i % 2 == 0) ? 'item-odd' : 'item-even')
+
+          div.icon
+            if timelineItem.type == 'graduation'
+              svg(viewBox="0 0 64 64")
+                use(xlink:href="#svg-graduation")
+
+            if timelineItem.type == 'certification'
+              svg(viewBox="0 0 32 32")
+                use(xlink:href="#svg-trophy")
+
+          div.container
+            h3.title #{timelineItem.title}
+
+            div.content
+              if timelineItem.description
+                p.description #{timelineItem.description}
+
+              div.details
+                if timelineItem.company
+                  div.company
+                    svg(viewBox="0 0 48 48")
+                      use(xlink:href="#svg-company")
+                    p #{timelineItem.company}
+
+                if timelineItem.location
+                  div.location
+                    svg(viewBox="0 0 24 24")
+                      use(xlink:href="#svg-mapMarkerPin")
+                    p #{timelineItem.location}
+
+                if timelineItem.time
+                  div.time
+                    svg(viewBox="0 0 50 50")
+                      use(xlink:href="#svg-calendar")
+                    p #{timelineItem.time}

@@ -214,6 +214,33 @@
                     "description": ""
                 }
             ]
+        },
+        "education": {
+            "title": "Formação Acadêmica",
+            "text": "",
+            "timeline": [
+                {
+                    "time": "Set. 2021",
+                    "title": "Certificação AWS",
+                    "company": "Amazon Web Services",
+                    "description": "Cloud Practitioner",
+                    "type": "certification"
+                },
+                {
+                    "time": "Mar. 2019 – Out. 2020",
+                    "title": "MBA em Ciência de Dados e BI",
+                    "location": "PUC-RIO",
+                    "description": "",
+                    "type": "graduation"
+                },
+                {
+                    "time": "Jan. 2014 - Dez. 2018",
+                    "title": "Engenharia de Computação",
+                    "location": "UCP",
+                    "description": "",
+                    "type": "graduation"
+                }
+            ]
         }
     }
 }

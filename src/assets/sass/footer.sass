@@ -11,6 +11,7 @@
 
 	font-family: $font1
 	color: var(--color-text)
+	position: relative
 
 	> .socialMedias
 		width: 35%
@@ -32,6 +33,7 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		z-index: 1
 
 		> p
 			margin-bottom: 5px
@@ -45,6 +47,75 @@
 
 				&:hover
 					color: var(--color-main)
+
+	> .waveWrapper
+		overflow: hidden
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 110px
+
+		> .waveWrapperInner
+			width: 210%
+			height: 100%
+			position: absolute
+			bottom: 0
+			display: flex
+
+			&:nth-child(1)
+				opacity: 0.20
+
+				> .wave
+					animation: move_x 60s linear infinite
+
+			&:nth-child(2)
+				opacity: 0.40
+
+				> .wave
+					animation: move_wave 40s linear infinite
+
+			&:nth-child(3)
+				opacity: 0.70
+
+				> .wave
+					animation: move_wave 30s linear infinite
+
+			&:nth-child(4)
+				opacity: 1
+
+				> .wave
+					animation: move_wave 10s linear infinite
+
+			> .wave
+				width: 100%
+				min-width: 1000px
+				display: block
+				fill: var(--color-main)
+				transform-origin: center bottom
+
+@keyframes move_x
+	0%
+		transform: translateX(0)
+
+	100%
+		transform: translateX(-100%)
+
+@keyframes move_wave
+	0%
+		transform: translateX(0) scaleY(1)
+
+	25%
+		transform: translateX(-25%) scaleY(0.55)
+
+	50%
+		transform: translateX(-50%) scaleY(1)
+
+	75%
+		transform: translateX(-75%) scaleY(0.55)
+
+	100%
+		transform: translateX(-100%) scaleY(1)
 
 @media only screen and (max-width: 1000px)
 	.homeFooter

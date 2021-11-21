@@ -2,7 +2,7 @@
 
 // Polyfill to ForEach.
 (function () {
-    if ( typeof NodeList.prototype.forEach === "function" ) return false;
+    if (typeof NodeList.prototype.forEach === "function") return false;
     NodeList.prototype.forEach = Array.prototype.forEach;
 })();
 
@@ -16,7 +16,9 @@ document.addEventListener("scroll", function () {
 function offset(el) {
     let rect = el.getBoundingClientRect();
     let scrollTop = window.pageYOffset || window.scrollY;
-    return {top: rect.top + scrollTop};
+    return {
+        top: rect.top + scrollTop
+    };
 }
 
 /* Change style of Menu when user scroll down after the ATF (Above The Fold). */
@@ -61,8 +63,8 @@ closeModal.addEventListener("click", function () {
     modal.classList.add("-hide");
 });
 
-modal.addEventListener("click", function (e){
-    if (e.target !== this){
+modal.addEventListener("click", function (e) {
+    if (e.target !== this) {
         return;
     }
 
@@ -88,7 +90,7 @@ emailSubmit.addEventListener("click", function () {
     let subjectWithName = subjectV + " - " + nameV;
     let res1 = subjectWithName.replace(/ /g, "%20");
     let res2 = messageV.replace(/ /g, "%20").replace(/\n/g, "%0D%0A");
-    
+
     let hyperReference = "mailto:eduardokmesiano@gmail.com?subject=" + res1 + "&body=" + res2;
 
     emailSubmit.setAttribute("href", hyperReference);
@@ -112,14 +114,20 @@ const modalHandler = ([btn, aModal, closeBtn, cssClass]) => {
 
     const classes = elementModal.classList;
 
-    const open = () => { classes.add(cssClass); }
-    const close = () => { classes.remove(cssClass); }
+    const open = () => {
+        classes.add(cssClass);
+    }
+    const close = () => {
+        classes.remove(cssClass);
+    }
 
     elementBtn.addEventListener('click', open);
     elementCloseBtn.addEventListener('click', close);
 
     window.addEventListener('click', (event) => {
-        if (event.target === elementModal) { close(); }
+        if (event.target === elementModal) {
+            close();
+        }
     });
 }
 
@@ -140,7 +148,9 @@ modalHandler([theme.btn, theme.modal, theme.closeBtn, theme.cssClass]);
 
 const getStoredTheme = (localStorageKey) => {
     const storedTheme = localStorage.getItem(localStorageKey) || document.documentElement.getAttribute(theme.documentAttr) || null;
-    if (storedTheme) { themeHandler(storedTheme) }
+    if (storedTheme) {
+        themeHandler(storedTheme)
+    }
 }
 
 getStoredTheme(theme.localStorageKey);

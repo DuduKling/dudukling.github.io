@@ -186,20 +186,43 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const themeColor = 'rgb(60,60,60)';
+const themeColor = `#3c3c3c80`;
+
+const avatarHover = document.getElementById('avatarHover');
+let hasMouse = false;
+avatarHover.addEventListener('dblclick', () => {
+    hasMouse = !hasMouse
+    hasMouse ? mouse.start() : mouse.end();
+});
 
 let particlesArray;
 
-// let mouse = {
-//     x: null,
-//     y: null,
-//     radius: (canvas.height / 80) * (canvas.width / 80),
-// }
+class Mouse {
+    constructor(theCanvas) {
+        this.x = null;
+        this.y = null;
+        this.radius = (theCanvas.height / 80) * (theCanvas.width / 80);
 
-// window.addEventListener('mousemove', (event) => {
-//     mouse.x = event.x;
-//     mouse.y = event.y;
-// });
+        this.moveListener = (event) => {
+            this.x = event.x;
+            this.y = event.y;
+        };
+        this.outListener = () => {
+            this.x = undefined;
+            this.y = undefined;
+        }
+    }
+
+    start() {
+        window.addEventListener('mousemove', this.moveListener, false);
+        window.addEventListener('mouseout', this.outListener, false);
+    }
+
+    end() {
+        window.removeEventListener('mousemove', this.moveListener, false);
+        window.removeEventListener('mouseout', this.outListener, false);
+    }
+}
 
 class Particle {
 
@@ -235,24 +258,26 @@ class Particle {
             this.dirY = -this.dirY;
         }
 
-        // // Collision detection
-        // let dx = mouse.x - this.x;
-        // let dy = mouse.y - this.y;
-        // let distance = Math.sqrt(dx * dx + dy * dy);
-        // if (distance < mouse.radius + this.size) {
-        //     if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
-        //         this.x += 10;
-        //     }
-        //     if (mouse.x > this.x && this.x > this.size * 10) {
-        //         this.x -= 10;
-        //     }
-        //     if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
-        //         this.y += 10;
-        //     }
-        //     if (mouse.y > this.y && this.y > this.size * 10) {
-        //         this.y -= 10;
-        //     }
-        // }
+        // Collision detection
+        if (hasMouse) {
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < mouse.radius + this.size) {
+                if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+                    this.x += 10;
+                }
+                if (mouse.x > this.x && this.x > this.size * 10) {
+                    this.x -= 10;
+                }
+                if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                    this.y += 10;
+                }
+                if (mouse.y > this.y && this.y > this.size * 10) {
+                    this.y -= 10;
+                }
+            }
+        }
 
         this.x += this.dirX;
         this.y += this.dirY;
@@ -263,6 +288,7 @@ class Particle {
 function initParticles() {
     particlesArray = [];
     let numberOfParticles = (canvas.height * canvas.width) / 9000;
+
     for (let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random() * 5) + 2;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
@@ -303,9 +329,12 @@ function connect() {
 
             if (distance < (canvas.width / 7) * (canvas.height / 7)) {
                 opacityValue = 1 - (distance / 20000);
-                opacityValue = opacityValue < 0 ? 0 : opacityValue;
+                opacityValue = opacityValue < 0 ? 0 : Math.round(opacityValue * 100);
 
-                ctx.strokeStyle = themeColor.replace(')', `,${opacityValue})`);
+                const opacityHex = opacityValue.toString(16).padStart(2, '0');
+                const strokeColor = `${themeColor.slice(0, -2)}${opacityHex}`;
+
+                ctx.strokeStyle = strokeColor;
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particleA.x, particleA.y);
@@ -320,12 +349,8 @@ window.addEventListener('resize', () => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
     mouse.radius = (canvas.height / 80) * (canvas.width / 80);
-})
+});
 
-// window.addEventListener('mouseout', () => {
-//     mouse.x = undefined;
-//     mouse.y = undefined;
-// })
-
+const mouse = new Mouse(canvas);
 initParticles();
 animate();

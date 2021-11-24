@@ -21,11 +21,13 @@
 		background-color: var(--color-menu-bg-top)
 
 		> .logo
+			color: var(--color-text-main-title)
 			font-size: 28px
 
 		> ul > li
 			> a,
 			> button
+				color: var(--color-text-main-title)
 				font-size: 18px
 
 				&:after
@@ -33,15 +35,17 @@
 
 	&.-scroll
 		height: 40px
-		background-color: var(--color-modal-bg)
+		background-color: var(--color-bg-dark-10)
 		border-bottom: 1px solid var(--color-main-dark-10)
 
 		> .logo
+			color: var(--color-text-main-title)
 			font-size: 20px
 
 		> ul > li
 			> a,
 			> button
+				color: var(--color-text-main-title)
 				font-size: 12px
 
 				&:after
@@ -54,7 +58,6 @@
 	> .logo
 		margin-left: 25px
 
-		color: var(--color-main)
 		font-family: $font2
 		font-weight: 500
 		letter-spacing: 1px
@@ -85,7 +88,6 @@
 				position: relative
 				padding: 0 5px
 
-				color: var(--color-main)
 				text-decoration: none
 
 				display: flex
@@ -192,10 +194,10 @@
 
 @media only screen and (max-width: 900px)
 	.menu
-		border-bottom: 1px solid var(--color-bg-dark-65)
+		border-bottom: 1px solid var(--color-main-dark-10)
 
 		&.-top
-			background-color: var(--color-modal-bg)
+			background-color: var(--color-bg-dark-10)
 
 			> ul
 				width: 100%
@@ -205,7 +207,7 @@
 				top: 60px
 
 				overflow: hidden
-				background-color: var(--color-modal-bg)
+				background-color: var(--color-bg-dark-10)
 				flex-direction: column
 				justify-content: flex-start
 
@@ -217,7 +219,7 @@
 
 					> a,
 					> button
-						color: var(--color-main)
+						color: var(--color-text-main-title)
 						padding: 15px 0
 						text-align: center
 						justify-content: center
@@ -247,7 +249,7 @@
 				top: 40px
 
 				overflow: hidden
-				background-color: var(--color-modal-bg)
+				background-color: var(--color-bg-dark-10)
 				flex-direction: column
 				justify-content: flex-start
 
@@ -285,12 +287,13 @@
 			height: 25px
 
 		> .respMenu:checked + ul
-			height: auto
+			height: 424px // auto faz o transition parar de funcionar
 
 @media only screen and (max-width: 500px)
 	.menu
 		&.-top
 			> .logo
+				color: var(--color-text-main-title)
 				margin-left: 15px
 				font-size: 20px
 

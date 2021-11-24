@@ -4,7 +4,7 @@
 	background-color: var(--color-bg)
 	position: relative
 
-	> h3
+	> h2
 		font-family: $font1
 		color: var(--color-text-main-title)
 		font-size: 28px
@@ -95,7 +95,7 @@
 						width: 30px
 						height: 30px
 						display: block
-						fill: #f8f8f8
+						fill: $black
 
 				> .container
 					width: 45%
@@ -108,13 +108,12 @@
 					> .title
 						padding: 15px
 						background: var(--color-main)
-						color: $grey
+						color: $black
 						margin: -20px -20px 0 -20px
 						font-weight: 300
 						border-radius: 3px 3px 0 0
 
 					> .content
-						color: var(--color-main)
 						display: flex
 						flex-direction: column
 						margin-top: 20px
@@ -138,13 +137,16 @@
 								flex-direction: row
 								min-width: 150px
 
+							p
+								color: var(--color-text-main-title)
+
 							svg
 								min-width: 20px
 								width: 20px
 								height: 20px
 								display: block
 								margin-right: 5px
-								fill: var(--color-main)
+								fill: var(--color-text-main-title)
 
 @media only screen and (max-width: 800px)
 	.education > .educationArea

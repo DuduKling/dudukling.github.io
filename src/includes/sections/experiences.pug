@@ -1,7 +1,7 @@
 - var exp = strings.experiences;
 
 section.experiences#ex
-  h3 #{exp.title}
+  h2 #{exp.title}
   p #{exp.text}
 
   div.experiencesArea
@@ -9,7 +9,7 @@ section.experiences#ex
       each timelineItem in exp.timeline
         li.item(data-time=timelineItem.time)
           h3.title #{timelineItem.title}
-          div.subtitle
+          div.content
             if timelineItem.company
               div.company
                 svg(viewBox="0 0 48 48")

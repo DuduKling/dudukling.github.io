@@ -15,6 +15,7 @@ import uglify from 'gulp-uglify';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
 import fs from 'fs';
+import webpack from 'webpack-stream';
 
 const paths = {
 	sass: {
@@ -41,7 +42,7 @@ const paths = {
 		},
 	},
 	js: {
-		src: './src/assets/*.js',
+		src: './src/assets/**/*.js',
 		dest: './assets/',
 	},
 	imgs: {
@@ -68,7 +69,11 @@ function reload(done) {
 }
 
 function runWatch() {
-	bs.init({ server: { baseDir: paths.root.src } });
+	bs.init({
+		server: {
+			baseDir: paths.root.src
+		}
+	});
 
 	gulp.watch(paths.sass.src, runSass);
 	gulp.watch(paths.sassImports.src, runSass);
@@ -134,6 +139,7 @@ function _pug(path) {
 
 function runJs() {
 	return gulp.src(paths.js.src)
+		.pipe(webpack({ mode: "development", /* "production" | "development" | "none" */ }))
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(babel({
@@ -146,6 +152,7 @@ function runJs() {
 
 function runJsPrd() {
 	return gulp.src(paths.js.src)
+		.pipe(webpack({ mode: "production", /* "production" | "development" | "none" */ }))
 		.pipe(plumber())
 		.pipe(babel({
 			presets: ['@babel/env']

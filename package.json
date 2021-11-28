@@ -38,7 +38,13 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgo": "^2.2.1",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.43.4"
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.43.4",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.2",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-stream": "^7.0.0"
   },
   "homepage": "https://github.com/DuduKling/dudukling.github.io#readme"
 }

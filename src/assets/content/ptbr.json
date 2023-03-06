@@ -187,8 +187,8 @@
             "timeline": [
                 {
                     "time": "Mar. 2019 - Atual",
-                    "title": "Desenvolvedor de Sistemas Pl.",
-                    "company": "Stone Age",
+                    "title": "Desenvolvedor de Sistemas Sr.",
+                    "company": "Stone Age - TIVIT",
                     "location": "Rio de Janeiro",
                     "description": ""
                 },
@@ -220,6 +220,20 @@
             "text": "",
             "timeline": [
                 {
+                    "time": "Fev. 2023",
+                    "title": "Project Management - Executive Program",
+                    "location": "Ohio University College of Business",
+                    "description": "",
+                    "type": "graduation"
+                },
+                {
+                    "time": "Jan. 2023",
+                    "title": "PSM I",
+                    "company": "Scrum.org",
+                    "description": "Professional Scrum Master I",
+                    "type": "certification"
+                },
+                {
                     "time": "Set. 2021",
                     "title": "Certificação AWS",
                     "company": "Amazon Web Services",
@@ -227,7 +241,7 @@
                     "type": "certification"
                 },
                 {
-                    "time": "Mar. 2019 – Out. 2020",
+                    "time": "Mar. 2019 - Out. 2020",
                     "title": "MBA em Ciência de Dados e BI",
                     "location": "PUC-RIO",
                     "description": "",

@@ -1,37 +1,21 @@
 - var blog = strings.blog;
 - var post = strings.blog.posts;
-- var category = strings.blog.categories;
+- var categories = strings.blog.categories;
 
 section.blog#blog
   h2 #{blog.title}
   div.blogContainer
-    div.post
-      a.postlink(href=post.first.url)
-        h2.postTitle #{post.first.title}
-        p.infos #{post.first.infos}
-        p.peek #{post.first.peek}
-      ul.tags
-        li 
-          a(href=category.misc.url) #{category.misc.title}
 
-    div.post
-      a.postlink(href=post.second.url)
-        h2.postTitle #{post.second.title}
-        p.infos #{post.second.infos}
-        p.peek #{post.second.peek}
-      ul.tags
-        li 
-          a(href=category.javascript.url) #{category.javascript.title}
+    each post in blog.posts
+      div.post
+        a.postlink(href=social.blog+post.url target="_blank" rel="noopener")
+          h2.postTitle #{post.title}
+          p.infos #{post.infos}
+          p.peek #{post.peek}
+        ul.tags
+          if post.categories
+            each cat in post.categories
+              li
+                a(href=social.blog+categories+cat) #{cat}
 
-    div.post
-      a.postlink(href=post.third.url)
-        h2.postTitle #{post.third.title}
-        p.infos #{post.third.infos}
-        p.peek #{post.third.peek}
-      ul.tags
-        li 
-          a(href=category.html.url) #{category.html.title}
-        li 
-          a(href=category.css.url) #{category.css.title}
-
-  a.link-blog(href=social.blog) #{blog.button}
+  a.link-blog(href=social.blog target="_blank" rel="noopener") #{blog.button}

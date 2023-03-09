@@ -21,7 +21,7 @@
         "twitter": "https://twitter.com/Eduardo_Kling",
         "twitterUsername": "@Eduardo_Kling",
         "mail": "eduardokmesiano@gmail.com",
-        "blog": "https://dudukling.github.io/blog"
+        "blog": "https://dudukling.github.io/my-blog"
     },
     "menu": {
         "home": "Home",
@@ -105,44 +105,29 @@
         "blog": {
             "title": "Blog",
             "button": "Blog >",
-            "categories": {
-                "html": {
-                    "title": "HTML",
-                    "url": "#"
+            "categories": "/blog/tags/",
+            "posts": [
+                {
+                    "url": "/blog/git-change-old-commit-messages",
+                    "title": "Git change old commit messages",
+                    "infos": "08/03/2022 | 3 min",
+                    "peek": "If a commit message contains unclear, incorrect, or sensitive information, you can change and push the new message.",
+                    "categories": ["git"]
                 },
-                "misc": {
-                    "title": "Misc",
-                    "url": "#"
+                {
+                    "url": "/blog/git-remove-from-history",
+                    "title": "Git Remove from History",
+                    "infos": "01/05/2012 | 1 min",
+                    "peek": "To remove a line or a file from git commit history.",
+                    "categories": ["git"]
                 },
-                "javascript": {
-                    "title": "JS",
-                    "url": "#"
-                },
-                "css": {
-                    "title": "CSS",
-                    "url": "#"
+                {
+                    "url": "/about",
+                    "title": "About",
+                    "infos": "",
+                    "peek": "The aim is to disseminate information and tutorials in the field of computing such as programming, web, networks, artificial intelligence, or even electrical / electronics."
                 }
-            },
-            "posts": {
-                "first": {
-                    "url": "#",
-                    "title": "Primeiro Post",
-                    "infos": "22/10/2017 | 5 min",
-                    "peek": "Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose."
-                },
-                "second": {
-                    "url": "#",
-                    "title": "Segundo Post",
-                    "infos": "22/10/2017 | 15 min",
-                    "peek": "Aqui é Body Builder Ipsum PORRA! Eu quero esse 13 daqui a pouquinho aí. Ajuda o maluco que tá doente. Aqui é Body Builder Ipsum PORRA! Birl! Sabe o que é isso daí? Trapézio descendente é o nome disso aí."
-                },
-                "third": {
-                    "url": "#",
-                    "title": "Dilmês Ipsum",
-                    "infos": "22/10/2017 | 20 min",
-                    "peek": "Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo muito importante!"
-                }
-            }
+            ]
         },
         "contact": {
             "title": "Contato",

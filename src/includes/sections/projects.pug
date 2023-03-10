@@ -5,7 +5,10 @@ section.projects#projects
   div.projectsBackground
   div.projectsContainer
     each proj in project.cases
-      div.card
+      a.card(href=proj.url target="_blank" rel="noopener")
+        div.github
+          svg(viewBox="0 0 24 24")
+            use(xlink:href="#svg-github")
         div.glass
           img(src=proj.icon)
           h2.title #{proj.title}
@@ -13,7 +16,3 @@ section.projects#projects
             p.description #{proj.description}
           if proj.tags
             div.tags #{proj.tags.join(", ")}
-
-  div#js-modal.modal.-hide
-    div#js-closeModal.closeModal
-    p teste

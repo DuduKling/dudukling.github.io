@@ -11,6 +11,18 @@ const getStoredTheme = (localStorageKey) => {
     }
 }
 
+function startButtonsLogic() {
+    const elementsBtn = document.querySelectorAll("#themeButton");
+
+    for (const el of elementsBtn) {
+        el.addEventListener('click', (event) => {
+            const key = event.target.getAttribute("themeKey");
+
+            themeHandler(key);
+        });
+    }
+}
+
 function themeHandler(key) {
     // Set Theme
     document.documentElement.setAttribute(theme.documentAttr, key);
@@ -33,6 +45,6 @@ function themeHandler(key) {
 
 export default function startTheme(modalHandler) {
     modalHandler(['themeBtn', 'themeModal', 'themeModalClose', 'themeModalShow']);
-
+    startButtonsLogic();
     getStoredTheme(theme.localStorageKey);
 }

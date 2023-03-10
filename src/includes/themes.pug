@@ -8,5 +8,5 @@ div#themeModal.themeModal
       each theme, key in modal.themes
         li.themeItem
           span.hiddenKey #{key}
-          button(onclick="themeHandler(\""+key+"\")") #{theme.title}
-            img(src="./assets/images/"+theme.imagePath+".svg", alt=theme.imageAlt)
+          button#themeButton(themeKey=key) #{theme.title}
+            img(src="./assets/images/"+theme.imagePath+".svg", alt=theme.imageAlt themeKey=key)

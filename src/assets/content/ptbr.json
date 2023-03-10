@@ -136,6 +136,75 @@
             "inputMessage": "Mensagem",
             "emailSubmit": "Enviar Mensagem"
         },
+        "project": {
+            "title": "Projetos",
+            "cases": [
+                {
+                    "title": "Bolão Imperial",
+                    "description": "Projeto de plataforma online para o \"bolão da copa\"",
+                    "url": "https://github.com/DuduKling/bolao",
+                    "icon": "./assets/images/project-bolao-logo.png",
+                    "alt": "Imagem de exemplo do projeto - Bolão Imperial",
+                    "tags": ["Web", "Node"]
+                },
+                {
+                    "title": "Energy Up",
+                    "description": "Protótipo de Aplicativo Android para operações de fiscalização em campo para empresas do ramo de distribuição de eletricidade",
+                    "url": "https://github.com/DuduKling/energy-up",
+                    "icon": "./assets/images/project-energy-up.png",
+                    "alt": "Imagem de exemplo do projeto - Energy Up",
+                    "tags": ["Mobile", "Java"]
+                },
+                {
+                    "title": "Collector",
+                    "description": "Aplicativo Android para Coletas Botânicas",
+                    "url": "https://github.com/DuduKling/collector",
+                    "icon": "./assets/images/project-collector.png",
+                    "alt": "Imagem de exemplo do projeto - Collector",
+                    "tags": ["Mobile", "Java"]
+                },
+                {
+                    "title": "Tob a Bot",
+                    "description": "Tob é um bot simples",
+                    "url": "https://github.com/DuduKling/tob-a-bot",
+                    "icon": "./assets/images/project-tob-a-bot.png",
+                    "alt": "Imagem de exemplo do projeto - Tob a Bot",
+                    "tags": ["Web", "Node", "DialogFlow"]
+                },
+                {
+                    "title": "Stocks Sentiment Analysis",
+                    "description": "Comparativo de análise de sentimentos em posts do Twitter/Reddit relacionados à Stocks",
+                    "url": "https://github.com/DuduKling/stocks-sentiment-analysis",
+                    "icon": "./assets/images/project-stocks-sentiment-analysis.png",
+                    "alt": "Imagem de exemplo do projeto - Stocks Sentiment Analysis",
+                    "tags": ["Web", "Python", "NLTK"]
+                },
+                {
+                    "title": "Resta Um",
+                    "description": "Jogo 'Resta Um' implementado utilizando backtracking",
+                    "url": "https://github.com/DuduKling/resta-um",
+                    "icon": "./assets/images/project-resta-um.png",
+                    "alt": "Imagem de exemplo do projeto - Resta Um",
+                    "tags": ["Web", "JavaScript"]
+                },
+                {
+                    "title": "Stocks Sentiment Analysis Web",
+                    "description": "Versão simplificada e web do projeto Stocks Sentiment Analysis",
+                    "url": "https://github.com/DuduKling/stocks-sentiment-analysis-web",
+                    "icon": "./assets/images/project-stocks-sentiment-analysis-web.png",
+                    "alt": "Imagem de exemplo do projeto - Stocks Sentiment Analysis Web",
+                    "tags": ["Web", "Python", "Flask"]
+                },
+                {
+                    "title": "Dados Enem 2019",
+                    "description": "Trabalhando e analisando os Dados da Educação do Brasil no Enem 2019",
+                    "url": "https://github.com/DuduKling/dados-enem-2019",
+                    "icon": "./assets/images/project-dados-enem-2019.png",
+                    "alt": "Imagem de exemplo do projeto - Dados Enem 2019",
+                    "tags": ["Python"]
+                }
+            ]
+        },
         "portfolio": {
             "title": "Portfólio",
             "alt": "Imagem de exemplo do portfólio tamanho maior",

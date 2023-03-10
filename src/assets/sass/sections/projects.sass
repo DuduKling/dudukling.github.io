@@ -1,0 +1,184 @@
+.projects
+	width: 100%
+	padding: 40px 5%
+	position: relative
+
+	.projectsBackground
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		background-color: var(--color-bg)
+
+	> h2
+		font-family: $font1
+		color: var(--color-text-main-title)
+		font-size: 28px
+		padding-bottom: 5px
+		border-bottom: 2px solid var(--color-text-main-title)
+		margin-bottom: 25px
+
+	> .projectsContainer
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+
+		> .card
+			max-height: 400px
+			width: 300px
+
+			border-radius: 50px
+			margin: 0px 30px 50px 30px
+
+			background-color: #fff
+			border: 2px solid var(--color-text-main-title)
+
+			position: relative
+			overflow: hidden
+			cursor: pointer
+
+			&:nth-child(6n+1)
+				box-shadow: inset 60px 0 120px #f0f, inset -60px 0 120px #0ff
+
+			&:nth-child(6n+2)
+				box-shadow: inset 60px 0 120px #00ff72, inset -60px 0 120px #fffb00
+
+			&:nth-child(6n+3)
+				box-shadow: inset 60px 0 120px #0091ff, inset -60px 0 120px #ff1c00
+
+			&:nth-child(6n+4)
+				box-shadow: inset 60px 0 120px #ff9100, inset -60px 0 120px #8900ff
+
+			&:nth-child(6n+5)
+				box-shadow: inset 60px 0 120px #0ff, inset -60px 0 120px #00ff72
+
+			&:nth-child(6n+6)
+				box-shadow: inset 60px 0 120px #ff1c00, inset -60px 0 120px #f0f
+
+			> .glass
+				width: 100%
+				height: 100%
+
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				align-items: center
+
+				background: rgb(0 0 0 / 25%)
+
+				padding: 20px
+
+				transition: transform 0.5s ease-in-out
+
+				&:hover
+					transform: scale(105%)
+
+				> img
+					display: block
+					width: 100px
+					height: 100px
+					border-radius: 20%
+					margin-bottom: 10px
+
+				> .title
+					color: var(--color-text-secondary-title)
+					font-family: $font1
+					text-align: center
+					margin-bottom: 10px
+
+				> .description
+					color: var(--color-text-secondary-title)
+					font-family: $font1
+					text-align: center
+					margin-bottom: 10px
+
+				> .tags
+					color: var(--color-text-main-title)
+					font-family: $font1
+					text-align: center
+
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+
+					border: 1px solid var(--color-text-main-title)
+					padding: 5px 10px
+					border-radius: 10px
+					background-color: var(--color-bg-dark-10)
+
+	> .modal
+		width: 100%
+		min-height: 100vh
+		position: fixed
+		z-index: 11
+		top: 0
+		left: 0
+		background-color: var(--color-modal-shadow)
+		justify-content: center
+		padding-top: 50px
+		overflow-y: scroll
+
+		&.-hide
+			display: none
+			overflow: hidden
+
+		&.-show
+			display: flex
+
+		> .closeModal
+			width: 40px
+			height: 40px
+			position: fixed
+			top: 25px
+			right: 50px
+			cursor: pointer
+			padding: 10px
+			border-radius: 50%
+			background-color: var(--color-modal-bg)
+
+			&:hover::after, &:hover::before
+				background-color: var(--color-modal-close-hover)
+
+			&::after
+				content: ""
+				width: 28px
+				height: 5px
+				position: absolute
+				top: 18px
+				left: 6px
+				background-color: var(--color-modal-close)
+				transform: rotate(-45deg)
+				border-radius: 10px
+				transition: all 0.3s ease
+
+			&::before
+				content: ""
+				width: 28px
+				height: 5px
+				position: absolute
+				top: 18px
+				left: 6px
+				background-color: var(--color-modal-close)
+				transform: rotate(45deg)
+				border-radius: 10px
+				transition: all 0.3s ease
+
+		> .img
+			width: 800px
+			position: absolute
+			border: 5px solid var(--color-bg-dark-10)
+			margin-bottom: 50px
+			background-color: var(--color-bg)
+
+			animation: zoom 0.5s
+
+			> img
+				width: 100%
+				height: 100%
+
+				&:not(:first-child)
+					margin-top: -4px
+

@@ -136,6 +136,75 @@
             "inputMessage": "Message",
             "emailSubmit": "Send Message"
         },
+        "project": {
+            "title": "Projects",
+            "cases": [
+                {
+                    "title": "Bolão Imperial",
+                    "description": "Project of a online platform for World Cup Betting Pool",
+                    "url": "https://github.com/DuduKling/bolao",
+                    "icon": "./assets/images/project-bolao-logo.png",
+                    "alt": "Project example image - Bolão Imperial",
+                    "tags": ["Web", "Node"]
+                },
+                {
+                    "title": "Energy Up",
+                    "description": "Android application prototype for field inspection operations for electricity distribution companies",
+                    "url": "https://github.com/DuduKling/energy-up",
+                    "icon": "./assets/images/project-energy-up.png",
+                    "alt": "Project example image - Energy Up",
+                    "tags": ["Mobile", "Java"]
+                },
+                {
+                    "title": "Collector",
+                    "description": "Android Application for Botanical Collections",
+                    "url": "https://github.com/DuduKling/collector",
+                    "icon": "./assets/images/project-collector.png",
+                    "alt": "Project example image - Collector",
+                    "tags": ["Mobile", "Java"]
+                },
+                {
+                    "title": "Tob a Bot",
+                    "description": "Tob is a simple bot",
+                    "url": "https://github.com/DuduKling/tob-a-bot",
+                    "icon": "./assets/images/project-tob-a-bot.png",
+                    "alt": "Project example image - Tob a Bot",
+                    "tags": ["Web", "Node", "DialogFlow"]
+                },
+                {
+                    "title": "Stocks Sentiment Analysis",
+                    "description": "Comparative sentiment analysis on Twitter/Reddit posts related to Stocks",
+                    "url": "https://github.com/DuduKling/stocks-sentiment-analysis",
+                    "icon": "./assets/images/project-stocks-sentiment-analysis.png",
+                    "alt": "Project example image - Stocks Sentiment Analysis",
+                    "tags": ["Web", "Python", "NLTK"]
+                },
+                {
+                    "title": "Resta Um",
+                    "description": "Game 'Peg Solitaire' implemented using backtracking",
+                    "url": "https://github.com/DuduKling/resta-um",
+                    "icon": "./assets/images/project-resta-um.png",
+                    "alt": "Project example image - Resta Um",
+                    "tags": ["Web", "JavaScript"]
+                },
+                {
+                    "title": "Stocks Sentiment Analysis Web",
+                    "description": "Simplified and web version of the Stocks Sentiment Analysis project",
+                    "url": "https://github.com/DuduKling/stocks-sentiment-analysis-web",
+                    "icon": "./assets/images/project-stocks-sentiment-analysis-web.png",
+                    "alt": "Project example image - Stocks Sentiment Analysis Web",
+                    "tags": ["Web", "Python", "Flask"]
+                },
+                {
+                    "title": "Dados Enem 2019",
+                    "description": "Working and analyzing Brazil's Education Data in Enem 2019",
+                    "url": "https://github.com/DuduKling/dados-enem-2019",
+                    "icon": "./assets/images/project-dados-enem-2019.png",
+                    "alt": "Project example image - Dados Enem 2019",
+                    "tags": ["Python"]
+                }
+            ]
+        },
         "portfolio": {
             "title": "Portfolio",
             "alt": "Larger size portfolio sample image",
@@ -164,7 +233,7 @@
         },
         "skills": {
             "title": "Skills & Tools",
-            "text": "Some languages ​​and tools I use or have used"
+            "text": "Some languages and tools I use or have used"
         },
         "experiences": {
             "title": "Experiences",

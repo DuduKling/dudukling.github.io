@@ -1,0 +1,19 @@
+- var project = strings.project;
+
+section.projects#projects
+  h2 #{project.title}
+  div.projectsBackground
+  div.projectsContainer
+    each proj in project.cases
+      div.card
+        div.glass
+          img(src=proj.icon)
+          h2.title #{proj.title}
+          if proj.description
+            p.description #{proj.description}
+          if proj.tags
+            div.tags #{proj.tags.join(", ")}
+
+  div#js-modal.modal.-hide
+    div#js-closeModal.closeModal
+    p teste

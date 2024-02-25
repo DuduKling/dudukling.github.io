@@ -1,6 +1,6 @@
 .about
 	width: 100%
-	padding: 50px 10px
+	padding: 40px 5%
 	background-color: var(--color-bg)
 	position: relative
 
@@ -17,16 +17,95 @@
 		font-size: 28px
 		margin-bottom: 30px
 
-	> .aboutMeSumUp
-		width: 50%
+	> .cvButton
+		padding: 5px 10px
+		margin-top: 40px
+
+		background-color: var(--color-main)
+		color: var(--color-text)
+		text-decoration: none
+
+		display: flex
+		flex-direction: row
+		align-items: center
+
+		border: none
+		border-radius: 15px
+		border: 2px solid var(--color-main)
+
+		cursor: pointer
+		outline: none
+		transition: all 0.2s ease
+
+		&:hover
+			color: var(--color-menu-text)
+			background-color: var(--color-main-dark-10)
+			border: 2px solid var(--color-main)
+
+			svg
+				fill: var(--color-menu-text)
+
+		svg
+			width: 25px
+			height: 25px
+			display: block
+
+			margin-left: 10px
+			fill: var(--color-text)
+
+			transition: all 0.2s ease
+
+	> .detailsContainer
+		width: 100%
+		min-height: 30px
+
+		margin-top: 10px
+
+			display: flex
+		position: relative
+
+		color: var(--color-main)
+		font-family: $font2
+
+		> details
+			align-self: flex-start
+
+			height: 0
+			overflow: hidden
+			transition: all 150ms ease-out
+
+			&[open]
+				margin-top: 30px
+				height: auto
+
+			> summary
+				position: absolute
+				top: 0
+				left: 0
+
+				cursor: pointer
+				font-weight: bold
+
+			> .texts
+				margin-top: 20px
+				text-align: center
+
+				> .aboutText
+					font-size: 15px
+					margin-bottom: 15px
+					line-height: 1.5
+
+	> .aboutText
 		font-size: 15px
-		margin-bottom: 100px
+		margin-bottom: 15px
 		color: var(--color-main)
 		font-family: $font2
 		text-align: center
+		line-height: 1.5
 
 	> .socialMediasMessage
 		color: var(--color-text-light-10)
+		margin-top: 70px
 		margin-bottom: 15px
 
 	> .socialMedias

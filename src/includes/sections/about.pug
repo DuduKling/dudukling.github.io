@@ -3,9 +3,20 @@
 section.about#sobre
   h1 #{about.main}
 
-  p.aboutMeSumUp #{about.firstLine}
-    br
-    | #{about.secondLine}
+  each txt in about.textsInicial
+    p.aboutText #{txt}
+
+  div.detailsContainer
+    details
+      summary #{about.viewMore}
+      div.texts
+        each txt in about.textsFinal
+          p.aboutText #{txt}
+
+  a.cvButton(href=info.resume target="_blank" rel="noopener") #{about.resumeButtonText}
+    svg(viewBox="0 0 24 24")
+      use(xlink:href="#svg-download")
+
 
   p.socialMediasMessage #{about.socialMediasMessage}
   include ../social-medias.pug

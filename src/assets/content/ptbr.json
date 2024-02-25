@@ -100,8 +100,17 @@
         },
         "about": {
             "main": "Oi, eu sou o Dudu!",
-            "firstLine": "Desenvolvedor de Software e amante de tecnologia.",
-            "secondLine": "Formado em Engenharia da computação e com pós-graduação em Ciência de Dados.",
+            "viewMore": "Mostrar mais",
+            "textsInicial": [
+                "Um desenvolvedor de software sênior na jornada para se tornar um grande líder.",
+                "Tenho cerca de 5 anos de experiência na área de Tecnologia da Informação, com graduação em Engenharia da Computação, certificações PSM 1, AWS e DevOps, e pós-graduação em Ciência de Dados."
+            ],
+            "textsFinal": [
+                "Atualmente estou desenvolvendo soluções utilizando principalmente JavaScript, Node, React, C# e SQL. Utilizando a estrutura da nuvem AWS e também diferentes infraestruturas locais. Tenho experiência trabalhando com metodologias ágeis, ferramentas de versionamento de código, testes unitários e docker.",
+                "O tipo de pessoa que busca sempre trabalhar em conjunto com a equipe e demais colegas, otimizando processos, disseminando conhecimento, buscando estar constantemente atualizado e aprendendo coisas novas para melhorar cada vez mais tudo o que for possível.",
+                "Tenho habilidades em gerenciar cronogramas de projetos, monitorar prazos e recursos e colaborar com stakeholders internos e externos para identificar requisitos e expectativas, garantindo a entrega de soluções de alta qualidade."
+            ],
+            "resumeButtonText": "Currículo",
             "socialMediasMessage": "Siga-me nas redes"
         },
         "blog": {

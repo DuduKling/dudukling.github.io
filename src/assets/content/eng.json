@@ -100,8 +100,17 @@
         },
         "about": {
             "main": "Hi, I'm Dudu!",
-            "firstLine": "Software Developer from Brazil and technology lover.",
-            "secondLine": "Graduated in Computer Engineering and post graduated in Data Science.",
+            "viewMore": "Show more",
+            "textsInicial": [
+                "A Senior Software developer on the journey of becoming a great leader.",
+                "I have about 5 years of experience in the Information Technology area, with a graduation in Computer Engineering, PSM 1, AWS, and DevOps certifications, and a postgraduate degree in Data Science."
+            ],
+            "textsFinal": [
+                "Currently, I'm developing solutions using mainly JavaScript, Node, React, C#, and SQL. Using the AWS cloud structure and also different on-premises infrastructures. I have experience working with agile methodologies, code versioning tools, unit testing, and docker.",
+                "The kind of person who always seeks to work together with the team and other colleagues, optimizing processes, disseminating knowledge, constantly seeking to be up to date, and learning new things to improve everything possible more and more.",
+                "I have abilities in managing project schedules, monitoring deadlines, and resources, and collaborating with internal and external stakeholders to identify requirements and expectations, ensuring the delivery of high-quality solutions."
+            ],
+            "resumeButtonText": "Resume",
             "socialMediasMessage": "Follow me on"
         },
         "blog": {

@@ -20,7 +20,12 @@ section.education#ed
                 use(xlink:href="#svg-trophy")
 
           div.container
-            h3.title #{timelineItem.title}
+            div.title
+              h3 #{timelineItem.title}
+              if timelineItem.url
+                a.url(href=timelineItem.url target="_blank" rel="noopener" aria-label="certification url") #{ed.viewMore}
+                  svg(viewBox="0 0 24 24")
+                    use(xlink:href="#svg-external-link")
 
             div.content
               if timelineItem.description

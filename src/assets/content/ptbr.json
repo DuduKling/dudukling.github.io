@@ -272,7 +272,16 @@
         "education": {
             "title": "Formação Acadêmica",
             "text": "",
+            "viewMore": "Ver",
             "timeline": [
+                {
+                    "time": "Fev. 2024",
+                    "title": "DevOps Professional",
+                    "company": "Exin",
+                    "description": "",
+                    "url": "https://app.exeed.pro/holder/badge/168853",
+                    "type": "certification"
+                },
                 {
                     "time": "Fev. 2023",
                     "title": "Project Management - Executive Program",
@@ -285,6 +294,7 @@
                     "title": "PSM I",
                     "company": "Scrum.org",
                     "description": "Professional Scrum Master I",
+                    "url": "https://www.credly.com/badges/572249e3-f991-4198-948d-3c3d61b06c8c/public_url",
                     "type": "certification"
                 },
                 {
@@ -292,6 +302,7 @@
                     "title": "Certificação AWS",
                     "company": "Amazon Web Services",
                     "description": "Cloud Practitioner",
+                    "url": "https://www.credly.com/badges/01ae0295-4d60-4276-b6c2-d2f17abb84f2/public_url",
                     "type": "certification"
                 },
                 {

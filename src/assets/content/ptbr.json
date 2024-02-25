@@ -106,6 +106,7 @@
         },
         "blog": {
             "title": "Blog",
+            "text": "Publicações interessantes no meu blog",
             "button": "Blog >",
             "categories": "/blog/tags/",
             "posts": [
@@ -133,6 +134,7 @@
         },
         "contact": {
             "title": "Contato",
+            "text": "Entre em contato comigo pelos campos abaixo, diretamente via e-mail ou através das minhas redes sociais",
             "inputName": "Nome Completo",
             "inputSubject": "Assunto",
             "inputMessage": "Mensagem",
@@ -140,6 +142,7 @@
         },
         "project": {
             "title": "Projetos",
+            "text": "Alguns projetos pessoais realizados ao longo dos anos",
             "cases": [
                 {
                     "title": "Bolão Imperial",
@@ -209,6 +212,7 @@
         },
         "portfolio": {
             "title": "Portfólio",
+            "text": "Exemplos de design de sites implementados com HTML/CSS e JS vanilla (Infelizmente já não estão mais online)",
             "alt": "Imagem de exemplo do portfólio tamanho maior",
             "cases": {
                 "load": {
@@ -239,7 +243,7 @@
         },
         "experiences": {
             "title": "Experiências",
-            "text": "",
+            "text": "Linha do tempo das minhas experiências profissionais",
             "viewMore": "Ver mais",
             "timeline": [
                 {
@@ -289,7 +293,7 @@
         },
         "education": {
             "title": "Formação Acadêmica",
-            "text": "",
+            "text": "Linha do tempo das minhas experiências educacionais como graduações e certificações",
             "viewMore": "Ver",
             "timeline": [
                 {

@@ -106,6 +106,7 @@
         },
         "blog": {
             "title": "Blog",
+            "text": "Interesting posts on my blog",
             "button": "Blog >",
             "categories": "/blog/tags/",
             "posts": [
@@ -133,6 +134,7 @@
         },
         "contact": {
             "title": "Contact",
+            "text": "Contact me using the fields below, directly via email or through my social media",
             "inputName": "Full name",
             "inputSubject": "Subject",
             "inputMessage": "Message",
@@ -140,6 +142,7 @@
         },
         "project": {
             "title": "Projects",
+            "text": "Some personal projects carried out over the years",
             "cases": [
                 {
                     "title": "Bolão Imperial",
@@ -209,6 +212,7 @@
         },
         "portfolio": {
             "title": "Portfolio",
+            "text": "Website design examples implemented with vanilla HTML/CSS and JS (Unfortunately they are no longer online)",
             "alt": "Larger size portfolio sample image",
             "cases": {
                 "load": {
@@ -239,7 +243,7 @@
         },
         "experiences": {
             "title": "Experiences",
-            "text": "",
+            "text": "Timeline of my professional experiences",
             "viewMore": "View",
             "timeline": [
                 {
@@ -289,7 +293,7 @@
         },
         "education": {
             "title": "Education",
-            "text": "",
+            "text": "Timeline of my educational experiences such as degrees and certifications",
             "viewMore": "View",
             "timeline": [
                 {

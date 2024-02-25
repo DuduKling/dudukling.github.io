@@ -17,7 +17,6 @@
     "url": "https://github.com/DuduKling/dudukling.github.io/issues"
   },
   "type": "module",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",

@@ -2,44 +2,33 @@
 
 This is my personal Web Site!
 
-Version: *Alpha*
-
+Made to be a simple portfolio/website with vanilla JS.
 
 ## Tech
-- [Node.JS](https://pugjs.org/api/getting-started.html): Server framework.
-- [NPM](https://www.npmjs.com/): Node's Package Manager.
-- [Sass](http://sass-lang.com/): CSS Preprocessor.
-- [Pug](https://pugjs.org/api/getting-started.html): Template Engine.
-- [Gulp](https://gulpjs.com/): Toolkit for automating tasks.
+- [Node.JS](https://nodejs.org/en).
+- [NPM](https://www.npmjs.com/).
+- [Sass](http://sass-lang.com/).
+- [Pug](https://pugjs.org/api/getting-started.html).
+- [Gulp](https://gulpjs.com/).
 
-
-### Installation
+### Dependencies
 Install [Node.JS](https://nodejs.org/en/download/).
 
 Go to project folder, and install project dependencies with:
-```console
-> npm init
-```
-```console
-> npm install
+```bash
+npm install
 ```
 
 ### Usage
 
-Start Server with:
-```console
->  gulp
-```
-Or
-```console
-> npm run gulp
+Start the server with:
+```bash
+npm run gulp
 ```
 
-Build with:
-```console
-> gulp runBuild
-```
-Or
-```console
-> npm run gulp runBuild
+### Build
+
+Build project with:
+```bash
+npm run gulp runBuild
 ```

@@ -21,4 +21,8 @@ section.experiences#ex
                   use(xlink:href="#svg-mapMarkerPin")
                 p #{timelineItem.location}
           if timelineItem.description
-            p.description #{timelineItem.description}
+            details
+              summary #{exp.viewMore}
+              div.description
+                each desc in timelineItem.description
+                  p #{desc}

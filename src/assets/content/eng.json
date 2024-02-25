@@ -238,34 +238,50 @@
         "experiences": {
             "title": "Experiences",
             "text": "",
+            "viewMore": "View",
             "timeline": [
                 {
                     "time": "Mar. 2019 - Present",
                     "title": "Senior Software Developer",
                     "company": "Stone Age - TIVIT",
                     "location": "Rio de Janeiro, Brazil",
-                    "description": ""
+                    "description": [
+                        "Responsible for monitoring, estimating, planning, developing, and implementing several projects for different large companies in the telecommunications, financial market services, retail insurance, credit, and government sectors.",
+                        "Full cycle development, participating in requirements gathering, development, testing, deployment, and monitoring of production services.",
+                        "Development of solutions and business rules implementation using mainly JavaScript, Node, .NET, AWS cloud structure, MySQL, SQL Server, and Oracle.",
+                        "Skills: JavaScript, Node.js, C#, TypeScript, Amazon Web Services (AWS), Delphi, Powershell, Microsoft Excel."
+                    ]
                 },
                 {
                     "time": "Feb. 2017 - Feb. 2019",
                     "title": "IT Internship",
                     "company": "Safran Helicopter Engines",
                     "location": "Duque de Caxias, Brazil",
-                    "description": ""
+                    "description": [
+                        "Managing and preparing purchases for the area, controlling executive phone lines, support in the survey and dimensioning of IT infrastructure, development of macros in Excel for for automating and improving business processes.",
+                        "Customizing elements of the Microsoft Dynamics CRM platform and development of applications in Microsoft Sharepoint.",
+                        "Skills: Microsoft Excel, Visual Basic for Applications (VBA)."
+                    ]
                 },
                 {
                     "time": "Jun. 2016 - Feb. 2017",
                     "title": "Internship in Web Development - Front-end",
                     "company": "Atelier Design",
                     "location": "Petrópolis, Brazil",
-                    "description": ""
+                    "description": [
+                        "Development of websites and web systems, with Front-end using HTML5, CSS3 (SASS) and JavaScript (React), with responsive design based on the Bootstrap framework, and using good practice methods such as RSCSS and ITCSS.",
+                        "Skills: Web Development, HTML, CSS, JavaScript."
+                    ]
                 },
                 {
                     "time": "Jan. 2015 - Jun. 2016",
                     "title": "IT Internship",
                     "company": "City Hall of Petrópolis",
                     "location": "Petrópolis, Brazil",
-                    "description": ""
+                    "description": [
+                        "Maintenance and access control. Promotion of information, training users through the integration of access to information through digital technologies.",
+                        "Skills: Teaching, Computer Maintenance."
+                    ]
                 }
             ]
         },

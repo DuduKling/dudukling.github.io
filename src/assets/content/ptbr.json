@@ -238,34 +238,50 @@
         "experiences": {
             "title": "Experiências",
             "text": "",
+            "viewMore": "Ver mais",
             "timeline": [
                 {
                     "time": "Mar. 2019 - Atual",
                     "title": "Desenvolvedor de Sistemas Sr.",
                     "company": "Stone Age - TIVIT",
                     "location": "Rio de Janeiro",
-                    "description": ""
+                    "description": [
+                        "Responsável por monitorar, estimar, planejar, desenvolver e implementar diversos projetos para diversas grandes empresas dos setores de telecomunicações, serviços do mercado financeiro, seguros de varejo, crédito e governo.",
+                        "Desenvolvimento de ciclo completo, participando de levantamento de requisitos, desenvolvimento, testes, implantação e monitoramento de serviços de produção.",
+                        "Desenvolvimento de soluções e implementação de regras de negócio utilizando principalmente JavaScript, Node, .NET, estrutura de nuvem AWS, MySQL, SQL Server e Oracle.",
+                        "Habilidades: JavaScript, Node.js, C#, TypeScript, Amazon Web Services (AWS), Delphi, Powershell, Microsoft Excel."
+                    ]
                 },
                 {
                     "time": "Fev. 2017 - Fev. 2019",
                     "title": "Estágio na Área de TI",
                     "company": "Safran Helicopter Engines",
                     "location": "Duque de Caxias",
-                    "description": ""
+                    "description": [
+                        "Gestão e preparo de compras da área, controle de linhas executivas, apoio no levantamento e dimensionamento de infra, desenvolvimento de macros no Excel para automatização e melhoria de processos.",
+                        "Customização de elementos da plataforma Microsoft Dynamics CRM e desenvolvimento de aplicações no Microsoft Sharepoint.",
+                        "Habilidades: Microsoft Excel, Visual Basic for Applications (VBA)."
+                    ]
                 },
                 {
                     "time": "Jun. 2016 - Fev. 2017",
                     "title": "Estágio em Desenvolvimento Web - Front-end",
                     "company": "Atelier Design",
                     "location": "Petrópolis",
-                    "description": ""
+                    "description": [
+                        "Desenvolvimento de sites e sistemas web, com Front-end com HTML5, CSS3 (SASS) e JavaScript (React), com design responsivo baseado no framework Bootstrap e utilizando métodos de boas práticas como RSCSS e ITCSS.",
+                        "Habilidades: Desenvolvimento Web, HTML, CSS, JavaScript."
+                    ]
                 },
                 {
                     "time": "Jan. 2015 - Jun. 2016",
                     "title": "Estagiário de TI",
                     "company": "Prefeitura Municipal de Petrópolis",
                     "location": "Petrópolis",
-                    "description": ""
+                    "description": [
+                        "Manutenção e controle de acesso. Promoção da informação, treinamento e capacitação a usuários, através da integração ao acesso da informação por meio das tecnologias digitais.",
+                        "Habilidades: Ensino, Manutenção de Computadores."
+                    ]
                 }
             ]
         },

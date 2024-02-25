@@ -34,6 +34,7 @@
         "theme": "Tema"
     },
     "languageModal": {
+        "title": "Mudar linguagem",
         "selected": "Selecionado",
         "languages": {
             "pt-br": {
@@ -67,6 +68,7 @@
         }
     },
     "themeModal": {
+        "title": "Mudar tema",
         "selected": "Selecionado",
         "themes": {
             "dark": {

@@ -248,7 +248,10 @@
         },
         "skills": {
             "title": "Habilidades & Ferramentas",
-            "text": "Algumas linguagens e ferramentas que utilizo ou já utilizei"
+            "text": "Algumas linguagens, ferramentas ou tecnologias que utilizo ou já utilizei antes",
+            "proficient": "Proficiente",
+            "familiar": "Familiar",
+            "others": "Outros"
         },
         "experiences": {
             "title": "Experiências",

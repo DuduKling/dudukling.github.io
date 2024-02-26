@@ -5,7 +5,7 @@ section.skills#sk
   p #{skill.text}
 
   div.skillsArea
-    p.skillGroupTitle Main
+    p.skillGroupTitle #{skill.proficient}
     ul.skillGroup
 
       li.skillContainer
@@ -23,13 +23,6 @@ section.skills#sk
           p.skillName NodeJS
 
       li.skillContainer
-        a.skill(href="https://reactjs.org/" target="_blank" rel="noopener")
-          div.logo
-            img.techImage(src="../../assets/images/skill-react.svg" alt="react")
-            img.bgImage(src="../../assets/images/skill-react.svg" alt="react")
-          p.skillName ReactJS
-
-      li.skillContainer
         a.skill(href="https://www.typescriptlang.org/" target="_blank" rel="noopener")
           div.logo
             img.techImage(src="../../assets/images/skill-typescript.svg" alt="typescript")
@@ -44,14 +37,28 @@ section.skills#sk
           p.skillName AWS
 
       li.skillContainer
+        a.skill(href="https://reactjs.org/" target="_blank" rel="noopener")
+          div.logo
+            img.techImage(src="../../assets/images/skill-react.svg" alt="react")
+            img.bgImage(src="../../assets/images/skill-react.svg" alt="react")
+          p.skillName ReactJS
+
+      li.skillContainer
+        a.skill(href="https://www.w3schools.com/cs/" target="_blank" rel="noopener")
+          div.logo
+            img.techImage(src="../../assets/images/skill-csharp.svg" alt="csharp")
+            img.bgImage(src="../../assets/images/skill-csharp.svg" alt="csharp")
+          p.skillName C#
+
+    p.skillGroupTitle #{skill.familiar}
+    ul.skillGroup
+
+      li.skillContainer
         a.skill(href="https://www.python.org" target="_blank" rel="noopener")
           div.logo
             img.techImage(src="../../assets/images/skill-python.svg" alt="python")
             img.bgImage(src="../../assets/images/skill-python.svg" alt="python")
           p.skillName Python
-
-    p.skillGroupTitle Secondary
-    ul.skillGroup
 
       li.skillContainer
         a.skill(href="https://www.w3.org/html/" target="_blank" rel="noopener")
@@ -89,13 +96,6 @@ section.skills#sk
           p.skillName ExpressJS
 
       li.skillContainer
-        a.skill(href="https://www.w3schools.com/cs/" target="_blank" rel="noopener")
-          div.logo
-            img.techImage(src="../../assets/images/skill-csharp.svg" alt="csharp")
-            img.bgImage(src="../../assets/images/skill-csharp.svg" alt="csharp")
-          p.skillName C#
-
-      li.skillContainer
         a.skill(href="https://developer.android.com" target="_blank" rel="noopener")
           div.logo
             img.techImage(src="../../assets/images/skill-android.svg" alt="android")
@@ -109,7 +109,7 @@ section.skills#sk
             img.bgImage(src="../../assets/images/skill-react-native.svg" alt="react-native")
           p.skillName React Native
 
-    p.skillGroupTitle Infra
+    p.skillGroupTitle #{skill.others}
     ul.skillGroup
 
       li.skillContainer
@@ -146,9 +146,6 @@ section.skills#sk
             img.techImage(src="../../assets/images/skill-grafana.svg" alt="grafana")
             img.bgImage(src="../../assets/images/skill-grafana.svg" alt="grafana")
           p.skillName Grafana
-
-    p.skillGroupTitle Others
-    ul.skillGroup
 
       li.skillContainer
         a.skill(href="https://flask.palletsprojects.com/" target="_blank" rel="noopener")
@@ -191,9 +188,6 @@ section.skills#sk
             img.techImage.darkInvert(src="../../assets/images/skill-latex.svg" alt="latex")
             img.bgImage.darkInvertBg(src="../../assets/images/skill-latex.svg" alt="latex")
           p.skillName LaTeX
-
-    p.skillGroupTitle Data Science
-    ul.skillGroup
 
       li.skillContainer
         a.skill(href="https://powerbi.microsoft.com" target="_blank" rel="noopener")

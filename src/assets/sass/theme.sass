@@ -11,6 +11,8 @@ $font1: 'Varela Round', sans-serif
 $font2: 'Montserrat', sans-serif
 
 :root
+	--invert-filter: invert(0)
+
 	--color-main: #{$green}
 	--color-main-dark-10: #{darken($green, 10%)}
 	--color-main-opacity-05: rgba(#{hexToRGB($green)}, 0.5)
@@ -51,6 +53,8 @@ $font2: 'Montserrat', sans-serif
 	--color-text-light-75: #{lighten($black, 75%)}
 
 [data-theme="dark"]
+	--invert-filter: invert(1)
+
 	--color-text-main-title: #{lighten($green, 10%)}
 	--color-text-main-subtitle: #{lighten($green, 10%)}
 
@@ -76,6 +80,8 @@ $font2: 'Montserrat', sans-serif
 	--color-text-light-75: #{darken($grey, 75%)}
 
 [data-theme="blue"]
+	--invert-filter: invert(0)
+
 	--color-main: #{$blue}
 	--color-main-dark-10: #{darken($blue, 10%)}
 	--color-main-opacity-05: rgba(#{hexToRGB($blue)}, 0.5)
@@ -91,6 +97,8 @@ $font2: 'Montserrat', sans-serif
 	--color-bg-social-back: #{$blue}
 
 [data-theme="darkblue"]
+	--invert-filter: invert(1)
+
 	--color-main: #{$blue}
 	--color-main-dark-10: #{darken($blue, 10%)}
 	--color-main-opacity-05: rgba(#{hexToRGB($blue)}, 0.5)

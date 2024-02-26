@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import imagemin from 'gulp-imagemin';
+import imagemin, { svgo } from 'gulp-imagemin';
 import browserSync from 'browser-sync';
 import gulpSass from 'gulp-sass';
 import originalSass from 'sass';
@@ -10,7 +10,6 @@ import plumber from 'gulp-plumber';
 import autoprefixer from 'gulp-autoprefixer';
 import cssnano from 'gulp-cssnano';
 import sourcemaps from 'gulp-sourcemaps';
-import svgo from 'gulp-svgo';
 import uglify from 'gulp-uglify';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
@@ -165,7 +164,6 @@ function runJsPrd() {
 function runImgsAssets() {
 	return gulp.src(paths.imgs.src)
 		.pipe(imagemin())
-		.pipe(svgo())
 		.pipe(gulp.dest(paths.imgs.dest));
 }
 

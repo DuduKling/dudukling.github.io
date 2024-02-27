@@ -9,43 +9,42 @@ section.education#ed
 
       each timelineItem, i in ed.timeline
         li.item(class=(i % 2 == 0) ? 'item-odd' : 'item-even')
-
           div.icon
             if timelineItem.type == 'graduation'
               svg(viewBox="0 0 64 64")
                 use(xlink:href="#svg-graduation")
-
             if timelineItem.type == 'certification'
               svg(viewBox="0 0 32 32")
                 use(xlink:href="#svg-trophy")
 
-          div.container
-            div.title
-              h3 #{timelineItem.title}
-              if timelineItem.url
-                a.url(href=timelineItem.url target="_blank" rel="noopener" aria-label="certification url") #{ed.viewMore}
-                  svg(viewBox="0 0 24 24")
-                    use(xlink:href="#svg-external-link")
-
-            div.content
-              if timelineItem.description
-                p.description #{timelineItem.description}
-
-              div.details
-                if timelineItem.company
-                  div.company
-                    svg(viewBox="0 0 48 48")
-                      use(xlink:href="#svg-company")
-                    p #{timelineItem.company}
-
-                if timelineItem.location
-                  div.location
+          div.edContainer(class=(i % 2 == 0) ? 'item-odd' : 'item-even')
+            div.container
+              div.title
+                h3 #{timelineItem.title}
+                if timelineItem.url
+                  a.url(href=timelineItem.url target="_blank" rel="noopener" aria-label="certification url") #{ed.viewMore}
                     svg(viewBox="0 0 24 24")
-                      use(xlink:href="#svg-mapMarkerPin")
-                    p #{timelineItem.location}
+                      use(xlink:href="#svg-external-link")
 
-                if timelineItem.time
-                  div.time
-                    svg(viewBox="0 0 50 50")
-                      use(xlink:href="#svg-calendar")
-                    p #{timelineItem.time}
+              div.content
+                if timelineItem.description
+                  p.description #{timelineItem.description}
+
+                div.details
+                  if timelineItem.company
+                    div.company
+                      svg(viewBox="0 0 48 48")
+                        use(xlink:href="#svg-company")
+                      p #{timelineItem.company}
+
+                  if timelineItem.location
+                    div.location
+                      svg(viewBox="0 0 24 24")
+                        use(xlink:href="#svg-mapMarkerPin")
+                      p #{timelineItem.location}
+
+                  if timelineItem.time
+                    div.time
+                      svg(viewBox="0 0 50 50")
+                        use(xlink:href="#svg-calendar")
+                      p #{timelineItem.time}

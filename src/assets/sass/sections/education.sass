@@ -43,32 +43,8 @@
 			> .item-odd
 				align-items: start
 
-				&::before
-					content: ""
-					position: absolute
-					top: 20px
-					width: 0
-					height: 0
-					border-top: 7px solid transparent
-					border-bottom: 7px solid transparent
-
-					left: 45%
-					border-left: 7px solid var(--color-main)
-
 			> .item-even
 				align-items: end
-
-				&::before
-					content: ""
-					position: absolute
-					top: 20px
-					width: 0
-					height: 0
-					border-top: 7px solid transparent
-					border-bottom: 7px solid transparent
-
-					right: 45%
-					border-right: 7px solid var(--color-main)
 
 			> .item
 				margin-bottom: 50px
@@ -97,99 +73,144 @@
 						display: block
 						fill: $black
 
-				> .container
-					width: 45%
-					background: var(--color-bg-dark-10)
-					padding: 20px
-					border-radius: 5px
-					transition: all 0.3s ease
-					box-shadow: 0px 1px 1px var(--color-bg-dark-50)
+				> .item-odd
+					padding: 0 50px 0 0
+					display: flex
+					flex-direction: row
+					justify-content: flex-end
 
-					> .title
-						padding: 15px
-						background: var(--color-main)
-						margin: -20px -20px 0 -20px
-						border-radius: 3px 3px 0 0
+					&::before
+						content: ""
+						position: absolute
+						top: 20px
+						width: 0
+						height: 0
+						border-top: 7px solid transparent
+						border-bottom: 7px solid transparent
 
-						display: flex
-						flex-direction: row
-						justify-content: space-between
+						right: 43px
+						border-left: 7px solid var(--color-main)
 
-						color: $black
+				> .item-even
+					padding: 0 0 0 50px
+					display: flex
+					flex-direction: row
+					justify-content: flex-start
 
-						> h3
-							font-weight: 300
-							margin-right: 10px
+					&::before
+						content: ""
+						position: absolute
+						top: 20px
+						width: 0
+						height: 0
+						border-top: 7px solid transparent
+						border-bottom: 7px solid transparent
 
-						> .url
-							height: 100%
-							margin: 0 5px
+						left: 43px
+						border-right: 7px solid var(--color-main)
 
-							text-decoration: none
+				> .edContainer
+					width: 50%
+					position: relative
+
+					> .container
+						width: 100%
+						max-width: 500px
+
+						background: var(--color-bg-dark-10)
+						padding: 20px 20px 10px 20px
+						border-radius: 5px
+						transition: all 0.3s ease
+						border: 2px solid var(--color-main)
+
+						> .title
+							padding: 15px
+							background: var(--color-main)
+							margin: -20px -20px 0 -20px
+							border-radius: 3px 3px 0 0
+
+							display: flex
+							flex-direction: row
+							justify-content: space-between
 
 							color: $black
 
+							> h3
+								font-weight: 300
+								margin-right: 10px
+
+							> .url
+								height: 100%
+								margin: 0 5px
+
+								text-decoration: none
+
+								color: $black
+
+								display: flex
+								align-items: center
+
+								svg
+									width: 15px
+									height: 15px
+									display: block
+									margin-left: 10px
+									fill: $black
+
+						> .content
 							display: flex
-							align-items: center
+							flex-direction: column
+							margin-top: 10px
 
-							svg
-								width: 15px
-								height: 15px
-								display: block
-								margin-left: 10px
-								fill: $black
+							> .description
+								color: var(--color-text-light-10)
+								margin-bottom: 15px
+								border-bottom: 1px dashed var(--color-main)
+								padding-bottom: 10px
 
-
-					> .content
-						display: flex
-						flex-direction: column
-						margin-top: 20px
-
-						> .description
-							color: var(--color-text-light-10)
-							margin-bottom: 20px
-
-						> .details
-							display: flex
-							flex-direction: row
-
-							font-size: 12px
-
-							> .location + .time,
-							> .company + .time
-								margin-left: 20px
-
-							> .location,
-							> .company,
-							> .time
+							> .details
 								display: flex
 								flex-direction: row
-								min-width: 150px
+								justify-content: space-between
 
-							p
-								color: var(--color-text-main-title)
+								font-size: 12px
 
-							svg
-								min-width: 15px
-								width: 15px
-								height: 15px px
-								display: block
-								margin-right: 5px
-								fill: var(--color-text-main-title)
+								> .location + .time,
+								> .company + .time
+									margin-left: 20px
+
+								> .location,
+								> .company,
+								> .time
+									display: flex
+									flex-direction: row
+
+								p
+									color: var(--color-text-main-title)
+
+								svg
+									min-width: 15px
+									width: 15px
+									height: 15px px
+									display: block
+									margin-right: 5px
+									fill: var(--color-text-main-title)
 
 @media only screen and (max-width: 800px)
-	.education > .educationArea
-		> .timeline
+	.education > .educationArea > .timeline
+		&::before
+			left: 100%
 
-			&::before
+		> .item
+			margin-right: 40px
+
+			> .icon
 				left: 100%
+				margin-left: 25px
 
-			> .item
-				margin-right: 40px
-
-				> .icon
-					left: 100%
-					margin-left: 25px
+			> .edContainer
+				width: 100%
+				padding: 0
 
 				> .container
 					width: 100%
@@ -198,7 +219,7 @@
 				left: 100%
 
 			> .item-even
-				align-items: start
+				justify-content: flex-end
 
 				&::before
 					left: 100%
@@ -210,24 +231,27 @@
 		&::before
 			content: none
 
-		> .item-odd::before,
-		> .item-even::before
-			content: none
-
 		> .item
 			margin-right: 0
 
+			> .item-odd::before,
+			> .item-even::before
+				content: none
+
 			> .icon
 				left: -20px
+				top: 2px
+				z-index: 2
 
-			> .container
-				> .title
-					padding-left: 60px
+			> .edContainer
+				> .container
+					> .title
+						padding-left: 60px
 
-				> .content > .details
-					flex-direction: column
+					> .content > .details
+						flex-direction: column
 
-					> .location + .time,
-					> .company + .time
-						margin-left: 0
-						margin-top: 10px
+						> .location + .time,
+						> .company + .time
+							margin-left: 0
+							margin-top: 10px

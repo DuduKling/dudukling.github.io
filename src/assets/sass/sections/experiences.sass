@@ -74,10 +74,6 @@
 						fill: var(--color-main)
 
 				> details
-					height: 0
-					overflow: hidden
-					transition: all 150ms ease-out
-
 					> summary
 						position: absolute
 						top: 20px
@@ -85,12 +81,11 @@
 
 						cursor: pointer
 
-					&[open]
+					> .description
 						margin-top: 30px
-						height: auto
 
-					> .description > p
-						margin-bottom: 20px
+						> p
+							margin-bottom: 20px
 
 				&:before
 					position: absolute
@@ -118,6 +113,22 @@
 					box-shadow: 0 0 0 4px var(--color-main)
 					background: var(--color-text-light-75)
 					border-radius: 50%
+
+@media only screen and (max-width: 1100px)
+	.experiences > .experiencesArea > .timeline > .item
+		> details
+			margin-top: 10px
+			padding: 10px 0
+			height: auto
+
+			&[open]
+				> summary
+					margin-bottom: 10px
+
+			> summary
+				position: relative
+				top: 0
+				text-align: end
 
 @media only screen and (max-width: 600px)
 	.experiences > .experiencesArea

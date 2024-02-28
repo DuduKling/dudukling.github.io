@@ -120,17 +120,17 @@
             "categories": "/blog/tags/",
             "posts": [
                 {
-                    "url": "/blog/git-change-old-commit-messages",
+                    "url": "/docs/git-change-old-commit-messages",
                     "title": "Git change old commit messages",
                     "infos": "08/03/2022 | 3 min",
                     "peek": "If a commit message contains unclear, incorrect, or sensitive information, you can change and push the new message.",
                     "categories": ["git"]
                 },
                 {
-                    "url": "/blog/git-remove-from-history",
-                    "title": "Git Remove from History",
-                    "infos": "01/05/2012 | 1 min",
-                    "peek": "To remove a line or a file from git commit history.",
+                    "url": "/blog/psm-certification",
+                    "title": "PSM I Certification",
+                    "infos": "20/01/2023 | 30 min",
+                    "peek": "Just a part of the Mind Map I created on my journey to get the Professional Scrum Master I.",
                     "categories": ["git"]
                 },
                 {

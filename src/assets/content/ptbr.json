@@ -264,9 +264,11 @@
                     "company": "Stone Age - TIVIT",
                     "location": "Rio de Janeiro",
                     "description": [
-                        "Responsável por monitorar, estimar, planejar, desenvolver e implementar diversos projetos para diversas grandes empresas dos setores de telecomunicações, serviços do mercado financeiro, seguros de varejo, crédito e governo.",
-                        "Desenvolvimento de ciclo completo, participando de levantamento de requisitos, desenvolvimento, testes, implantação e monitoramento de serviços de produção.",
-                        "Desenvolvimento de soluções e implementação de regras de negócio utilizando principalmente JavaScript, Node, .NET, estrutura de nuvem AWS, MySQL, SQL Server e Oracle.",
+                        "Incorporada pela TIVIT em 2024, a Stone Age, faz parte de uma multinacional brasileira que impulsiona negócios por meio da tecnologia e soluções de embarque digital, antifraude, crédito e risco. A empresa atende clientes do mundo todo, oferecendo integrações e automatizações de processos para diversos segmentos como Mercado Financeiro e Varejo.",
+                        "Como Desenvolvedor, minhas principais responsabilidades incluem:",
+                        "- Responsável por monitorar, estimar, planejar, desenvolver e implementar diversos projetos para diversas grandes empresas dos setores de telecomunicações, serviços do mercado financeiro, seguros de varejo, crédito e governo.",
+                        "- Desenvolvimento de ciclo completo, participando de levantamento de requisitos, desenvolvimento, testes, implantação e monitoramento de serviços de produção.",
+                        "- Desenvolvimento de soluções e implementação de regras de negócio utilizando principalmente JavaScript, Node, .NET, estrutura de nuvem AWS, MySQL, SQL Server e Oracle.",
                         "Habilidades: JavaScript, Node.js, C#, TypeScript, Amazon Web Services (AWS), Delphi, Powershell, Microsoft Excel."
                     ]
                 },
@@ -276,8 +278,10 @@
                     "company": "Safran Helicopter Engines",
                     "location": "Duque de Caxias",
                     "description": [
-                        "Gestão e preparo de compras da área, controle de linhas executivas, apoio no levantamento e dimensionamento de infra, desenvolvimento de macros no Excel para automatização e melhoria de processos.",
-                        "Customização de elementos da plataforma Microsoft Dynamics CRM e desenvolvimento de aplicações no Microsoft Sharepoint.",
+                        "A Safran é uma multinacional Francesa que atua nos ramos de defesa, motores, equipamentos e comunicação.",
+                        "Como estagiário, minhas principais responsabilidades incluem:",
+                        "- Gestão e preparo de compras da área, controle de linhas executivas, apoio no levantamento e dimensionamento de infra, desenvolvimento de macros no Excel para automatização e melhoria de processos.",
+                        "- Customização de elementos da plataforma Microsoft Dynamics CRM e desenvolvimento de aplicações no Microsoft Sharepoint.",
                         "Habilidades: Microsoft Excel, Visual Basic for Applications (VBA)."
                     ]
                 },
@@ -287,7 +291,9 @@
                     "company": "Atelier Design",
                     "location": "Petrópolis",
                     "description": [
-                        "Desenvolvimento de sites e sistemas web, com Front-end com HTML5, CSS3 (SASS) e JavaScript (React), com design responsivo baseado no framework Bootstrap e utilizando métodos de boas práticas como RSCSS e ITCSS.",
+                        "A Atelier é uma pequena empresa de Design de sites, com o foco em empresas dos ramos imobiliário, hoteleiro, saúde e varejo.",
+                        "Como estagiário web, minhas principais responsabilidades incluem:",
+                        "- Desenvolvimento de sites e sistemas web, com Front-end com HTML5, CSS3 (SASS) e JavaScript (React), com design responsivo baseado no framework Bootstrap e utilizando métodos de boas práticas como RSCSS e ITCSS.",
                         "Habilidades: Desenvolvimento Web, HTML, CSS, JavaScript."
                     ]
                 },
@@ -297,7 +303,9 @@
                     "company": "Prefeitura Municipal de Petrópolis",
                     "location": "Petrópolis",
                     "description": [
-                        "Manutenção e controle de acesso. Promoção da informação, treinamento e capacitação a usuários, através da integração ao acesso da informação por meio das tecnologias digitais.",
+                        "Petrópolis é um município localizado na Região Metropolitana do Rio de Janeiro, no estado do Rio de Janeiro, no Brasil. Tem uma população é de aproximadamente 300 mil habitantes, de acordo com o censo do IBGE divulgado em 2023.",
+                        "Como estagiário da prefeitura, minhas principais responsabilidades incluem:",
+                        "- Manutenção e controle de acesso. Promoção da informação, treinamento e capacitação a usuários, através da integração ao acesso da informação por meio das tecnologias digitais.",
                         "Habilidades: Ensino, Manutenção de Computadores."
                     ]
                 }
@@ -308,6 +316,14 @@
             "text": "Linha do tempo das minhas experiências educacionais como graduações e certificações",
             "viewMore": "Ver",
             "timeline": [
+                {
+                    "time": "Jun. 2025",
+                    "title": "Security+",
+                    "company": "CompTIA",
+                    "description": "",
+                    "url": "https://www.credly.com/badges/4a19dd33-9263-47b1-8682-678cae0f119f/public_url",
+                    "type": "certification"
+                },
                 {
                     "time": "Fev. 2024",
                     "title": "DevOps Professional",

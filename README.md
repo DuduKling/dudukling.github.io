@@ -14,6 +14,8 @@ Made to be a simple portfolio/website with vanilla JS.
 ### Dependencies
 Install [Node.JS](https://nodejs.org/en/download/).
 
+Version: `20.17.0`.
+
 Go to project folder, and install project dependencies with:
 ```bash
 npm install

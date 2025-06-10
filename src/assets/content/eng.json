@@ -264,9 +264,11 @@
                     "company": "Stone Age - TIVIT",
                     "location": "Rio de Janeiro, Brazil",
                     "description": [
-                        "Responsible for monitoring, estimating, planning, developing, and implementing several projects for different large companies in the telecommunications, financial market services, retail insurance, credit, and government sectors.",
-                        "Full cycle development, participating in requirements gathering, development, testing, deployment, and monitoring of production services.",
-                        "Development of solutions and business rules implementation using mainly JavaScript, Node, .NET, AWS cloud structure, MySQL, SQL Server, and Oracle.",
+                        "Incorporated by TIVIT in 2024, Stone Age is part of a Brazilian multinational that drives business through technology and digital onboarding, anti-fraud, credit and risk solutions. The company serves clients worldwide, offering integrations and process automation for various segments such as the Financial Market and Retail.",
+                        "As a Developer, my main responsibilities include:",
+                        "- Responsible for monitoring, estimating, planning, developing, and implementing several projects for different large companies in the telecommunications, financial market services, retail insurance, credit, and government sectors.",
+                        "- Full cycle development, participating in requirements gathering, development, testing, deployment, and monitoring of production services.",
+                        "- Development of solutions and business rules implementation using mainly JavaScript, Node, .NET, AWS cloud structure, MySQL, SQL Server, and Oracle.",
                         "Skills: JavaScript, Node.js, C#, TypeScript, Amazon Web Services (AWS), Delphi, Powershell, Microsoft Excel."
                     ]
                 },
@@ -276,8 +278,10 @@
                     "company": "Safran Helicopter Engines",
                     "location": "Duque de Caxias, Brazil",
                     "description": [
-                        "Managing and preparing purchases for the area, controlling executive phone lines, support in the survey and dimensioning of IT infrastructure, development of macros in Excel for for automating and improving business processes.",
-                        "Customizing elements of the Microsoft Dynamics CRM platform and development of applications in Microsoft Sharepoint.",
+                        "Safran is a French multinational company that operates in the defense, engines, equipment and communications sectors.",
+                        "As an intern, my main responsibilities include:",
+                        "- Managing and preparing purchases for the area, controlling executive phone lines, support in the survey and dimensioning of IT infrastructure, development of macros in Excel for for automating and improving business processes.",
+                        "- Customizing elements of the Microsoft Dynamics CRM platform and development of applications in Microsoft Sharepoint.",
                         "Skills: Microsoft Excel, Visual Basic for Applications (VBA)."
                     ]
                 },
@@ -287,7 +291,9 @@
                     "company": "Atelier Design",
                     "location": "Petrópolis, Brazil",
                     "description": [
-                        "Development of websites and web systems, with Front-end using HTML5, CSS3 (SASS) and JavaScript (React), with responsive design based on the Bootstrap framework, and using good practice methods such as RSCSS and ITCSS.",
+                        "Atelier is a small web design company, focused on companies in the real estate, hotel, healthcare and retail sectors.",
+                        "As a web intern, my main responsibilities include:",
+                        "- Development of websites and web systems, with Front-end using HTML5, CSS3 (SASS) and JavaScript (React), with responsive design based on the Bootstrap framework, and using good practice methods such as RSCSS and ITCSS.",
                         "Skills: Web Development, HTML, CSS, JavaScript."
                     ]
                 },
@@ -297,7 +303,9 @@
                     "company": "City Hall of Petrópolis",
                     "location": "Petrópolis, Brazil",
                     "description": [
-                        "Maintenance and access control. Promotion of information, training users through the integration of access to information through digital technologies.",
+                        "Petrópolis is a municipality located in the Metropolitan Region of Rio de Janeiro, in the state of Rio de Janeiro, Brazil. It has a population of approximately 300,000 inhabitants, according to the census released in 2023.",
+                        "As a city hall intern, my main responsibilities include:",
+                        "- Maintenance and access control. Promotion of information, training users through the integration of access to information through digital technologies.",
                         "Skills: Teaching, Computer Maintenance."
                     ]
                 }
@@ -308,6 +316,14 @@
             "text": "Timeline of my educational experiences such as degrees and certifications",
             "viewMore": "View",
             "timeline": [
+                {
+                    "time": "Jun. 2025",
+                    "title": "Security+",
+                    "company": "CompTIA",
+                    "description": "",
+                    "url": "https://www.credly.com/badges/4a19dd33-9263-47b1-8682-678cae0f119f/public_url",
+                    "type": "certification"
+                },
                 {
                     "time": "Feb. 2024",
                     "title": "DevOps Professional",
